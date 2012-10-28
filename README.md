@@ -1,4 +1,1 @@
-jz12
-====
-
-JavaZone 2012
+Javazone nettsider 2012 =)

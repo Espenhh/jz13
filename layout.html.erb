@@ -1,0 +1,28 @@
+<!doctype html>
+<!--[if IE 7]>    <html class="ie7 ie" lang="no" class="nojs"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie" lang="no" class="nojs"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 ie" lang="no" class="nojs"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="no" class="nojs"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title><%= title %></title>
+  <meta name="description" content="Javazone!">
+  <meta name="robots" content="<%= robots %>">
+
+  <%= stylesheet_link_merged :css %>
+</head>
+
+<body id="<%= category %>">
+
+<%= render "partials/menu.html.erb" %>
+
+<div id="page">
+  <%= yield %>
+  <%= render "partials/footer.html.erb" %>
+</div>
+
+<%= javascript_include_merged :js %>
+
+</body>
+</html>
