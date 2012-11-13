@@ -1,25 +1,16 @@
 <!doctype html>
-<!--[if IE 7]>    <html class="ie7 ie" lang="no" class="nojs"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 ie" lang="no" class="nojs"> <![endif]-->
-<!--[if IE 9]>    <html class="ie9 ie" lang="no" class="nojs"> <![endif]-->
-<!--[if gt IE 9]><!--> <html lang="no" class="nojs"> <!--<![endif]-->
-
+<html>
 <head>
   <meta charset="utf-8">
   <title>JavaZone 2013</title>
   <meta name="description" content="Javazone!">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700' rel='stylesheet' type='text/css'>
   <%= assets("css", "all") %>
 </head>
 <body>
-
-    <%= render("partial", "/_partials/menu.html") %>
-
-    <div id="page">
-        <%= content %>
-        <%= render("partial", "/_partials/footer.html") %>
-    </div>
-
-    <%= assets("js", "all") %>
-
+  <div id="page">
+    <%= content %>
+  </div>
+  <%= assets("js", "all") %>
 </body>
 </html>
