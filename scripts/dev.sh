@@ -1,4 +1,5 @@
 BASEDIR=$(dirname $0)
 cd $BASEDIR/..
 
-bundle exec stasis $@
+source scripts/prelude.sh
+pacman -d

@@ -6,23 +6,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title><%= title %></title>
+  <title>JavaZone 2013</title>
   <meta name="description" content="Javazone!">
-  <meta name="robots" content="<%= robots %>">
-
-  <%= stylesheet_link_merged :css %>
+  <%= assets("css", "all") %>
 </head>
+<body>
 
-<body id="<%= category %>">
+    <%= render("partial", "/_partials/menu.html") %>
 
-<%= render "partials/menu.html.erb" %>
+    <div id="page">
+        <%= content %>
+        <%= render("partial", "/_partials/footer.html") %>
+    </div>
 
-<div id="page">
-  <%= yield %>
-  <%= render "partials/footer.html.erb" %>
-</div>
-
-<%= javascript_include_merged :js %>
+    <%= assets("js", "all") %>
 
 </body>
 </html>
