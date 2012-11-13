@@ -31,7 +31,7 @@ if [ $1 == "test" ]; then
 	JZ_SERVER="javabin@test.javazone.no"
 	JZ_SERVER_ROOT="/home/javabin/web/jz13/test"
 	JZ_KEEP_OLD_PACKAGES_FOR_MINUTES=86400 # 60 dager
-	JZ_CHECK_STASIS=false
+	JZ_CHECK_PACMAN=false
 elif [ $1 == "prod" ]; then
 	echo "Bekreft deploy til prod ved å skrive 'p-r-o-d-u-k-s-j-o-n' uten bindestrekene"
 	read ans
@@ -45,7 +45,7 @@ elif [ $1 == "prod" ]; then
 	JZ_SERVER="javabin@test.javazone.no"
 	JZ_SERVER_ROOT="/home/javabin/web/jz13/prod"
 	JZ_KEEP_OLD_PACKAGES_FOR_MINUTES=86400 # 60 dager
-	JZ_CHECK_STASIS=true
+	JZ_CHECK_PACMAN=true
 else
 	echo "Ugyldig miljø. Bruk en av [prod/test]"
 	exit $E_BADARGS
@@ -54,12 +54,12 @@ JZ_NEW_FOLDER=`date +%s`
 
 fancymessage "Deployer til  $JZ_SERVER, mappe $JZ_SERVER_ROOT/$JZ_NEW_FOLDER"
 
-fancymessage "BYGGER STASIS"
+fancymessage "BYGGER PACMAN"
 rm -r public
-bundle exec stasis
+./scripts/build.sh
 
-if $JZ_CHECK_STASIS; then
-	echo "Gikk stasis-bygget bra? [y/n]?"
+if $JZ_CHECK_PACMAN; then
+	echo "Gikk pacman-bygget bra? [y/n]?"
 	read ans
 	if [ $ans = y -o $ans = Y -o $ans = yes -o $ans = Yes -o $ans = YES ]
 	then
