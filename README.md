@@ -1,4 +1,4 @@
-# JavaZone 2013 - AwesomeStasis2k13
+# JavaZone 2013
 
 Dette repoet inneholder oppsettet for "statisk innhold" på JavaZone.no. Systemet er basert på pacman! :)
 
