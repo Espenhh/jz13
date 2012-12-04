@@ -60,6 +60,11 @@ a:hover {
 	line-height:1.8;
 }
 
+.smalltext {
+	margin-top: 20px;
+	font-size: 0.6em;
+}
+
 
 @media only screen and (max-width: 650px) {
 	.logo { height:35px; width:200px; }
