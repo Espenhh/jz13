@@ -1,0 +1,18 @@
+/* Hide completely */
+html body .hide {
+    display:none;
+}
+
+/* Hide visually (but read by screen readers) */
+html body .hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+html body .show {
+    display:block;
+}

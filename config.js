@@ -14,6 +14,8 @@ exports.config = {
     css: {
       all: [
         "css/reset.css",
+        "css/elements.css",
+        "css/helpers.css",
         "css/style.css"
       ]
     }
