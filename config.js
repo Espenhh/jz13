@@ -19,6 +19,7 @@ exports.config = {
         "css/font-awesome.css",
         "css/elements.css",
         "css/helpers.css",
+        "css/buttons.css",
         "css/style.css"
       ],
       ie7: [
