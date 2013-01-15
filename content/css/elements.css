@@ -33,7 +33,7 @@ hr {
 }
 
 a {
-    color:#09195d;
+    color:#000;
     text-decoration: none;
     border-bottom:1px solid rgba(0,0,0,0.05);
     -o-transition:all .1s ease-out;
@@ -71,7 +71,7 @@ li {
 
 h2 {
     font-weight: bold;
-    font-size:2em;
+    font-size:1.6em;
     color:#000;
     margin:0 0 1.5em 0;
     clear:both;
