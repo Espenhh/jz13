@@ -40,7 +40,7 @@ elif [ $1 == "prod" ]; then
 		echo "Flott! :)"
 	else
 		echo "Feil token. Avbryter."
-		exit $E_BADARGS	
+		exit $E_BADARGS
 	fi
 	JZ_SERVER="javabin@test.javazone.no"
 	JZ_SERVER_ROOT="/home/javabin/web/jz13/prod"
@@ -58,18 +58,6 @@ fancymessage "BYGGER PACMAN"
 rm -r public
 ./scripts/build.sh
 
-if $JZ_CHECK_PACMAN; then
-	echo "Gikk pacman-bygget bra? [y/n]?"
-	read ans
-	if [ $ans = y -o $ans = Y -o $ans = yes -o $ans = Yes -o $ans = YES ]
-	then
-		echo "Flott! :)"
-	else
-		echo "Avbryter. Fiks stasis-bygget og prøv igjen"
-		exit $E_BADARGS	
-	fi
-fi
-
 fancymessage "LAGER PAKKE"
 cd public
 zip javazone.zip * -r > /dev/null
@@ -78,7 +66,7 @@ fancymessage "SJEKKER AT PAKKING GIKK BRA"
 if [ ! -f javazone.zip ]
 then
     echo "Error: javazone.zip does not exist, exiting."
-    exit $E_BADARGS	
+    exit $E_BADARGS
 fi
 
 fancymessage "OVERFØRER PAKKE"
