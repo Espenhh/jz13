@@ -1,3 +1,5 @@
+/*global exports */
+
 exports.config = {
 
   assets: {
@@ -14,9 +16,13 @@ exports.config = {
     css: {
       all: [
         "css/reset.css",
+        "css/font-awesome.css",
         "css/elements.css",
         "css/helpers.css",
         "css/style.css"
+      ],
+      ie7: [
+        "css/font-awesome-ie7.min.css"
       ]
     }
 
