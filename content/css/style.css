@@ -96,6 +96,10 @@ nav ul {
 	font-size:.9em;
 }
 
+nav ul a {
+	color:#544b2a;
+}
+
 nav.main ul {
 	background: none;
 	padding:0;
@@ -119,7 +123,8 @@ nav li.separator {
 }
 
 .topics {
-	background: #F6F4ED;
+	background:#F6F4ED;
+	color:#544b2a;
 	padding:2em;
 	margin:0 0 5em 0;
 }
@@ -133,6 +138,11 @@ nav li.separator {
 
 .topics li, .topics h3 {
 	padding:.5em 0;
+}
+
+.topics strong {
+	display: block;
+	font-weight: 600;
 }
 
 .topics h3 {
