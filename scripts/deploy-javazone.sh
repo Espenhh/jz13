@@ -28,7 +28,7 @@ fi
 
 ## Sett opp variabler for riktig miljø
 if [ $1 == "test" ]; then
-	JZ_SERVER="javabin@test.javazone.no"
+	JZ_SERVER="javabin@176.58.113.146"
 	JZ_SERVER_ROOT="/home/javabin/web/jz13/test"
 	JZ_KEEP_OLD_PACKAGES_FOR_MINUTES=86400 # 60 dager
 	JZ_CHECK_PACMAN=false
@@ -42,7 +42,7 @@ elif [ $1 == "prod" ]; then
 		echo "Feil token. Avbryter."
 		exit $E_BADARGS
 	fi
-	JZ_SERVER="javabin@test.javazone.no"
+	JZ_SERVER="javabin@176.58.113.146"
 	JZ_SERVER_ROOT="/home/javabin/web/jz13/prod"
 	JZ_KEEP_OLD_PACKAGES_FOR_MINUTES=86400 # 60 dager
 	JZ_CHECK_PACMAN=true
