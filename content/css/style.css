@@ -43,7 +43,7 @@ a:hover {
 	padding:8%;
 }
 
-.logo {
+h1 {
 	width:400px;
 	height:70px;
 	background:url("/img/logo.png") top left no-repeat;
@@ -80,6 +80,25 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
-	.logo { background-image:url("/img/logo@2x.png"); }
+	h1 { background-image:url("/img/logo@2x.png"); }
 
+}
+
+/* Hide completely */
+html body .hide {
+	display:none;
+}
+
+/* Hide visually (but read by screen readers) */
+html body .hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+html body .show {
+    display:block;
 }
