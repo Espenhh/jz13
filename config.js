@@ -20,6 +20,8 @@ exports.config = {
         "css/elements.css",
         "css/helpers.css",
         "css/buttons.css",
+        "css/layout.css",
+        "css/images.css",
         "css/style.css"
       ],
       ie7: [

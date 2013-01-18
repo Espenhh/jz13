@@ -1,0 +1,60 @@
+#page {
+    padding:0 0 5% 0;
+    position: relative;
+}
+
+header {
+    width:54em;
+    padding:10em 3em 4em 3em;
+    margin:0 auto;
+    background:url("/img/robots/bg3.png") 6em 3em no-repeat;
+    background-size:500px 150px;
+}
+
+header a {
+    display: block;
+    width:400px;
+    height:70px;
+    background:url("/img/logos/javazone.png") top left no-repeat;
+    background-size:100% 100%;
+    margin:0 0 2em 0;
+    border:none;
+}
+
+header p {
+    font-size:2em;
+    line-height:1.3;
+    margin:0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+    header a { background-image:url("/img/logos/javazone@2x.png"); }
+
+}
+
+.content { width:54em; padding:0 3em; margin:0 auto; }
+section { float:left; width:100%; clear:both; }
+article { float:left; width:56%; }
+aside { float:right; width:35%; }
+
+@media only screen and (max-width: 70em) {
+    header { width:40em; }
+    header p { font-size:1.6em; }
+    .content { width:40em; }
+}
+
+@media only screen and (max-width: 50em) {
+    #page { padding:2% 0; }
+    header { width:auto; background-size:375px 113px; background-position: 4.5em 1em; padding:6.5em 2em 2em 2em; }
+    header a { width:296px; height:53px; margin:0 0 1.5em 0; }
+    header p { font-size:1.2em; }
+
+    .content { width:auto; padding:0 2em; }
+    section, article, aside { float:none; width:auto; margin-bottom:2em; }
+}

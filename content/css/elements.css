@@ -1,26 +1,12 @@
-html {
-    width:100%;
-    height:100%;
-    background:#fff;
-    overflow:auto;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:18px;
-    font-weight: 300;
-    color:#4f6066;
-    line-height:1.3;
-    position: relative;
-    width:100%;
-    height:100%;
-    background:#fff;
-}
-
 strong {
     color:#000;
+}
+
+em {
+    background:#F15B40;
+    color:#fff;
+    padding:.2em .5em;
+    border-radius:.2em;
 }
 
 sup {
@@ -37,14 +23,14 @@ hr {
 }
 
 a {
-    color:#4f6066;
+    color:#F15B40;
     text-decoration: none;
-    border-bottom:1px solid rgba(0,0,0,0.05);
-    -o-transition:all .1s ease-out;
-    -ms-transition:all .1s ease-out;
-    -moz-transition:all .1s ease-out;
-    -webkit-transition:all .1s ease-out;
-    transition:all .1s ease-out;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    -o-transition:color .1s ease-out;
+    -ms-transition:color .1s ease-out;
+    -moz-transition:color .1s ease-out;
+    -webkit-transition:color .1s ease-out;
+    transition:color .1s ease-out;
     -webkit-hyphens: none;
     -moz-hyphens: none;
     hyphens: none;
@@ -52,7 +38,7 @@ a {
 
 a:hover {
     color:#000;
-    border-bottom:1px solid rgba(0,0,0,0.2);
+    border-color:#000;
 }
 
 img {
@@ -68,9 +54,6 @@ ul, ol {
     list-style-type: circle;
     margin:0 0 1em 0;
     line-height:1.8;
-}
-
-li {
 }
 
 h2 {
@@ -93,7 +76,7 @@ h2 i, h3 i, h4 i, h5 i, h6 i {
     margin-right:.3em;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 50em) {
     h2 { font-size:1.6em; }
     br { display: none; }
 }

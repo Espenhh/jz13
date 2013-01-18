@@ -1,0 +1,55 @@
+.hero {
+    margin:0 auto 5em auto;
+    height:20em;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center top;
+}
+
+.hero-inner {
+}
+
+.hero-flam { background-image:url("/img/pics/flam.jpg"); }
+.hero-agir { background-image:url("/img/pics/agir.jpg"); }
+
+/* ------------------------------ */
+
+.img {
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-indent: -999em;
+}
+
+/* ------------------------------ */
+
+.bg {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+.bgf {
+    position: fixed;
+    bottom:0;
+    right:0;
+}
+
+.bgc {
+    position: static;
+    margin: 2em auto;
+    max-width: 100%;
+    background-position: center center;
+}
+
+.bg1 { background-image:url("/img/robots/bg1.png"); width:500px;  height:750px; background-size:500px 750px; }
+.bg6 { background-image:url("/img/robots/bg6.png"); width:1000px; height:200px; background-size:1000px 200px; }
+
+
+@media only screen and (max-width: 50em) {
+    .hero { margin-bottom:2em; }
+    .bgf { display: none; }
+}
