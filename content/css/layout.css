@@ -11,7 +11,7 @@ header {
     background-size:500px 150px;
 }
 
-header a {
+header h1 a {
     display: block;
     width:400px;
     height:70px;
@@ -34,7 +34,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
-    header a { background-image:url("/img/logos/javazone@2x.png"); }
+    header h1 a { background-image:url("/img/logos/javazone@2x.png"); }
 
 }
 
@@ -51,10 +51,10 @@ aside { float:right; width:35%; }
 
 @media only screen and (max-width: 50em) {
     #page { padding:2% 0; }
+    .content, header { width:auto; max-width: 25em; margin:0 auto; padding:0 2em; }
+
     header { width:auto; background-size:375px 113px; background-position: 4.5em 1em; padding:6.5em 2em 2em 2em; }
     header a { width:296px; height:53px; margin:0 0 1.5em 0; }
     header p { font-size:1.2em; }
-
-    .content { width:auto; padding:0 2em; }
     section, article, aside { float:none; width:auto; margin-bottom:2em; }
 }

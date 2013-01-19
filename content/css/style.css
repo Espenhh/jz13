@@ -37,13 +37,13 @@ body {
 }
 
 .be-warm {
-    color:#e32d22;
+    color:#F15B40;
     -webkit-animation: pulsate 1s ease-out;
     -webkit-animation-iteration-count: infinite;
 }
 
 .be-new {
-    color:#7eb71b;
+    color:#179D9C;
 }
 
 nav {
@@ -165,4 +165,27 @@ a.media img {
 
 p.sig {
     padding-top:2em;
+}
+
+ul.tags {
+    max-width:36em;
+    padding:2em 0;
+}
+
+ul.tags li {
+    display: inline;
+}
+
+ul.tags a {
+    background:#F15B40;
+    color:#fff;
+    padding:.2em .5em;
+    border-radius:.2em;
+    white-space: nowrap;
+    font-size:.9em;
+    border:none;
+}
+
+ul.tags a:hover {
+    background: #189D9C;
 }
