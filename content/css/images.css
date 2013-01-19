@@ -6,11 +6,10 @@
     background-position: center top;
 }
 
-.hero-inner {
-}
 
 .hero-flam { background-image:url("/img/pics/flam.jpg"); }
 .hero-agir { background-image:url("/img/pics/agir.jpg"); }
+.hero-topdown { background-image:url("/img/pics/topdown.jpg"); }
 
 /* ------------------------------ */
 

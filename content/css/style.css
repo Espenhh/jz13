@@ -211,3 +211,7 @@ a.tag {
 a.tag:hover {
     background: #189D9C;
 }
+
+a.emph {
+    font-weight: bold;
+}
