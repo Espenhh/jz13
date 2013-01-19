@@ -80,3 +80,18 @@
     .bg1 { display: none; }
     .hero { background-attachment: scroll; margin-bottom:3em; }
 }
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+    .bg1 { background-image:url("/img/robots/bg1@2x.png"); }
+    .bg5 { background-image:url("/img/robots/bg5@2x.png"); }
+    .bg6 { background-image:url("/img/robots/bg6@2x.png"); }
+    .bg7 { background-image:url("/img/robots/bg7@2x.png"); }
+
+}
