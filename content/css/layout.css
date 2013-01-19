@@ -47,13 +47,13 @@ aside { float:right; width:35%; }
 .line { background:#262626; padding:3em; margin-bottom:3em; }
 .line-inner { width:54em; margin:0 auto; }
 
-@media only screen and (max-width: 70em) {
+@media only screen and (max-width: 1260px) {
     header { width:40em; }
     header p { font-size:1.6em; }
     section, .line-inner { width:40em; }
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 900px) {
     #page { padding:2% 0; }
     section, header, .line-inner { width:auto; max-width: 20em; margin:0 auto; padding:0 2em; }
 
