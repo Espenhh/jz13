@@ -36,10 +36,18 @@ body {
     100% { -webkit-transform: scale(0.9, 0.9); }
 }
 
-.be-warm {
+.be-warm{
     color:#F15B40;
-    -webkit-animation: pulsate 1s ease-out;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation:pulsate 1s ease-out;
+       -moz-animation:pulsate 1s ease-out;
+        -ms-animation:pulsate 1s ease-out;
+         -o-animation:pulsate 1s ease-out;
+            animation:pulsate 1s ease-out;
+    -webkit-animation-iteration-count:infinite;
+       -moz-animation-iteration-count:infinite;
+        -ms-animation-iteration-count:infinite;
+         -o-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
 }
 
 .be-new {
