@@ -3,7 +3,7 @@
     position: relative;
 }
 
-header {
+.header {
     position: relative;
     width:54em;
     padding:10em 3em 4em 3em;
@@ -12,7 +12,7 @@ header {
     background-size:500px 150px;
 }
 
-header h1 a {
+.header h1 a {
     display: block;
     width:400px;
     height:70px;
@@ -22,10 +22,33 @@ header h1 a {
     border:none;
 }
 
-header p {
+.header p {
     font-size:1.8em;
     line-height:1.3;
     margin:0;
+}
+
+.section { width:54em; padding:0 3em; margin:0 auto; }
+.article { float:left; width:56%; }
+.aside { float:right; width:35%; }
+
+.line { background:#262626; padding:3em; margin-bottom:3em; }
+.line-inner { width:54em; margin:0 auto; }
+
+@media only screen and (max-width: 1260px) {
+    .header { width:40em; }
+    .header p { font-size:1.6em; }
+    .section, .line-inner { width:40em; }
+}
+
+@media only screen and (max-width: 900px) {
+    #page { padding:2% 0; }
+    .section, .header, .line-inner { width:auto; max-width: 20em; margin:0 auto; padding:0 2em; }
+
+    .header { width:auto; background-size:375px 113px; background-position: 3.5em 1em; padding:6.5em 2em 3em 2em; }
+    .header h1 a { width:296px; height:53px; margin:0 0 1.5em 0; }
+    .header p { font-size:1.2em; }
+    .section, .article, .aside { float:none; width:auto; margin-bottom:2em; }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -35,30 +58,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
-    header { background-image:url("/img/robots/bg3@2x.png"); }
-    header h1 a { background-image:url("/img/logos/javazone@2x.png"); }
+    .header { background-image:url("/img/robots/bg3@2x.png"); }
+    .header h1 a { background-image:url("/img/logos/javazone@2x.png"); }
 
-}
-
-section { width:54em; padding:0 3em; margin:0 auto; }
-article { float:left; width:56%; }
-aside { float:right; width:35%; }
-
-.line { background:#262626; padding:3em; margin-bottom:3em; }
-.line-inner { width:54em; margin:0 auto; }
-
-@media only screen and (max-width: 1260px) {
-    header { width:40em; }
-    header p { font-size:1.6em; }
-    section, .line-inner { width:40em; }
-}
-
-@media only screen and (max-width: 900px) {
-    #page { padding:2% 0; }
-    section, header, .line-inner { width:auto; max-width: 20em; margin:0 auto; padding:0 2em; }
-
-    header { width:auto; background-size:375px 113px; background-position: 3.5em 1em; padding:6.5em 2em 3em 2em; }
-    header h1 a { width:296px; height:53px; margin:0 0 1.5em 0; }
-    header p { font-size:1.2em; }
-    section, article, aside { float:none; width:auto; margin-bottom:2em; }
 }
