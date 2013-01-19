@@ -120,12 +120,12 @@ nav li.separator {
 }
 
 .topics strong i {
-    margin:0.1em 0.2em 0 -0.1em;
     color:#000;
 }
 
-.topics strong i.icon-star {
-    margin:0.1em 0 0 0;
+.icon-close {
+    margin:.4em 0 0 0;
+    float:left;
 }
 
 .topics h3 {
@@ -224,5 +224,9 @@ a.tag-big {
 a.tag-alone {
     display: block;
     text-align: center;
+    margin:0 0 2em 0;
+}
+
+.video {
     margin:0 0 2em 0;
 }

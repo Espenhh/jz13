@@ -55,5 +55,5 @@
 
 @media only screen and (max-width: 50em) {
     .hero { margin-bottom:2em; }
-    .bgf { display: none; }
+    .bg1 { display: none; }
 }
