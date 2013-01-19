@@ -5,6 +5,7 @@
 }
 
 header {
+    position: relative;
     width:54em;
     padding:10em 3em 4em 3em;
     margin:0 auto;

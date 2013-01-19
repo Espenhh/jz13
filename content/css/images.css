@@ -1,11 +1,12 @@
 .hero {
     margin:0 auto 5em auto;
     height:20em;
+    max-width:90em;
     background-size:cover;
     background-attachment: fixed;
     background-position: center top;
+    position: relative;
 }
-
 
 .hero-flam { background-image:url("/img/pics/flam.jpg"); }
 .hero-agir { background-image:url("/img/pics/agir.jpg"); }
@@ -46,6 +47,7 @@
 
 .bg1 { background-image:url("/img/robots/bg1.png"); width:450px;  height:750px; background-size:500px 750px; }
 .bg6 { background-image:url("/img/robots/bg6.png"); width:1000px; height:200px; background-size:1000px 200px; }
+.bg7 { background-image:url("/img/robots/bg7.png"); width:450px; height:500px; background-size:450px 500px; }
 
 @media only screen and (max-width: 70em) {
     .bg1 { right:-10em; }

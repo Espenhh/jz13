@@ -215,3 +215,14 @@ a.tag:hover {
 a.emph {
     font-weight: bold;
 }
+
+a.tag-big {
+    font-size:1.2em;
+    padding:.5em 1em;
+}
+
+a.tag-alone {
+    display: block;
+    text-align: center;
+    margin:0 0 2em 0;
+}
