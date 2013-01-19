@@ -1,11 +1,22 @@
 .hero {
     margin:0 auto 5em auto;
     height:20em;
-    max-width:90em;
+    max-width:120em;
     background-size:cover;
     background-attachment: fixed;
     background-position: center top;
     position: relative;
+}
+
+.hero-side {
+    width:6em;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+.hero-inner {
 }
 
 .hero-flam { background-image:url("/img/pics/flam.jpg"); }
@@ -20,6 +31,11 @@
     background-repeat: no-repeat;
     text-indent: -999em;
 }
+
+.img-list { max-width:35em; }
+.img-list img { width:150px; display: block; float:left; margin:0 1px 1px 0; }
+.img-list a img { opacity:.8; }
+.img-list a:hover img { opacity:1; }
 
 /* ------------------------------ */
 
@@ -46,6 +62,7 @@
 }
 
 .bg1 { background-image:url("/img/robots/bg1.png"); width:450px;  height:750px; background-size:500px 750px; }
+.bg5 { background-image:url("/img/robots/bg5.png"); width:525px;  height:600px; background-size:525px 600px; bottom:auto; top:0; }
 .bg6 { background-image:url("/img/robots/bg6.png"); width:1000px; height:200px; background-size:1000px 200px; }
 .bg7 { background-image:url("/img/robots/bg7.png"); width:450px; height:500px; background-size:450px 500px; }
 
