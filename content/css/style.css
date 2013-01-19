@@ -101,7 +101,7 @@ nav li.separator {
     margin:0 0 5em 0;
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 900px) {
     .text, .topics { margin-bottom:1em; }
 }
 
@@ -207,16 +207,18 @@ ul.tags li {
     display: inline;
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 900px) {
     header ul.tags { padding:1em 0; }
     header ul.tags li { display: none; }
 }
 
 a.tag {
+    display: inline-block;
     text-transform: lowercase;
     background:#F15B40;
     color:#fff;
-    padding:.2em .5em;
+    padding:.1em .5em;
+    margin:0 0.2em 0.2em 0;
     border-radius:.2em;
     white-space: nowrap;
     font-size:.9em;
