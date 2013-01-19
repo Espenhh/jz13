@@ -101,6 +101,10 @@ nav li.separator {
     margin:0 0 5em 0;
 }
 
+@media only screen and (max-width: 50em) {
+    .text, .topics { margin-bottom:1em; }
+}
+
 aside h3 {
     font-size:1em;
     font-weight: bold;
@@ -201,6 +205,11 @@ ul.tags {
 
 ul.tags li {
     display: inline;
+}
+
+@media only screen and (max-width: 50em) {
+    header ul.tags { padding:1em 0; }
+    header ul.tags li { display: none; }
 }
 
 a.tag {
