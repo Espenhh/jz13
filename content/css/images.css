@@ -45,7 +45,7 @@
     background-position: center center;
 }
 
-.bg1 { background-image:url("/img/robots/bg1.png"); width:500px;  height:750px; background-size:500px 750px; }
+.bg1 { background-image:url("/img/robots/bg1.png"); width:450px;  height:750px; background-size:500px 750px; }
 .bg6 { background-image:url("/img/robots/bg6.png"); width:1000px; height:200px; background-size:1000px 200px; }
 
 @media only screen and (max-width: 70em) {

@@ -2,13 +2,6 @@ strong {
     color:#000;
 }
 
-em {
-    background:#F15B40;
-    color:#fff;
-    padding:.2em .5em;
-    border-radius:.2em;
-}
-
 sup {
     vertical-align: text-top;
     font-size: 0.6em;
@@ -74,10 +67,10 @@ h3 {
 
 h2 i, h3 i, h4 i, h5 i, h6 i {
     margin-right:.3em;
+    color:#179D9C;
 }
 
 @media only screen and (max-width: 50em) {
     h2 { font-size:1.6em; }
     br { display: none; }
-    em { padding:0; background: none; color:inherit; }
 }
