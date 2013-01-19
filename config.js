@@ -18,11 +18,11 @@ exports.config = {
         "css/reset.css",
         "css/font-awesome.css",
         "css/elements.css",
-        "css/helpers.css",
         "css/buttons.css",
         "css/layout.css",
         "css/images.css",
-        "css/style.css"
+        "css/style.css",
+        "css/helpers.css"
       ],
       ie7: [
         "css/font-awesome-ie7.min.css"
