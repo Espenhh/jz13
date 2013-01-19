@@ -6,7 +6,6 @@ exports.config = {
 
     js: {
       all: [
-        "js/vendor/html5shiv.js",
         "js/vendor/json2.js",
         "js/vendor/underscore.js",
         "js/vendor/jquery.js",

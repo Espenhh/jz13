@@ -51,7 +51,7 @@ body {
     color:#179D9C;
 }
 
-nav {
+.nav {
     margin:0 0 3em 0;
     max-width:30em;
     -webkit-hyphens: none;
@@ -59,11 +59,11 @@ nav {
     hyphens: none;
 }
 
-aside nav {
+.aside .nav {
     max-width: 100%;
 }
 
-nav ul {
+.nav ul {
     position: relative;
     list-style-type: none;
     background: #F6F4ED;
@@ -71,26 +71,26 @@ nav ul {
     margin:0;
 }
 
-nav ul a {
+.nav ul a {
     color:#280002;
 }
 
 
-nav.main ul {
+.nav.main ul {
     background: none;
     padding:0;
 }
 
-nav i {
+.nav i {
     margin:0 .5em 0 0;
 }
 
-nav li {
+.nav li {
     display: block;
     padding:.3em 0;
 }
 
-nav li.separator {
+.nav li.separator {
     height:1em;
 }
 
@@ -105,7 +105,7 @@ nav li.separator {
     .text, .topics { margin-bottom:1em; }
 }
 
-aside h3 {
+.aside h3 {
     font-size:1em;
     font-weight: bold;
     padding:.5em 0;
@@ -207,11 +207,6 @@ ul.tags li {
     display: inline;
 }
 
-@media only screen and (max-width: 900px) {
-    header ul.tags { padding:1em 0; }
-    header ul.tags li { display: none; }
-}
-
 a.tag {
     display: inline-block;
     text-transform: lowercase;
@@ -247,3 +242,9 @@ a.tag-alone {
 .video {
     margin:0 0 2em 0;
 }
+
+@media only screen and (max-width: 900px) {
+    .header ul.tags { padding:1em 0; }
+    .header ul.tags li { display: none; }
+}
+
