@@ -78,4 +78,5 @@
 
 @media only screen and (max-width: 50em) {
     .bg1 { display: none; }
+    .hero { background-attachment: scroll; margin-bottom:3em; }
 }

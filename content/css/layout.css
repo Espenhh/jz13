@@ -1,7 +1,6 @@
 #page {
     padding:0 0 5% 0;
     position: relative;
-    min-width:30em;
 }
 
 header {
@@ -55,10 +54,10 @@ aside { float:right; width:35%; }
 
 @media only screen and (max-width: 50em) {
     #page { padding:2% 0; }
-    section, header, .line-inner { width:auto; max-width: 25em; margin:0 auto; padding:0 2em; }
+    section, header, .line-inner { width:auto; max-width: 20em; margin:0 auto; padding:0 2em; }
 
-    header { width:auto; background-size:375px 113px; background-position: 4.5em 1em; padding:6.5em 2em 3em 2em; }
-    header a { width:296px; height:53px; margin:0 0 1.5em 0; }
+    header { width:auto; background-size:375px 113px; background-position: 3.5em 1em; padding:6.5em 2em 3em 2em; }
+    header h1 a { width:296px; height:53px; margin:0 0 1.5em 0; }
     header p { font-size:1.2em; }
     section, article, aside { float:none; width:auto; margin-bottom:2em; }
 }
