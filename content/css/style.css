@@ -248,3 +248,8 @@ a.tag-alone {
     .header ul.tags li { display: none; }
 }
 
+.credits {
+    font-size:.9em;
+    padding:2em 0;
+    text-align: center;
+}
