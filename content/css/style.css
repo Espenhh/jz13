@@ -101,7 +101,7 @@ body {
     margin:0 0 5em 0;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 850px) {
     .text, .topics { margin-bottom:1em; }
 }
 
@@ -133,12 +133,12 @@ body {
 
 .topics strong i {
     color:#000;
-    padding:0 .3em 0 0;
+    padding:0 .1em 0 0;
 }
 
 .icon-close {
     padding:0;
-    margin:.4em 0 0 0;
+    margin:.4em -0.3em 0 0;
     float:left;
 }
 
@@ -215,7 +215,7 @@ a.tag {
     background:#F15B40;
     color:#fff;
     padding:.1em .5em;
-    margin:0 0.2em 0.2em 0;
+    margin:0 0 0.2em 0;
     border-radius:.2em;
     white-space: nowrap;
     font-size:.9em;
@@ -246,7 +246,7 @@ a.tag-alone {
     margin:0 0 2em 0;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 850px) {
     .header ul.tags { padding:1em 0; }
     .header ul.tags li { display: none; }
 }

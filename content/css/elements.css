@@ -70,7 +70,7 @@ h2 i, h3 i, h4 i, h5 i, h6 i {
     color:#179D9C;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 850px) {
     h2 { font-size:1.6em; }
     br { display: none; }
 }

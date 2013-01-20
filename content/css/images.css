@@ -72,11 +72,11 @@
 .bg6 { background-image:url("/img/robots/bg6.png"); width:1000px; height:200px; background-size:1000px 200px; }
 .bg7 { background-image:url("/img/robots/bg7.png"); width:450px; height:500px; background-size:450px 500px; }
 
-@media only screen and (max-width: 1260px) {
-    .bg1 { right:-10em; }
+@media only screen and (max-width: 1100px) {
+    .bg1 { right:-8em; }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 850px) {
     .bg1 { display: none; }
     .hero { background-attachment: scroll; margin-bottom:3em; }
 }

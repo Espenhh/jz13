@@ -39,15 +39,15 @@
 .line { background:#262626; padding:3em; margin-bottom:3em; }
 .line-inner { width:54em; margin:0 auto; }
 
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 1100px) {
     .header { width:40em; }
     .header p { font-size:1.6em; }
     .section, .line-inner { width:40em; }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 850px) {
     #page { padding:2% 0; }
-    .section, .header, .line-inner { width:auto; max-width: 20em; margin:0 auto; padding:0 2em; }
+    .section, .header, .line-inner { width:auto; max-width: 25em; margin:0 auto; padding:0 2em; }
 
     .header { width:auto; background-size:375px 113px; background-position: 3.5em 1em; padding:6.5em 2em 3em 2em; }
     .header h1 a { width:296px; height:53px; margin:0 0 1.5em 0; }
