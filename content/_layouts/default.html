@@ -22,11 +22,6 @@
 <div id="container">
 <div id="page">
 
-<div class="skiplinks hidden">
-    <!-- <a tabindex="-1" href="#menu" title="Skip to navigation">Skip to navigation</a> -->
-    <a tabindex="-1" href="#main" title="Skip to content">Skip to content</a>
-</div>
-
 <%= content %>
 <div class="clear"></div>
 
@@ -42,9 +37,11 @@
   _gaq.push(['_trackPageview']);
 
   (function() {
+    if(window.googleAnalyticsInjected) return;
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    window.googleAnalyticsInjected = true;
   })();
 
 </script>

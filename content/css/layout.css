@@ -10,13 +10,27 @@
 .header {
     position: relative;
     width:54em;
-    padding:10em 3em 4em 3em;
+    padding:0 3em 4em 3em;
     margin:0 auto;
-    background:url("/img/robots/bg3.png") 6em 3em no-repeat;
-    background-size:500px 150px;
 }
 
 .header h1 a {
+    display: block;
+    background:url("/img/robots/bg3.png") 3em 3em no-repeat;
+    background-size:500px 150px;
+    padding:10em 0 0 0;
+    border:none;
+}
+
+.header h1 a:hover,
+.header h1 a:focus,
+.header h1 a:active {
+    border:none;
+    outline:none;
+}
+
+.header h1 span {
+    text-indent: -999em;
     display: block;
     width:400px;
     height:70px;
@@ -49,8 +63,9 @@
     #page { padding:2% 0; }
     .section, .header, .line-inner { width:auto; max-width: 25em; margin:0 auto; padding:0 2em; }
 
-    .header { width:auto; background-size:375px 113px; background-position: 3.5em 1em; padding:6.5em 2em 3em 2em; }
-    .header h1 a { width:296px; height:53px; margin:0 0 1.5em 0; }
+    .header { width:auto; padding:0 2em 3em 2em; }
+    .header h1 a { background-size:375px 113px; background-position: 2em 1em; padding-top:6em; }
+    .header h1 span { width:296px; height:53px; margin:0 0 1.5em 0; }
     .header p { font-size:1.2em; }
     .section, .article, .aside { float:none; width:auto; margin-bottom:2em; }
 }
@@ -62,7 +77,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
-    .header { background-image:url("/img/robots/bg3@2x.png"); }
-    .header h1 a { background-image:url("/img/logos/javazone@2x.png"); }
+    .header h1 a { background-image:url("/img/robots/bg3@2x.png"); }
+    .header h1 span { background-image:url("/img/logos/javazone@2x.png"); }
 
 }
