@@ -24,6 +24,7 @@ jz.utils.addSupportClasses = function() {
     var handheld = jz.utils.agent("iPad", "Tablet") || mobile;
     if(mobile)   $("html").addClass("support-mobile");
     if(handheld) $("html").addClass("support-handheld");
+    $("html").addClass("loaded");
 };
 
 jz.utils.agent = function() {
