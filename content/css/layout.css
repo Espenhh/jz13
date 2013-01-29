@@ -63,10 +63,11 @@
     #page { padding:2% 0; }
     .section, .header, .line-inner { width:auto; max-width: 25em; margin:0 auto; padding:0 2em; }
 
-    .header { width:auto; padding:0 2em 3em 2em; }
+    .header { width:auto; padding:0 0 0 2em; }
     .header h1 a { background-size:375px 113px; background-position: 2em 1em; padding-top:6em; }
     .header h1 span { width:296px; height:53px; margin:0 0 1.5em 0; }
-    .header p { font-size:1.2em; }
+    .header p { font-size:1.2em; padding:0 2em 2em 0; }
+    .header.last p { padding-bottom:0; }
     .section, .article, .aside { float:none; width:auto; margin-bottom:2em; }
 }
 
