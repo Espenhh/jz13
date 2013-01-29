@@ -57,6 +57,7 @@ $(function() {
 });
 
 jz.data.partners = [
+    ["ViaNett", "vianett_2013.jpg", "http://www.vianett.no"],
     ["Systek", "systek_2012.jpg", "http://www.systek.no/"],
     ["Arktekk", "arktekk_2012.jpg", "http://www.arktekk.no/"],
     ["NETS", "nets_2012.jpg", "http://www.nets.no/"],
