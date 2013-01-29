@@ -1,3 +1,5 @@
+/*global window, navigator, jz, $, _ */
+
 window.jz = {
     utils: {},
     routes: {},
@@ -6,8 +8,8 @@ window.jz = {
 
 jz.utils.shuffle = function(array) {
     var i = array.length, j, tempi, tempj;
-    if ( i == 0 ) return false;
-    while ( --i ) {
+    if(i === 0) return false;
+    while(--i) {
         j = Math.floor( Math.random() * ( i + 1 ) );
         tempi = array[i];
         tempj = array[j];
@@ -15,6 +17,19 @@ jz.utils.shuffle = function(array) {
         array[j] = tempi;
     }
     return array;
+};
+
+jz.utils.addSupportClasses = function() {
+    var mobile   = jz.utils.agent("Android", "webOS", "iPhone", "iPod", "BlackBerry", "IEMobile");
+    var handheld = jz.utils.agent("iPad", "Tablet") || mobile;
+    if(mobile)   $("html").addClass("support-mobile");
+    if(handheld) $("html").addClass("support-handheld");
+};
+
+jz.utils.agent = function() {
+    return _.any(_.toArray(arguments), function(s) {
+        return !!navigator.userAgent.match(s);
+    });
 };
 
 jz.routes.go = function() {
@@ -37,6 +52,7 @@ jz.routes.partners = function() {
 };
 
 $(function() {
+    jz.utils.addSupportClasses();
     jz.routes.go();
 });
 
