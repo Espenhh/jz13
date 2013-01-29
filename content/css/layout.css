@@ -4,7 +4,7 @@
 }
 
 #page {
-    padding:0 0 2% 0;
+    padding:0 0 2em 0;
 }
 
 .header {
@@ -12,6 +12,10 @@
     width:54em;
     padding:0 3em 4em 3em;
     margin:0 auto;
+}
+
+.header h1 {
+    font-size:1em;
 }
 
 .header h1 a {
@@ -46,12 +50,16 @@
     margin:0;
 }
 
-.section { width:54em; padding:0 3em; margin:0 auto 5em auto; }
+.section { width:54em; padding:0 3em 2em 3em; margin:0 auto 0 auto; }
 .article { float:left; width:56%; }
 .aside { float:right; width:35%; }
 
 .line { background:#262626; padding:3em; margin-bottom:3em; }
 .line-inner { width:54em; margin:0 auto; }
+
+
+footer { background:#303030; padding:2em; }
+.footer-inner { max-width:54em; margin:0 auto; }
 
 @media only screen and (max-width: 1100px) {
     .header { width:40em; }
@@ -60,15 +68,15 @@
 }
 
 @media only screen and (max-width: 850px) {
-    #page { padding:2% 0; }
+    #page { padding:2% 0 0 0; }
     .section, .header, .line-inner { width:auto; max-width: 25em; margin:0 auto; padding:0 2em; }
 
-    .header { width:auto; padding:0 0 0 2em; }
+    .header { width:auto; padding:0 0 0 2em; max-width: 27em; }
     .header h1 a { background-size:375px 113px; background-position: 2em 1em; padding-top:6em; }
     .header h1 span { width:296px; height:53px; margin:0 0 1.5em 0; }
     .header p { font-size:1.2em; padding:0 2em 2em 0; }
     .header.last p { padding-bottom:0; }
-    .section, .article, .aside { float:none; width:auto; margin-bottom:2em; }
+    .section, .article, .aside { float:none; width:auto; margin-bottom:2em; padding-bottom:0; }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

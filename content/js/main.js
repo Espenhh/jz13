@@ -42,14 +42,17 @@ jz.routes.go = function() {
 };
 
 jz.view.partners = function() {
-    var partners = jz.utils.shuffle(jz.data.partners);
-    $("#partners").empty();
-    _.each(partners, function(partner, i) {
-        $("#partners").prepend($("<a />")
-            .attr("href", partners[i][2]).attr("target", "_blank")
-            .html($("<img />")
-                .attr("src", "img/partners/" + partners[i][1])
-                .attr("alt", partners[i][0])));
+    if($(".partners").size() === 0) return;
+    $(".partners").empty().each(function(i, el) {
+        var partners = jz.utils.shuffle(jz.data.partners);
+        var limit = parseInt($(el).attr("data-limit"), 10) || 1000;
+        _.each(partners, function(partner, i) {
+            if(i + 1 > limit) return;
+            var img = $("<img />").attr("src", "img/partners/" + partners[i][1]).attr("alt", partners[i][0]);
+            var lnk = $("<a />").html(img).attr("href", partners[i][2]).attr("target", "_blank");
+            if($(el).attr("data-internal")) $(lnk).attr("href", "/partners.html").attr("target", "");
+            $(el).prepend(lnk);
+        });
     });
 };
 

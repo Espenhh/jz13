@@ -53,6 +53,7 @@
     display: block;
     float:left;
     margin:0 .3em .3em 0;
+    border-radius: 2px;
     -webkit-transition: all 100ms ease-in-out;
     -moz-transition: all 100ms ease-in-out;
     -ms-transition: all 100ms ease-in-out;
@@ -61,6 +62,7 @@
 }
 
 .img-list a:hover {
+    opacity: 1;
     border-color:#000;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
@@ -68,7 +70,26 @@
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
-.img-list img { width:130px; height:58px; display: block; }
+
+.img-list img {
+    width:130px;
+    height:58px;
+    display: block;
+    border-radius: 2px;
+}
+
+.img-list-small {
+    max-width:35em;
+}
+
+.img-list-small a {
+    border:none;
+    opacity: .2;
+}
+
+.img-list-small img {
+    border-radius: 2px;
+}
 
 /* ------------------------------ */
 
@@ -89,7 +110,8 @@
 
 .bgc {
     position: static;
-    margin: 2em auto;
+    margin: 0 auto;
+    padding:2em 0;
     max-width: 100%;
     background-position: center center;
 }
@@ -101,6 +123,7 @@
 
 @media only screen and (max-width: 1100px) {
     .bg1 { background-position: 120px 0; }
+    .img-list-small { max-width:30em; }
 }
 
 @media only screen and (max-width: 850px) {
