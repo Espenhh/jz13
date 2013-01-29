@@ -100,7 +100,7 @@
 .bg7 { background-image:url("/img/robots/bg7.png"); width:450px; height:500px; background-size:450px 500px; }
 
 @media only screen and (max-width: 1100px) {
-    .bg1 { right:-8em; }
+    .bg1 { background-position: 120px 0; }
 }
 
 @media only screen and (max-width: 850px) {
