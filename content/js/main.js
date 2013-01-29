@@ -84,13 +84,7 @@ jz.data.partners = [
     ["Webstep", "wepstep_2012.jpg", "http://www.webstep.no/"],
     ["Skatteetaten", "skatteetaten_2012.jpg", "http://www.skatteetaten.no/"],
     ["Inmeta", "inmeta_2012.jpg", "http://www.inmetacrayon.no/"],
-    ["NITH", "nith_2012.jpg", "http://www.nith.no/"],
     ["Conduct", "conduct_2012.jpg", "http://www.conduct.no"],
     ["Computas", "computas_2012.jpg", "http://www.computas.no/"]
-
-    //["Evry", "evry_2012.jpg", "http://www.evry.com/"],
-    //["Iterate", "iterate_2012.jpg", "http://www.iterate.no/"],
-    //["Norgesgruppen", "norgesgruppen_2012.jpg", "http://www.norgesgruppen.no/"],
-    //["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"],
 ];
 
