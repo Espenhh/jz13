@@ -3,7 +3,8 @@
 window.jz = {
     utils: {},
     routes: {},
-    data: {}
+    data: {},
+    view: {}
 };
 
 jz.utils.shuffle = function(array) {
@@ -40,7 +41,7 @@ jz.routes.go = function() {
     if(jz.routes[name]) jz.routes[name]();
 };
 
-jz.routes.partners = function() {
+jz.view.partners = function() {
     var partners = jz.utils.shuffle(jz.data.partners);
     $("#partners").empty();
     _.each(partners, function(partner, i) {
@@ -54,6 +55,7 @@ jz.routes.partners = function() {
 
 $(function() {
     jz.utils.addSupportClasses();
+    jz.view.partners();
     jz.routes.go();
 });
 
