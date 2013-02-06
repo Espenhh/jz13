@@ -87,7 +87,7 @@ jz.data.partners = [
     ["Systek", "systek_2012.jpg", "http://www.systek.no/"],
     ["ViaNett", "vianett_2013.jpg", "http://www.vianett.no"],
     ["Visma", "visma_2012.jpg", "http://www.visma.no/"],
-    ["Webstep", "wepstep_2012.jpg", "http://www.webstep.no/"],
+    ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
     ["Skatteetaten", "skatteetaten_2012.jpg", "http://www.skatteetaten.no/"],
     ["Inmeta", "inmeta_2012.jpg", "http://www.inmetacrayon.no/"],
     ["Conduct", "conduct_2012.jpg", "http://www.conduct.no"],
