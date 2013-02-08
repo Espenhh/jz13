@@ -78,7 +78,7 @@ jz.data.partners = [
     ["Kantega", "kantega_2012.jpg", "http://www.kantega.no/"],
     ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"],
     ["Kodemaker", "kodemaker_2012.jpg", "http://www.kodemaker.no/"],
-    ["Marcello", "marcello_2012.jpg", "http://www.marcello.no/"],
+    ["Marcello", "marcello_2013.jpg", "http://www.marcello.no/"],
     ["Mesan", "mesan_2012.jpg", "http://www.mesan.no/"],
     ["Microsoft", "microsoft_2012.jpg", "http://www.microsoft.no/"],
     ["Miles", "miles_2012.jpg", "http://www.miles.no/"],
