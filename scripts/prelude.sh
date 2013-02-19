@@ -9,7 +9,7 @@ if ! _command_exists pacman ; then
     exit 2
 fi
 
-if [ "$(pacman -V)" != "0.10.4" ]; then
+if [ "$(pacman -V)" != "0.10.5" ]; then
     echo -e "\nUpdating pacman..."
     npm install pacman -g
 fi
