@@ -91,6 +91,9 @@ jz.data.partners = [
     ["Skatteetaten", "skatteetaten_2012.jpg", "http://www.skatteetaten.no/"],
     ["Inmeta", "inmeta_2012.jpg", "http://www.inmetacrayon.no/"],
     ["Conduct", "conduct_2012.jpg", "http://www.conduct.no"],
-    ["Computas", "computas_2012.jpg", "http://www.computas.no/"]
+    ["Computas", "computas_2012.jpg", "http://www.computas.no/"],
+    ["Iterate", "stolt_partner_iterate.jpg", "http://www.iterate.no/"],
+    ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
+    ["Decisive", "stolt_partner_decisive.jpg", "http://www.decisive.no/"]
 ];
 
