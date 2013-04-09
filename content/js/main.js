@@ -71,7 +71,7 @@ jz.data.partners = [
     ["Ciber", "ciber_2012.jpg", "http://www.ciber.no/"],
     ["Cisco", "cisco_2012.jpg", "http://www.cisco.com/"],
     ["NITH", "nith_2012.jpg", "http://nith.no/"],
-    ["Conax", "conax_2012.jpg", "http://www.conax.no/"],
+    ["Conax", "stolt_partner_conax.jpg", "http://www.conax.no/"],
     ["Finn.no", "finn_2012.jpg", "http://www.finn.no"],
     ["Itera", "itera_2012.jpg", "http://www.iteraconsulting.no/"],
     ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"],
