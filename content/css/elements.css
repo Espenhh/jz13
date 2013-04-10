@@ -80,3 +80,7 @@ h2 i, h3 i, h4 i, h5 i, h6 i {
     h2 { font-size:1.6em; }
     br { display: none; }
 }
+
+p.small {
+    font-size: 0.7em;
+}

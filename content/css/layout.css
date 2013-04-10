@@ -91,3 +91,19 @@ only screen and (                min-resolution: 2dppx) {
     .header h1 span { background-image:url("/img/logos/javazone@2x.png"); }
 
 }
+
+
+.numbers {
+    margin: 0 0 30px 0;
+}
+.numbers .number {
+    float: left;
+    width: 180px;
+    text-align: center;
+    font-style: italic;
+}
+.numbers .number span {
+    display: block;
+    font-style: normal;
+    font-size: 4em;
+}
