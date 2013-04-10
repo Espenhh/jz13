@@ -49,6 +49,10 @@ ul, ol {
     line-height:1.8;
 }
 
+ol.numbered {
+	list-style-type: decimal;
+}
+
 h2 {
     font-weight: bold;
     font-size:1.6em;
