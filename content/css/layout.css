@@ -111,13 +111,3 @@ only screen and (                min-resolution: 2dppx) {
 .separator {
     height: 50px;
 }
-
-.urgent {
-    background: rgb(143, 0, 38);
-    border-radius: 15px;
-    color: white;
-    font-weight: bold;
-    font-size: 0.8em;
-    padding: 4px 15px;
-    margin: 0 0 0 10px;
-}

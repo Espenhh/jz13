@@ -210,11 +210,11 @@ ul.tags li {
     display: inline;
 }
 
-a.tag {
+.tag {
     display: inline-block;
     text-transform: lowercase;
     background:#F15B40;
-    color:#fff;
+    color:#fff !important;
     padding:.1em .5em;
     margin:0 0 0.2em 0;
     border-radius:.2em;
@@ -224,23 +224,30 @@ a.tag {
     border:none;
 }
 
-a.tag:hover {
+.tag:hover {
     background: #189D9C;
 }
 
-a.emph {
+.emph {
     font-weight: bold;
 }
 
-a.tag-big {
+.tag-big {
     font-size:1.2em;
     padding:.5em 1em;
 }
 
-a.tag-alone {
+.tag-alone {
     display: block;
     text-align: center;
     margin:0 0 2em 0;
+}
+
+.tag-notice {
+    color:#fff;
+    background: #ffad32;
+    margin:0 0 0 1em;
+    font-size:.8em;
 }
 
 .video {
