@@ -95,6 +95,7 @@ jz.data.partners = [
     ["Iterate", "stolt_partner_iterate.jpg", "http://www.iterate.no/"],
     ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
     ["Decisive", "stolt_partner_decisive.jpg", "http://www.decisive.no/"],
-    ["Esito", "stolt_partner_esito.jpg", "http://www.esito.no/"]
+    ["Esito", "stolt_partner_esito.jpg", "http://www.esito.no/"],
+    ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"]
 ];
 
