@@ -85,7 +85,7 @@ a:hover { color:#000; border-color:#000; }
 
 
 
-ul.tags { padding:1em 0; }
+ul.tags { padding:1em 0 3em 0; clear: both; }
 ul.tags li { display: inline; }
 .tag { display: inline-block; text-transform: lowercase; background:#F15B40; color:#fff !important;
     padding:.5em .5em; margin:0 0 0.2em 0; border-radius:.2em;
@@ -98,5 +98,6 @@ ul.dates strong { color:#F15B40; }
 
 ul.links li { line-height: 2; }
 
-
+ul.contact li { line-height:1.65; position: relative; }
+ul.contact strong { display: inline-block; text-align: right; width:200px; padding:0 1em 0 0; color:#000; }
 
