@@ -9,11 +9,12 @@
 }
 
 .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.png"); width:350px; height:88px; }
-
-.tile-map { background-image:url("/assets/img/maps/spektrum.png"); }
-.tile-intro { background-image:url("/assets/img/pics/topdown.jpg"); }
-.tile-video { background-image:url("/assets/img/pics/stand.jpg"); }
-.tile-agir { background-image:url("/assets/img/pics/agir.jpg"); }
+.img-map { background-image:url("/assets/img/maps/spektrum.png"); }
+.img-intro { background-image:url("/assets/img/pics/topdown.jpg"); }
+.img-video { background-image:url("/assets/img/pics/stand.jpg"); }
+.img-agir { background-image:url("/assets/img/pics/agir.jpg"); }
+.img-awezone { background-image:url("/assets/img/pics/awezone2.jpg"); }
+.img-workshop { background-image:url("/assets/img/pics/workshop.jpg"); }
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -24,7 +25,7 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
     .img-logo { background-image:url("/assets/img/logos/javazone.horizontal@2x.png"); }
-
-    .tile-map { background-image:url("/assets/img/maps/spektrum@2x.png"); }
+    .img-map { background-image:url("/assets/img/maps/spektrum@2x.png"); }
+    .img-workshop { background-image:url("/assets/img/pics/workshop@2x.jpg"); }
 
 }
