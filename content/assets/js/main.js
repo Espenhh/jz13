@@ -48,7 +48,7 @@ jz.view.partners = function() {
         var limit = parseInt($(el).attr("data-limit"), 10) || 1000;
         _.each(partners, function(partner, i) {
             if(i + 1 > limit) return;
-            var img = $("<img />").attr("src", "img/partners/" + partners[i][1]).attr("alt", partners[i][0]);
+            var img = $("<img />").attr("src", "/assets/img/partners/" + partners[i][1]).attr("alt", partners[i][0]);
             var lnk = $("<a />").html(img).attr("href", partners[i][2]).attr("target", "_blank");
             if($(el).attr("data-internal")) $(lnk).attr("href", "/partners.html").attr("target", "");
             $(el).prepend(lnk);

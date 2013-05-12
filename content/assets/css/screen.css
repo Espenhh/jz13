@@ -28,8 +28,8 @@ body {
     position: relative;
 }
 
-h2 { font-size:1.2em; margin:0 0 1.5em 0; line-height: 1.2; color:#000; font-weight: bold; }
-h3 { font-size:1.2em; color:#000; margin:0 0 1em 0; line-height: 1.5; max-width: 30em; }
+h2 { font-size:1.2em; margin:2em 0 1.5em 0; line-height: 1.2; color:#000; font-weight: bold; }
+h3 { font-size:1.2em; color:#000; margin:2em 0 1em 0; line-height: 1.5; max-width: 30em; }
 h4 { font-size:.8em; text-transform: uppercase; font-weight: bold; color:#000; margin:0 0 .5em 0; }
 h2 i, h3 i { margin:0 .3em 0 0; }
 
@@ -87,8 +87,11 @@ a:hover { color:#000; border-color:#000; }
 .tile-dates h2 { color:#fff; }
 .tile-dates strong { font-weight: bold; }
 
+.tile-partners .tile-inner { background:#303030; height:auto; text-align: center; min-height:280px; }
+.tile-partners a { border:none; }
+.tile-partners img { width:110px; display: inline-block; margin:.5em; }
 
-ul.tags { padding:1em 0 3em 0; clear: both; }
+ul.tags { padding:1em 0; clear: both; }
 ul.tags li { display: inline; }
 .tag { display: inline-block; text-transform: lowercase; background:#F15B40; color:#fff !important;
     padding:.5em .5em; margin:0 0 0.2em 0; border-radius:.2em;
@@ -103,3 +106,9 @@ ul.links li { line-height: 2; }
 ul.contact li { line-height:1.65; position: relative; }
 ul.contact strong { display: inline-block; text-align: right; width:200px; padding:0 1em 0 0; color:#000; }
 
+ul.list { line-height: 1.8; }
+ul.list i { margin:0 .5em 0 0; }
+
+.numbers { width:100%; margin:3em -50px 3em -50px; padding:20px 50px; background:#F15B40; color:#fff; }
+.numbers .number { float:left; text-align: center; font-size:1.4em; width:33.333%; padding:30px 0; }
+.numbers .number span { font-size:2em; display: block; margin:0 0 .3em 0; font-weight: bold; }
