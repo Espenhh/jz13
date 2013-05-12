@@ -1,54 +1,40 @@
 <%= partial("_partials/menu.html") %>
 
-<div class="col col-main"><div class="col-inner">
+<div class="tiles-outer">
 
-    <h3 class="first"><i class="icon-globe"></i> Great sights with great people</h3>
+<ul class="tiles tiles-main">
 
-    <p>We are arranging JourneyZone on September 13th-15th, the first weekend after JavaZone. This is our fourth annual journey into the Norwegian wilderness. We would like to exclusively invite speakers to explore the Norwegian nature, enjoy the very best of Norwegian food and have a great time together.</p>
-    <p>To ensure safety and exclusivity, this journey is limited to 30 participants on a first come, first served basis. JavaZone will subsidize the journey with qualified guides to ensure the best possible experience. Your personal expenses will be around NOK 1500. More information about the trips destination, departure and arrival times to Oslo will be provided.</p>
+    <li class="tile tile-big"><a href="/info.html" class="tile-inner tile-intro">
+        <span class="extra">
+            Join thousands of devs at our next conference.<br>
+            11–12th September 2013, in Oslo Spektrum.
+        </span>
+    </a></li>
 
-    <h3><i class="icon-camera-retro"></i> Soak up some inspiration</h3>
+    <li class="tile"><a href="/info.html" class="tile-inner tile-map">
+        <span class="extra">
+            <i class="icon icon-chevron-sign-right"></i>
+            Oslo Spektrum, Norway
+        </span>
+    </a></li>
 
-    <p>
-    To see what this is all about, take a look at the pic­tures from <a href="http://www.flickr.com/photos/philwills/sets/72157631638077768/with/8030820679/">last years JourneyZone</a>. JourneyZone has been a tradition for many years, here are some pictures from <a rel="nofollow" class="external-link" href="http://picasaweb.google.com/andreas.roe/201009JourneyZone?authkey=Gv1sRgCMHcycO1io6h1QE&amp;feat=directlink">Jour­ney­Zone 2010</a>.
-    Some ad­di­tional pic­tures can be found in
-    <a rel="nofollow" class="external-link" href="http://www.idg.no/computerworld/article220078.ece">Com­put­er­world</a>
-    (nor­we­gian).
-    </p>
+    <li class="tile"><a href="/toptalks.html" class="tile-inner tile-video">
+        <span class="extra">
+            <i class="icon icon-chevron-sign-right"></i>
+            Videos of previous talks
+        </span>
+    </a></li>
 
-    <h3><i class="icon-heart"></i> How to register</h3>
+</ul>
 
-    <p>
-    JourneyZone is a trip exclusively for speakers of full presentations. We will send out information to the speakers on how to register
-    for the trip after the program is finished. The 30 slots on the trip is filled on a first come first served basis.
-    If you have any ques­tions, get in touch with us at:
-    </p>
+<div class="tiles tiles-side">
+    <div class="tile tile-big tile-tall"><div class="tile-inner tile-tweets">
+        <%= partial("_partials/tweets.html") %>
+    </div></div>
+</div>
 
-    <p>We are arranging JourneyZone on September 13th-15th, the first weekend after JavaZone. This is our fourth annual journey into the Norwegian wilderness. We would like to exclusively invite speakers to explore the Norwegian nature, enjoy the very best of Norwegian food and have a great time together.</p>
-    <p>To ensure safety and exclusivity, this journey is limited to 30 participants on a first come, first served basis. JavaZone will subsidize the journey with qualified guides to ensure the best possible experience. Your personal expenses will be around NOK 1500. More information about the trips destination, departure and arrival times to Oslo will be provided.</p>
+<div class="clear"></div>
 
-</div></div>
+</div>
 
-<div class="col col-side"><div class="col-inner">
-    <p class="tweet">
-        <strong>@foobar:</strong> This years JavaZone is over, thank you for visiting! We hope you had a great time and that we will see you back next year. <em>2 hours ago.</em>
-    </p>
-    <p class="tweet">
-        <strong>@maxbar:</strong> We are always looking out for things to improve, so if you have any suggestions send them to javazone@java.no. <em>3 hours ago.</em>
-    </p>
-    <p class="tweet">
-        <strong>@javabin:</strong> Over 30 large and mid-sized companies – our partners – exhibit their brand and services/products during the conference. <em>3 hours ago.</em>
-    </p>
-    <p class="tweet">
-        <strong>@vandelay:</strong> Found a bug, want a new feature? The code for both Androidito and Iphonito can be found on GitHub! <em>5 hours ago.</em>
-    </p>
-    <p class="tweet">
-        <strong>@foobar:</strong> This years JavaZone is over, thank you for visiting! We hope you had a great time and that we will see you back next year. <em>2 hours ago.</em>
-    </p>
-    <p class="tweet">
-        <strong>@maxbar:</strong> We are always looking out for things to improve, so if you have any suggestions send them to javazone@java.no. <em>3 hours ago.</em>
-    </p>
-    <p class="tweet">
-        <strong>@javabin:</strong> Over 30 large and mid-sized companies – our partners – exhibit their brand and services/products during the conference. <em>3 hours ago.</em>
-    </p>
-</div></div>
+<%= partial("_partials/footer.html") %>
