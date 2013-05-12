@@ -13,6 +13,7 @@
 .tile-map { background-image:url("/img/maps/spektrum.png"); }
 .tile-intro { background-image:url("/img/pics/topdown.jpg"); }
 .tile-video { background-image:url("/img/pics/stand.jpg"); }
+.tile-agir { background-image:url("/img/pics/agir.jpg"); }
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

@@ -28,8 +28,9 @@ body {
     position: relative;
 }
 
-h2 { font-size:1.2em; margin:0 0 1em 0; line-height: 1.2; color:#000; font-weight: bold; }
+h2 { font-size:1.2em; margin:0 0 1.5em 0; line-height: 1.2; color:#000; font-weight: bold; }
 h3 { font-size:1.2em; color:#000; margin:0 0 1em 0; line-height: 1.5; max-width: 30em; }
+h4 { font-size:.8em; text-transform: uppercase; font-weight: bold; color:#000; margin:0 0 .5em 0; }
 h2 i, h3 i { margin:0 .3em 0 0; }
 
 p { margin:0 0 1em 0; line-height: 1.5; max-width: 40em; }
@@ -79,20 +80,21 @@ a:hover { color:#000; border-color:#000; }
 .tweet { margin:0 0 1.7em 0; font-size:1em; color:#fff; }
 .tweet strong { font-weight: bold; color:#fff; }
 
-.tile-txt .tile-inner { height:auto; background:#fff; }
+.tile-txt {  }
+.tile-txt .tile-inner { height:auto; }
 
 
 
-ul.tags { }
+ul.tags { padding:1em 0; }
 ul.tags li { display: inline; }
 .tag { display: inline-block; text-transform: lowercase; background:#F15B40; color:#fff !important;
     padding:.5em .5em; margin:0 0 0.2em 0; border-radius:.2em;
     white-space: nowrap; font-size:.9em; font-weight: 600; border:none; }
 .tag:hover { background: #189D9C; }
 
-ul.dates { margin:-.5em 0 2em 2em; }
-ul.dates li { line-height: 2; }
-ul.dates strong { font-weight: bold; }
+ul.dates { margin:0 0 2em 0; font-size:.9em; }
+ul.dates li { line-height: 1; padding:.5em 0; }
+ul.dates strong { color:#F15B40; }
 
 ul.links li { line-height: 2; }
 
