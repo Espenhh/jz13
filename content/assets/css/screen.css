@@ -38,9 +38,9 @@ p { margin:0 0 1em 0; line-height: 1.5; max-width: 40em; }
 a { color:#F15B40; text-decoration: none; border-bottom:1px solid rgba(0,0,0,0.1); }
 a:hover { color:#000; border-color:#000; }
 
-.menu { padding:4em 4em 3em 4em; }
+.menu { padding:50px 50px 50px 70px; }
 .menu h1 a { border:none; }
-.menu ul { position: absolute; top:4em; right:4em; }
+.menu ul { position: absolute; top:50px; right:60px; }
 .menu li { line-height: 2.5; display: inline; margin:0 0 0 2em; }
 .menu ul a { color:#394549; font-size:2em; }
 .menu .active a { color:#000; }
