@@ -8,12 +8,12 @@
     height:128px;
 }
 
-.img-logo { background-image:url("/img/logos/javazone.horizontal.png"); width:350px; height:88px; }
+.img-logo { background-image:url("/assets/img/logos/javazone.horizontal.png"); width:350px; height:88px; }
 
-.tile-map { background-image:url("/img/maps/spektrum.png"); }
-.tile-intro { background-image:url("/img/pics/topdown.jpg"); }
-.tile-video { background-image:url("/img/pics/stand.jpg"); }
-.tile-agir { background-image:url("/img/pics/agir.jpg"); }
+.tile-map { background-image:url("/assets/img/maps/spektrum.png"); }
+.tile-intro { background-image:url("/assets/img/pics/topdown.jpg"); }
+.tile-video { background-image:url("/assets/img/pics/stand.jpg"); }
+.tile-agir { background-image:url("/assets/img/pics/agir.jpg"); }
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -23,8 +23,8 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
-    .img-logo { background-image:url("/img/logos/javazone.horizontal@2x.png"); }
+    .img-logo { background-image:url("/assets/img/logos/javazone.horizontal@2x.png"); }
 
-    .tile-map { background-image:url("/img/maps/spektrum@2x.png"); }
+    .tile-map { background-image:url("/assets/img/maps/spektrum@2x.png"); }
 
 }

@@ -16,17 +16,17 @@ exports.config = {
         "components/eventemitter2/lib/eventemitter2.js",
         "components/dispatch/dispatch.js",
         "components/jquery/jquery.js",
-        "js/main.js"
+        "assets/js/main.js"
       ]
     },
 
     css: {
       all: [
-        "css/reset.css",
-        "css/font-awesome.css",
-        "css/images.css",
-        "css/helpers.css",
-        "css/screen.css"
+        "assets/css/reset.css",
+        "assets/css/font-awesome.css",
+        "assets/css/images.css",
+        "assets/css/helpers.css",
+        "assets/css/screen.css"
       ]
     }
 
