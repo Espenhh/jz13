@@ -109,6 +109,8 @@ ul.dates { margin:0 0 2em 0; font-size:.9em; }
 ul.dates li { line-height: 1; padding:.5em 0; }
 
 ul.links li { line-height: 2; }
+ul.links li a { border-bottom: none; }
+ul.links li i { padding: 0 0.5em 0 0; }
 
 ul.contact li { line-height:1.65; position: relative; }
 ul.contact strong { display: inline-block; text-align: right; width:200px; padding:0 1em 0 0; color:#000; }
