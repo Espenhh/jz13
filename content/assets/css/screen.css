@@ -56,7 +56,6 @@ a:hover { color:#000; border-color:#000; }
 .menu .active a { color:#000; }
 
 .footer { padding:30px 0; margin:0 30px 0 0; opacity: .5; }
-.footer:hover { opacity: 1; }
 .footer ul { display: inline; }
 .footer ul.first { float: left;}
 .footer ul.second { float: right;}
