@@ -4,8 +4,11 @@ window.jz = {
     utils: {},
     routes: {},
     data: {},
-    view: {}
+    view: {},
+    api: {}
 };
+
+/*         UTILS         */
 
 jz.utils.shuffle = function(array) {
     var i = array.length, j, tempi, tempj;
@@ -34,12 +37,31 @@ jz.utils.agent = function() {
     });
 };
 
+
+/*         ROUTES         */
+
 jz.routes.go = function() {
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
     var file = _.last(path.split("/")) || "index";
     var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "index" : file;
     if(jz.routes[name]) jz.routes[name]();
 };
+
+jz.routes.index = function() {
+    jz.api.tweets(function(tweets) {
+        var tweetsDiv = $(".tweets");
+        _.each(tweets.tweets, function(tweet, i) {
+            tweetsDiv.append(
+                $("<p />")
+                    .addClass("tweet")
+                    .html("<strong>" + tweet.relativeDate + ": </strong>" + tweet.tweet)
+            )
+        });
+    });
+};
+
+
+/*         VIEW         */
 
 jz.view.partners = function() {
     if($(".partners").size() === 0) return;
@@ -55,6 +77,18 @@ jz.view.partners = function() {
         });
     });
 };
+
+
+/*         API         */
+
+jz.api.tweets = function(callback) {
+    jz.api.get("/api/tweets", callback);
+};
+
+jz.api.get = function(url, callback) {
+    $.get(url, callback);
+};
+
 
 $(function() {
     jz.utils.addSupportClasses();
