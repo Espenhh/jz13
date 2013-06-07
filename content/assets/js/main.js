@@ -37,6 +37,11 @@ jz.utils.agent = function() {
     });
 };
 
+jz.utils.urlify = function(string) {
+    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return string.replace(exp,"<a href='$1'>$1</a>"); 
+};
+
 
 /*         ROUTES         */
 
@@ -54,7 +59,7 @@ jz.routes.index = function() {
             tweetsDiv.append(
                 $("<p />")
                     .addClass("tweet")
-                    .html("<strong>" + tweet.relativeDate + ": </strong>" + tweet.tweet)
+                    .html("<strong>" + tweet.relativeDate + ": </strong>" + jz.utils.urlify(tweet.tweet))
             )
         });
     });

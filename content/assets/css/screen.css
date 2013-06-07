@@ -87,6 +87,7 @@ a:hover { color:#000; border-color:#000; }
 .tweets { overflow: hidden; height: 100%; }
 .tweet { margin:0 0 1.7em 0; font-size:1em; color:#fff; }
 .tweet strong { font-weight: bold; color:#fff; }
+.tweet a { color: #fff; }
 
 .tile-txt {  }
 .tile-txt .tile-inner { height:auto; }
