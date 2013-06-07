@@ -144,6 +144,8 @@ ul.list i { margin:0 .5em 0 0; }
 .tile-facts a { color:#FCAF2A; }
 .tile-facts a:hover { color:#FCAF2A; border-color:#FCAF2A; }
 
+.tile-video .tile-inner { padding:0; height: 23.5em; }
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }
