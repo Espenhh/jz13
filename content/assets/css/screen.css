@@ -133,6 +133,10 @@ ul.list i { margin:0 .5em 0 0; }
 .mini h3 { font-size: 1em; font-weight: 400; margin: 0 0 0.5em 0; }
 .mini p { font-size: 0.8em; margin:0; }
 
+.tile-soon .tile-inner { height: auto; background: none; }
+.tile-soon .tiled { font-size:2em; text-align: center; padding:1em 0; text-transform: uppercase; }
+.tile-soon i { font-size:4em; margin:0 0 .1em 0; }
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }
