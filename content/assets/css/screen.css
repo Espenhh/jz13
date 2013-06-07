@@ -137,10 +137,12 @@ ul.list i { margin:0 .5em 0 0; }
 .tile-soon .tiled { font-size:2em; text-align: center; padding:1em 0; text-transform: uppercase; }
 .tile-soon i { font-size:4em; margin:0 .1em .2em .1em; }
 
-.tile-facts .tile-inner { background:#303030; color:#fff; height: auto; line-height: 1.5; }
+.tile-facts .tile-inner { background:#303030; color:#fff; height: auto; line-height: 1.5; padding-bottom:1.5em; }
 .tile-facts strong { display: block; font-weight: bold; margin:0 0 .5em 0; }
-.tile-facts li { margin:0 0 1em 0; font-size:.9em; }
+.tile-facts li { margin:0 0 2em 0; font-size:.9em; }
 .tile-facts i { margin:0 .5em 0 0; }
+.tile-facts a { color:#FCAF2A; }
+.tile-facts a:hover { color:#FCAF2A; border-color:#FCAF2A; }
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
