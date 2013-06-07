@@ -59,7 +59,7 @@ jz.routes.index = function() {
             tweetsDiv.append(
                 $("<p />")
                     .addClass("tweet")
-                    .html("<strong>" + tweet.relativeDate + ": </strong>" + jz.utils.urlify(tweet.tweet))
+                    .html("<strong><a href='" + tweet.link + "'>" + tweet.relativeDate + "</a>: </strong>" + jz.utils.urlify(tweet.tweet))
             )
         });
     });
