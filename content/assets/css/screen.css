@@ -75,20 +75,28 @@ a:hover { color:#000; border-color:#000; }
 .tile-big { width:100%; }
 .tile-med { width:66.666%; }
 .tile-small { width:33.333%; }
-.tile-high .tile-inner { height:18em; }
-.tile-tall .tile-inner { height:27.25em; }
+.tile-tall .tile-inner { height:19em; }
 .tile-low  .tile-inner { height:8em; }
+
+.tile-invert .tile-inner { background:#1B1B1B; color:#fff; }
+.tile-invert a { color:#FCAF2A; border:none; }
+.tile-invert a:hover { color:#fff; }
+.tile-invert h3 { color:#fff; }
 
 .tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:20px 30px 20px 20px; font-size:1.2em; background:#fff; line-height: 1.5; }
 .tile .extra i { margin:0 .4em 0 0; }
 .tile .extra strong { font-weight: bold; color:#000; }
 
-.tile-tweets { background:#fd8640; overflow: hidden; }
+.tile-tweets .tile-inner { background:#1B1B1B; overflow: hidden; }
 .tweets { overflow: hidden; height: 100%; }
 .tweet { margin:0 0 1.7em 0; font-size:1em; color:#fff; }
 .tweet strong { font-weight: bold; color:#fff; }
 .tweet strong a { border-bottom: none }
 .tweet a { color: #fff; }
+
+.tile-video { }
+.tile-video .tile-inner { padding:0; height:24.6em; }
+.tile-video iframe { width:100%; height:100%; }
 
 .tile-txt {  }
 .tile-txt .tile-inner { height:auto; }
@@ -104,7 +112,7 @@ a:hover { color:#000; border-color:#000; }
 .tile-partners a { border:none; }
 .tile-partners img { width:110px; display: inline-block; margin:.5em; }
 
-.tile-contact .tile-inner { background:#FCAF2A; color:#000; line-height: 1.5; }
+.tile-contact .tile-inner { background:#FCAF2A; color:#000; line-height: 1.35; }
 .tile-contact h2 { color:#fff; }
 .tile-contact strong { font-weight: bold; display: block; }
 .tile-contact a { color:#000; }
@@ -141,14 +149,18 @@ ul.list i { margin:0 .5em 0 0; }
 .tile-soon .tiled { font-size:2em; text-align: center; padding:1em 0; text-transform: uppercase; }
 .tile-soon i { font-size:4em; margin:0 .1em .2em .1em; }
 
-.tile-facts .tile-inner { background:#303030; color:#fff; height: auto; line-height: 1.5; padding-bottom:1.5em; }
+.tile-facts .tile-inner { background:#1B1B1B; color:#fff; height: auto; line-height: 1.5; padding-bottom:1.5em; }
 .tile-facts strong { display: block; font-weight: bold; margin:0 0 .5em 0; }
 .tile-facts li { margin:0 0 2em 0; font-size:.9em; }
 .tile-facts i { margin:0 .5em 0 0; }
 .tile-facts a { color:#FCAF2A; }
 .tile-facts a:hover { color:#FCAF2A; border-color:#FCAF2A; }
 
-.tile-video .tile-inner { padding:0; height: 23.5em; }
+.tile-talk .tile-inner { padding:0; height:26em; background:#1B1B1B; }
+.tile-talk iframe { width:100%; height:20em; }
+.tile-talk span { color:#FCAF2A; }
+.tile-talk h4 { text-transform: none; color:#fff; padding:1em 5em 1em 1em;
+    text-transform: none; font-size:1.2em; line-height: 1.4; font-weight: inherit; }
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
@@ -168,10 +180,10 @@ ul.list i { margin:0 .5em 0 0; }
     .tile-big { width:100%; }
     .tile-med { width:100%; }
     .tile-small { width:100%; }
-    .tile-high .tile-inner { height:18em; }
-    .tile-tall .tile-inner { height:20em; }
+    .tile-tall .tile-inner { height:18em; }
     .tile-low  .tile-inner { height:8em; }
     .tile-inner { margin:0 0 10px 0; }
+    .tile-talk .tile-inner { height:28em; }
 
     .mini { float:none; width:auto; height:auto; margin:0 0 .5em 0; }
 

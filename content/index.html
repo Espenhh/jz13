@@ -1,36 +1,37 @@
 <%= partial("_partials/menu.html") %>
 
-<ul class="tiles tiles-main">
+<div class="tile tile-med tile-tall tile-video"><div class="tile-inner">
+    <iframe src="https://www.youtube-nocookie.com/embed/XNSZNTMfNxg?rel=0&hd=1&vq=hd720&showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div></div>
 
-    <li class="tile tile-big"><a href="/info.html" class="tile-inner img-intro">
-        <span class="extra">
-            Join thousands of devs at JavaZone 2013:<br>
-            11–12th September 2013, in Oslo Spektrum.
-        </span>
-    </a></li>
+<div class="tile tile-small tile-tall tile-invert"><div class="tile-inner">
+    <h3 class="first">
+        Join thousands of developers at JavaZone 2013,
+        on the 11th and 12th September 2013, in Oslo Spektrum. Topics include:
+    </h3>
+    <p><a href="/info.html">Alternative languages</a>, <a href="/info.html">Architecture</a>, <a href="/info.html">Big Data and NoSQL</a>, <a href="/info.html">Con­tin­u­ous De­liv­ery</a>, <a href="/info.html">Core Java</a>, <a href="/info.html">Crafts­man­ship</a>, <a href="/info.html">En­ter­prise</a>, <a href="/info.html">Ex­pe­ri­ence Re­port</a>, <a href="/info.html">Fron­tend</a>, <a href="/info.html">Functional Programming</a>, <a href="/info.html">Mobile</a>, <a href="/info.html">Re­search and Trends</a>, <a href="/info.html">Se­cu­rity</a>, <a href="/info.html">Star­tups</a>, and much, much more.</p>
+</div></div>
 
-    <li class="tile"><a href="/info.html" class="tile-inner img-map">
-        <span class="extra">
-            <i class="icon icon-chevron-sign-right"></i>
-            Oslo Spektrum, Norway
-        </span>
-    </a></li>
+<div class="tile tile-med"><a href="/info.html" class="tile-inner img-intro">
+    <span class="extra">
+        More than one hundred sessions, amazing workshops,<br>
+        and over 50 unique partners, coming together in one building.
+    </span>
+</a></div>
 
-    <li class="tile"><a href="/toptalks.html" class="tile-inner img-video">
-        <span class="extra">
-            <i class="icon icon-chevron-sign-right"></i>
-            Videos of previous talks
-        </span>
-    </a></li>
+<div class="tile tile-small"><a href="/toptalks.html" class="tile-inner img-video">
+    <span class="extra">
+        <i class="icon icon-chevron-sign-right"></i>
+        Videos of previous talks
+    </span>
+</a></div>
 
-</ul>
-
+<!--
 <div class="tiles tiles-side">
     <div class="tile tile-big tile-tall"><div class="tile-inner tile-tweets">
         <%= partial("_partials/tweets.html") %>
     </div></div>
 </div>
-
-<div class="clear"></div>
+-->
 
 <%= partial("_partials/footer.html") %>
