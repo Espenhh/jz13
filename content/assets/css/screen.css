@@ -32,7 +32,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 #container {
-    width: 72em;
+    width: 70em;
     margin: 0 auto;
     position: relative;
     padding:0 0 100px 1.667em;
