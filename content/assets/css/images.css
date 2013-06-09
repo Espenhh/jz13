@@ -33,9 +33,11 @@ a:hover .img-inner {
 .img-stand2 { background-image:url("/assets/img/pics/stand2.jpg"); }
 .img-agir { background-image:url("/assets/img/pics/agir.jpg"); }
 .img-awezone { background-image:url("/assets/img/pics/awezone2.jpg"); }
+.img-awezone5 { background-image:url("/assets/img/pics/awezone5.jpg"); }
 .img-workshop { background-image:url("/assets/img/pics/workshop.jpg"); }
 .img-crowd { background-image:url("/assets/img/pics/crowd.jpg"); }
 .img-bags { background-image:url("/assets/img/pics/bags.jpg"); }
+.img-flam { background-image:url("/assets/img/pics/flam.jpg"); }
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
