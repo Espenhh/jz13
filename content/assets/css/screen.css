@@ -113,6 +113,10 @@ a:hover { color:#000; border-color:#000; }
 .tile-partners img { width:110px; display: inline-block; border:.5em solid #303030; }
 .tile-partners img:hover { border-color:#222; }
 
+.tile-credits .tile-inner { background:#303030; height:auto; text-align: center; min-height:280px; padding:2em 1em; }
+.tile-credits img { width:200px; height:200px; display: inline-block; border:.5em solid #222; }
+.tile-credits img:hover { border-color:#000; }
+
 .tile-contact .tile-inner { background:#FCAF2A; color:#000; line-height: 1.35; }
 .tile-contact h2 { color:#fff; }
 .tile-contact strong { font-weight: bold; display: block; }
@@ -163,6 +167,9 @@ ul.list i { margin:0 .5em 0 0; }
 .tile-talk span { color:#FCAF2A; }
 .tile-talk h4 { text-transform: none; color:#fff; padding:.5em 5em .5em 1em;
     text-transform: none; font-size:1.2em; line-height: 1.4; font-weight: inherit; }
+
+.credits { background: #303030; margin: 1em 0; width: 100%;}
+.instagram { width: 300px; height: 300px; float: left; margin: 0.5em; }
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }

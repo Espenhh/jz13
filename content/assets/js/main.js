@@ -65,6 +65,20 @@ jz.routes.index = function() {
     });
 };
 
+jz.routes.credits = function() {
+    if($(".credits").size() === 0) return;
+    $(".credits").empty().each(function(i, el) {
+        var credits = jz.utils.shuffle(jz.data.credits);
+        var limit = parseInt($(el).attr("data-limit"), 10) || 1000;
+        _.each(credits, function(credit, i) {
+            if(i + 1 > limit) return;
+            var img = $("<img />").addClass("instagram").attr("src", credits[i][1]).attr("alt", credits[i][0]);
+            var lnk = $("<a />").html(img).attr("href", credits[i][2]).attr("target", "_blank");
+            $(el).prepend(lnk);
+        });
+    });
+};
+
 
 /*         VIEW         */
 
@@ -82,6 +96,8 @@ jz.view.partners = function() {
         });
     });
 };
+
+
 
 
 /*         API         */
@@ -136,5 +152,34 @@ jz.data.partners = [
     ["Decisive", "stolt_partner_decisive.jpg", "http://www.decisive.no/"],
     ["Esito", "stolt_partner_esito.jpg", "http://www.esito.no/"],
     ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"]
+];
+
+// TODODODODODOD!!11one
+jz.data.credits = [
+    ["Navn", "http://distilleryimage4.s3.amazonaws.com/07fa19b2d14a11e2866d22000a9f137d_7.jpg", "https://twitter.com/Espenhh"],
+    ["Navn", "http://distilleryimage3.s3.amazonaws.com/c904f556d14911e292d022000a1fcc15_7.jpg", "https://twitter.com/vandelan"],
+    ["Navn", "http://distilleryimage8.s3.amazonaws.com/c4125a36d14711e29b6422000aa80460_7.jpg", ""],
+    ["Navn", "http://distilleryimage6.s3.amazonaws.com/8874eb8ad14511e285fc22000a1f96be_7.jpg", ""],
+    ["Navn", "http://distilleryimage10.s3.amazonaws.com/b900e1a8d15111e285b022000a9f15de_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage4.s3.amazonaws.com/07fa19b2d14a11e2866d22000a9f137d_7.jpg", "https://twitter.com/Espenhh"],
+    ["Navn", "http://distilleryimage3.s3.amazonaws.com/c904f556d14911e292d022000a1fcc15_7.jpg", "https://twitter.com/vandelan"],
+    ["Navn", "http://distilleryimage8.s3.amazonaws.com/c4125a36d14711e29b6422000aa80460_7.jpg", ""],
+    ["Navn", "http://distilleryimage6.s3.amazonaws.com/8874eb8ad14511e285fc22000a1f96be_7.jpg", ""],
+    ["Navn", "http://distilleryimage10.s3.amazonaws.com/b900e1a8d15111e285b022000a9f15de_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage6.s3.amazonaws.com/8874eb8ad14511e285fc22000a1f96be_7.jpg", ""],
+    ["Navn", "http://distilleryimage10.s3.amazonaws.com/b900e1a8d15111e285b022000a9f15de_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""],
+    ["Navn", "http://distilleryimage8.s3.amazonaws.com/c4125a36d14711e29b6422000aa80460_7.jpg", ""],
+    ["Navn", "http://distilleryimage6.s3.amazonaws.com/8874eb8ad14511e285fc22000a1f96be_7.jpg", ""],
+    ["Navn", "http://distilleryimage10.s3.amazonaws.com/b900e1a8d15111e285b022000a9f15de_7.jpg", ""],
+    ["Navn", "http://distilleryimage1.s3.amazonaws.com/85ffef08d06911e29f1422000a1fbc0e_7.jpg", ""]
 ];
 
