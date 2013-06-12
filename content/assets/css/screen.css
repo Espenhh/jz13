@@ -120,9 +120,9 @@ a:hover { color:#000; border-color:#000; }
 
 .tile-contact .tile-inner { background:#FCAF2A; color:#000; line-height: 1.35; }
 .tile-contact h2 { color:#fff; }
-.tile-contact strong { font-weight: bold; display: block; }
-.tile-contact a { color:#000; }
-.tile-contact li { margin:0 0 1em 0; }
+.tile-contact strong { font-weight: bold; }
+.tile-contact a { color:#000; float: right; }
+.tile-contact li { margin:0 0 .5em 0; }
 .tile-contact span { color:#fff; float: right; letter-spacing:1px; }
 
 ul.tags { padding:1em 0; clear: both; }
