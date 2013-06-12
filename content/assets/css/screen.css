@@ -191,10 +191,11 @@ ul.list i { margin:0 .5em 0 0; }
     .tile-big { width:100%; }
     .tile-med { width:100%; }
     .tile-small { width:100%; }
-    .tile-tall .tile-inner { height:auto; }
+    .tile-tall .tile-inner { height:18em; }
+    .tile-tall-text .tile-inner { height:auto; }
     .tile-low  .tile-inner { height:8em; }
     .tile-inner { margin:0 0 10px 0; }
-    .tile-talk .tile-inner { height:28em; }
+    .tile-talk .tile-inner { height:26.5em; }
 
     .mini { float:none; width:auto; height:auto; margin:0 0 .5em 0; }
 
