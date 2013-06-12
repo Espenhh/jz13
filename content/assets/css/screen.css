@@ -168,6 +168,10 @@ ul.list i { margin:0 .5em 0 0; }
 .tile-talk span { color:#FCAF2A; }
 .tile-talk h4 { text-transform: none; color:#fff; padding:.5em 5em .5em 1em;
     text-transform: none; font-size:1.2em; line-height: 1.4; font-weight: inherit; }
+.tile-talk-more { text-align: center; }
+.tile-talk-more i { color:#fff; font-size:10em; padding:.6em 0 .1em 0; display: inline-block; }
+.tile-talk-more span { display: block; font-size:1.2em; color:#fff; }
+.tile-talk-more a:hover i, .tile-talk-more a:hover span { color:#fcaf2a; }
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
@@ -187,7 +191,7 @@ ul.list i { margin:0 .5em 0 0; }
     .tile-big { width:100%; }
     .tile-med { width:100%; }
     .tile-small { width:100%; }
-    .tile-tall .tile-inner { height:18em; }
+    .tile-tall .tile-inner { height:auto; }
     .tile-low  .tile-inner { height:8em; }
     .tile-inner { margin:0 0 10px 0; }
     .tile-talk .tile-inner { height:28em; }
