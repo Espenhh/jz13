@@ -40,7 +40,7 @@ a:hover .img-inner {
 .img-crowd { background-image:url("/assets/img/tiles/crowd.jpg"); }
 .img-bags { background-image:url("/assets/img/tiles/bags.jpg"); }
 .img-flam { background-image:url("/assets/img/tiles/flam.jpg"); }
-
+.img-view { background-image:url("/assets/img/tiles/view.jpg"); }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -63,5 +63,6 @@ only screen and (                min-resolution: 2dppx) {
     .img-crowd { background-image:url("/assets/img/tiles/crowd@2x.jpg"); }
     .img-bags { background-image:url("/assets/img/tiles/bags@2x.jpg"); }
     .img-flam { background-image:url("/assets/img/tiles/flam@2x.jpg"); }
+    .img-view { background-image:url("/assets/img/tiles/view@2x.jpg"); }
 
 }
