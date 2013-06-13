@@ -30,13 +30,13 @@ a:hover .img-inner {
 .img-map { background-image:url("/assets/img/maps/spektrum.gif"); }
 .img-intro { background-image:url("/assets/img/tiles/topdown.jpg"); }
 .img-video { background-image:url("/assets/img/tiles/stand.jpg"); }
-.img-stand2 { background-image:url("/assets/img/pics/stand2.jpg"); }
-.img-agir { background-image:url("/assets/img/pics/agir.jpg"); }
+.img-stand2 { background-image:url("/assets/img/tiles/stand2.jpg"); }
+.img-agir { background-image:url("/assets/img/tiles/agir.jpg"); }
 .img-awezone { background-image:url("/assets/img/tiles/awezone2.jpg"); }
-.img-awezone5 { background-image:url("/assets/img/pics/awezone5.jpg"); }
+.img-awezone5 { background-image:url("/assets/img/tiles/awezone5.jpg"); }
 .img-workshop { background-image:url("/assets/img/tiles/workshop.jpg"); }
-.img-crowd { background-image:url("/assets/img/pics/crowd.jpg"); }
-.img-bags { background-image:url("/assets/img/pics/bags.jpg"); }
+.img-crowd { background-image:url("/assets/img/tiles/crowd.jpg"); }
+.img-bags { background-image:url("/assets/img/tiles/bags.jpg"); }
 .img-flam { background-image:url("/assets/img/tiles/flam.jpg"); }
 
 
@@ -51,10 +51,13 @@ only screen and (                min-resolution: 2dppx) {
     .img-map { background-image:url("/assets/img/maps/spektrum@2x.gif"); }
     .img-intro { background-image:url("/assets/img/tiles/topdown@2x.jpg"); }
     .img-video { background-image:url("/assets/img/tiles/stand@2x.jpg"); }
+    .img-stand2 { background-image:url("/assets/img/tiles/stand2@2x.jpg"); }
+    .img-agir { background-image:url("/assets/img/tiles/agir@2x.jpg"); }
     .img-awezone { background-image:url("/assets/img/tiles/awezone2@2x.jpg"); }
-
+    .img-awezone5 { background-image:url("/assets/img/tiles/awezone5@2x.jpg"); }
     .img-workshop { background-image:url("/assets/img/tiles/workshop@2x.jpg"); }
-
+    .img-crowd { background-image:url("/assets/img/tiles/crowd@2x.jpg"); }
+    .img-bags { background-image:url("/assets/img/tiles/bags@2x.jpg"); }
     .img-flam { background-image:url("/assets/img/tiles/flam@2x.jpg"); }
 
 }
