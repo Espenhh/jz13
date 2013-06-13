@@ -39,7 +39,7 @@ jz.utils.agent = function() {
 
 jz.utils.urlify = function(string) {
     var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-    return string.replace(exp,"<a href='$1'>$1</a>"); 
+    return string.replace(exp, "<a href='$1'>$1</a>");
 };
 
 
@@ -53,15 +53,12 @@ jz.routes.go = function() {
 };
 
 jz.routes.index = function() {
-    jz.api.tweets(function(tweets) {
+    jz.api.tweets().then(function(tweets) {
         var tweetsDiv = $(".tweets");
-        _.each(tweets.tweets, function(tweet, i) {
-            tweetsDiv.append(
-                $("<p />")
-                    .addClass("tweet")
-                    .html("<strong><a href='" + tweet.link + "'>" + tweet.relativeDate + "</a>: </strong>" + jz.utils.urlify(tweet.tweet))
-            )
-        });
+        var tweet = tweets.tweets[0];
+        var text = jz.utils.urlify(tweet.tweet);
+        var icon = $("<i>").addClass("icon-twitter");
+        if(tweet) $(".tweet").html($("<p>").append(icon, text));
     });
 };
 
@@ -102,12 +99,12 @@ jz.view.partners = function() {
 
 /*         API         */
 
-jz.api.tweets = function(callback) {
-    jz.api.get("/api/tweets", callback);
+jz.api.tweets = function() {
+    return jz.api.get("/api/tweets");
 };
 
-jz.api.get = function(url, callback) {
-    $.get(url, callback);
+jz.api.get = function(url) {
+    return $.get(url);
 };
 
 

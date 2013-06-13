@@ -55,6 +55,10 @@ a:hover { color:#000; border-color:#000; }
 .menu ul a { color:#394549; font-size:2em; }
 .menu ul a:hover { color:#000; }
 
+.tweet i { display: inline-block; width: 1.5em; }
+.tweet i { color:#fd8640; }
+.tweet p { max-width: none; padding:1.2em; background-color:#f6f4ed; margin:0 1.667em 0.667em 0; line-height: 1; }
+
 .footer { padding:1em 0; margin:0 1em 0 0; opacity: .5; }
 .footer ul { display: inline; }
 .footer ul.first { float: left;}
@@ -83,16 +87,9 @@ a:hover { color:#000; border-color:#000; }
 .tile-invert a:hover { color:#fff; }
 .tile-invert h3 { color:#fff; }
 
-.tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:20px 30px 20px 20px; font-size:1.2em; background:#fff; line-height: 1.5; }
+.tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:1em 2em 1em 1em; font-size:1.2em; background:#fff; line-height: 1.5; }
 .tile .extra i { margin:0 .4em 0 0; }
 .tile .extra strong { font-weight: bold; color:#000; }
-
-.tile-tweets .tile-inner { background:#1B1B1B; overflow: hidden; }
-.tweets { overflow: hidden; height: 100%; }
-.tweet { margin:0 0 1.7em 0; font-size:1em; color:#fff; }
-.tweet strong { font-weight: bold; color:#fff; }
-.tweet strong a { border-bottom: none }
-.tweet a { color: #fff; }
 
 .tile-video { }
 .tile-video .tile-inner { padding:0; height:25.2em; }
