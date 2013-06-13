@@ -42,6 +42,17 @@ jz.utils.urlify = function(string) {
     return string.replace(exp, "<a href='$1'>$1</a>");
 };
 
+jz.utils.date = function(year, month, day, hour, min) {
+    return new Date(Date.UTC(parseInt(year, 10), parseInt(month, 10), parseInt(day, 10),
+        parseInt(hour, 10) - 2, parseInt(min, 10)));
+};
+
+jz.utils.ms = function(endDate) {
+    var startDate = new Date();
+    if (endDate < startDate) return "kLO1djacsfg";
+    else return endDate - startDate;
+};
+
 
 /*         ROUTES         */
 
@@ -114,6 +125,13 @@ $(function() {
     jz.utils.addSupportClasses();
     jz.view.partners();
     jz.routes.go();
+
+
+    var date = jz.utils.date(2013, 9, 11, 08, 00);
+    setInterval(function() {
+        $("body").attr("data-prophecy", jz.utils.ms(date));
+    }, 666);
+
 });
 
 jz.data.partners = [
