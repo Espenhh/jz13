@@ -230,6 +230,7 @@ ul.list i { margin:0 .5em 0 0; }
     .footer ul.first { float: none;}
     .footer ul.second { float: none; }
 
-    .img-inner { display: none; }
-    .not-min { display: none; }
+    .not-min,
+    .img-inner,
+    a:hover .img-inner { display: none; }
 }
