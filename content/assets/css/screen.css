@@ -58,6 +58,7 @@ a:hover { color:#000; border-color:#000; }
 .tweet i { display: inline-block; width: 1.5em; }
 .tweet i { color:#fd8640; }
 .tweet p { max-width: none; padding:1.2em; background-color:#f6f4ed; margin:0 1.667em 0.667em 0; line-height: 1; }
+.tweet a { border:none; }
 
 .footer { padding:1em 0; margin:0 1em 0 0; opacity: .5; }
 .footer ul { display: inline; }
@@ -87,9 +88,10 @@ a:hover { color:#000; border-color:#000; }
 .tile-invert a:hover { color:#fff; }
 .tile-invert h3 { color:#fff; }
 
-.tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:1em 2em 1em 1em; font-size:1.2em; background:#fff; line-height: 1.5; }
+.tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:1em 2em 1em 1em;
+    font-size:1.2em; background:#fff; background:rgba(255,255,255,0.9); line-height: 1.5; }
 .tile .extra i { margin:0 .4em 0 0; }
-.tile .extra strong { font-weight: bold; color:#000; }
+.tile .extra strong { font-weight: bold; }
 
 .tile-video { }
 .tile-video .tile-inner { padding:0; height:25.2em; }
@@ -170,6 +172,13 @@ ul.list i { margin:0 .5em 0 0; }
 .tile-talk-more span { display: block; font-size:1.2em; color:#fff; }
 .tile-talk-more a:hover i, .tile-talk-more a:hover span { color:#fcaf2a; }
 
+.page-invert, .page-invert body { background:#101010; }
+.page-invert .tweet p { background:#1B1B1B; color:#fff; }
+.page-invert .tweet a:hover { color:#fff; }
+.page-invert .footer a, .page-invert .menu a { color:#ccc; }
+.page-invert .footer a:hover, .page-invert .menu a:hover { border-color:#fff; color:#fff; }
+.page-invert .tile .extra { background:#1B1B1B; background:rgba(0,0,0,0.8); color:#fff; }
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }
@@ -208,10 +217,3 @@ ul.list i { margin:0 .5em 0 0; }
     .footer ul.first { float: none;}
     .footer ul.second { float: none; }
 }
-
-
-
-
-
-
-

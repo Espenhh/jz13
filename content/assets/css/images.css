@@ -16,7 +16,7 @@
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
-    border:1em solid rgba(0,0,0,0.05);
+    border:1em solid rgba(0,0,0,0.1);
     position: absolute;
     top:0;
     left:0;
@@ -27,6 +27,8 @@ a:hover .img-inner {
 }
 
 .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.png"); width:19.444em; height:4.889em; }
+.page-invert .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.light.png"); }
+
 .img-map { background-image:url("/assets/img/maps/spektrum.gif"); }
 .img-intro { background-image:url("/assets/img/tiles/topdown.jpg"); }
 .img-video { background-image:url("/assets/img/tiles/stand.jpg"); }
@@ -48,6 +50,8 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
     .img-logo { background-image:url("/assets/img/logos/javazone.horizontal@2x.png"); }
+    .page-invert .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.light@2x.png"); }
+
     .img-map { background-image:url("/assets/img/maps/spektrum@2x.gif"); }
     .img-intro { background-image:url("/assets/img/tiles/topdown@2x.jpg"); }
     .img-video { background-image:url("/assets/img/tiles/stand@2x.jpg"); }
