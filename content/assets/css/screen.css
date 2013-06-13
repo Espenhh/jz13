@@ -57,7 +57,7 @@ a:hover { color:#000; border-color:#000; }
 
 .tweet i { display: inline-block; width: 1.5em; }
 .tweet i { color:#fd8640; }
-.tweet p { max-width: none; padding:1.2em; background-color:#f6f4ed; margin:0 1.5em 0.5em 0; line-height: 1; position: relative; }
+.tweet p { max-width: none; padding:1.2em; background-color:#f6f4ed; margin:0 1.5em 0.5em 0; line-height: 1.5; position: relative; }
 .tweet a { border:none; }
 .tweet .next { position: absolute; top:1.2em; right:1em; color:#394549; }
 
@@ -178,7 +178,8 @@ ul.list i { margin:0 .5em 0 0; }
 
 .page-invert, .page-invert body { background:#101010; }
 .page-invert .tweet p { background:#1B1B1B; color:#fff; }
-.page-invert .tweet a:hover { color:#fff; }
+.page-invert .tweet p a { color:#fff; border-bottom:.1em solid #fff; }
+.page-invert .tweet .next { border:none; }
 .page-invert .tweet .next i { color:#3b3b3b; }
 .page-invert .tweet .next:hover i { color:#fff; }
 .page-invert .menu a { color:#fff; }
@@ -213,6 +214,9 @@ ul.list i { margin:0 .5em 0 0; }
     .tile-talk .tile-inner { height:26.5em; }
 
     .mini { float:none; width:auto; height:auto; margin-bottom:.5em; }
+    .tweet p { margin:0; padding:2.8em; }
+    .page-invert .tweet p { background:#2b2b2b; }
+    .tweet .next { display: none; }
 
     .menu { margin:0; }
     .menu h1 span { display: block; margin:0 auto; }
@@ -225,4 +229,7 @@ ul.list i { margin:0 .5em 0 0; }
     .footer ul { display: block; text-align: center; padding:0 0 2em 0; }
     .footer ul.first { float: none;}
     .footer ul.second { float: none; }
+
+    .img-inner { display: none; }
+    .not-min { display: none; }
 }
