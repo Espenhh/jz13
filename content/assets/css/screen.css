@@ -35,7 +35,7 @@ only screen and (                min-resolution: 2dppx) {
     width: 70em;
     margin: 0 auto;
     position: relative;
-    padding:0 0 100px 1.667em;
+    padding:0 0 100px 1.5em;
 }
 
 h2 { font-size:1.2em; margin:2em 0 1.5em 0; line-height: 1.2; color:#000; font-weight: normal; }
@@ -57,7 +57,7 @@ a:hover { color:#000; border-color:#000; }
 
 .tweet i { display: inline-block; width: 1.5em; }
 .tweet i { color:#fd8640; }
-.tweet p { max-width: none; padding:1.2em; background-color:#f6f4ed; margin:0 1.667em 0.667em 0; line-height: 1; position: relative; }
+.tweet p { max-width: none; padding:1.2em; background-color:#f6f4ed; margin:0 1.5em 0.5em 0; line-height: 1; position: relative; }
 .tweet a { border:none; }
 .tweet .next { position: absolute; top:1.2em; right:1em; color:#394549; }
 
@@ -66,7 +66,7 @@ a:hover { color:#000; border-color:#000; }
 .footer ul.first { float: left;}
 .footer ul.second { float: right; }
 .footer li { display: inline; margin:0 2em 0 0; }
-.footer ul.second li { margin:0 0.667em 0 0; }
+.footer ul.second li { margin:0 0.5em 0 0; }
 .footer a { color:#394549; font-size:1.4em; }
 .footer p { font-size:1.4em; float: right; }
 
@@ -74,7 +74,7 @@ a:hover { color:#000; border-color:#000; }
 .tiles-side { width:33.333%; float:right; margin:0; }
 
 .tile { float:left; width:50%; overflow: hidden; }
-.tile-inner { margin:0 1.667em 1.667em 0; padding:2.8em; height:10em; overflow: hidden; display: block; }
+.tile-inner { margin:0 1.5em 1.5em 0; padding:2.8em; height:10em; overflow: hidden; display: block; }
 .tile-inner { border:none; color:#394549; position: relative; }
 .tile-inner { background-color:#f6f4ed; background-size:cover; background-position: center center; }
 .tile-last .tile-inner { padding-bottom:1.5em; }
@@ -119,7 +119,7 @@ a:hover { color:#000; border-color:#000; }
 .tile-credits img { width:200px; height:200px; display: inline-block; border:.5em solid #222; float: left; margin: 0.5em; }
 .tile-credits img:hover { border-color:#000; }
 
-.tile-contact .tile-inner { background:#FCAF2A; color:#000; line-height: 1.35; }
+.tile-contact .tile-inner { background:#FCAF2A; color:#000; line-height: 1.35; padding-bottom:2.3em; }
 .tile-contact h2 { color:#fff; }
 .tile-contact strong { font-weight: bold; }
 .tile-contact a { color:#000; float: right; border-color:#000; }
@@ -198,7 +198,7 @@ ul.list i { margin:0 .5em 0 0; }
 
 @media only screen and (max-width: 500px) {
     br { display: none; }
-    #container { width:auto; padding:0 20px 20px 20px; }
+    #container { width:auto; padding:0; }
     .tiles-main { width:100%; float:none; }
     .tiles-side { width:100%; float:none; }
 
@@ -209,10 +209,10 @@ ul.list i { margin:0 .5em 0 0; }
     .tile-tall .tile-inner { height:18em; }
     .tile-tall-text .tile-inner { height:auto; }
     .tile-low  .tile-inner { height:8em; }
-    .tile-inner { margin:0 0 10px 0; }
+    .tile-inner { margin:0 0 0 0; }
     .tile-talk .tile-inner { height:26.5em; }
 
-    .mini { float:none; width:auto; height:auto; margin:0 0 .5em 0; }
+    .mini { float:none; width:auto; height:auto; margin-bottom:.5em; }
 
     .menu { margin:0; }
     .menu h1 span { display: block; margin:0 auto; }
