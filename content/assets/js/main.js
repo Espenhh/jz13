@@ -58,7 +58,9 @@ jz.routes.index = function() {
         var tweet = tweets.tweets[0];
         var text = jz.utils.urlify(tweet.tweet);
         var icon = $("<i>").addClass("icon-twitter");
-        if(tweet) $(".tweet").html($("<p>").append(icon, text));
+        var play = $("<i>").addClass("icon-play-sign");
+        var next = $("<a>").addClass("next").attr("href", "https://twitter.com/javazone").html(play);
+        if(tweet) $(".tweet").html($("<p>").append(icon, text, next));
     });
 };
 
