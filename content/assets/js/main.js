@@ -152,12 +152,12 @@ jz.data.partners = [
     ["Kodemaker", "kodemaker_2012.jpg", "http://www.kodemaker.no/"],
     ["Marcello", "marcello_2013.jpg", "http://www.marcello.no/"],
     ["Mesan", "mesan_2012.jpg", "http://www.mesan.no/"],
-    ["Microsoft", "microsoft_2012.jpg", "http://www.microsoft.no/"],
+    ["Microsoft", "Microsoft.jpg", "http://www.microsoft.no/"],
     ["Miles", "miles_2012.jpg", "http://www.miles.no/"],
     ["Programutvikling", "programutvikling_2012.jpg", "http://www.put.no/"],
     ["Steria", "steria_2012.jpg", "http://www.steria.no/"],
     ["Systek", "systek_2012.jpg", "http://www.systek.no/"],
-    ["ViaNett", "vianett_2013.jpg", "http://www.vianett.no"],
+    ["ViaNett", "vianett_2013ny.jpg", "http://www.vianett.no"],
     ["Visma", "visma_2012.jpg", "http://www.visma.no/"],
     ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
     ["Skatteetaten", "skatteetaten_2012.jpg", "http://www.skatteetaten.no/"],
@@ -168,7 +168,11 @@ jz.data.partners = [
     ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
     ["Decisive", "stolt_partner_decisive.jpg", "http://www.decisive.no/"],
     ["Esito", "stolt_partner_esito.jpg", "http://www.esito.no/"],
-    ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"]
+    ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"],
+    ["Antares", "antares_2013.jpg", "http://www.antares.no"],
+    ["Evry", "evry_2013.jpg", "http://www.evry.no"],
+    ["Jetbrains", "Jetbrains.jpg", "http://www.jetbrains.com"],
+    ["Pluralsight", "pluralsight_2013.jpg", "http://www.pluralsight.com"]
 ];
 
 // TODODODODODOD!!11one
