@@ -5,7 +5,8 @@ window.jz = {
     routes: {},
     data: {},
     view: {},
-    api: {}
+    api: {},
+    date: {}
 };
 
 /*         UTILS         */
@@ -53,6 +54,27 @@ jz.utils.ms = function(endDate) {
     else return endDate - startDate;
 };
 
+jz.date.parse = function(date) {
+    var    m = /(\d\d\d\d)-(\d\d)-(\d\d).(\d\d):(\d\d):(\d\d)/.exec(date);
+    if(!m) m = /(\d\d\d\d)-(\d\d)-(\d\d)/.exec(date);
+    if(!m) return "";
+    return { year: m[1], month: m[2], day: m[3], hour: m[4], min: m[5], sec: m[6] };
+};
+
+/*
+ * Format: 01.12.2020 12.00
+ */
+jz.date.date = function(date) {
+    var m = jz.date.parse(date);
+    return !m ? "" : m.day + "." + m.month + " " + m.year + " " + m.hour + "." + m.min;
+};
+
+jz.date.duration = function(start, stop) {
+    var startDate = Date.parse(start);
+    var stopDate = Date.parse(stop);
+    return stopDate - startDate;
+};
+
 
 /*         ROUTES         */
 
@@ -96,11 +118,23 @@ jz.routes.program = function() {
         var sorted = _.sortBy(sessions, "start");
         var grouped = _.groupBy(sorted, "room");
 
-        _.each(grouped, function(roomSessions, roomName) {
+        var rooms = _.keys(grouped).sort();
+
+        _.each(rooms, function(roomName) {
+            var roomSessions = grouped[roomName];
+
             var roomDiv = $("<div />").addClass("room");
             roomDiv.append($("<h2 />").text(roomName));
             _.each(roomSessions, function(roomSession) {
-                roomDiv.append($("<div />").text(roomSession.start + " – " +  roomSession.stop + ": " + roomSession.title));
+                var durationMin = jz.date.duration(roomSession.start, roomSession.stop) / 1000 / 60;
+                //var durationHtml = $("<div />").addClass("duration").text(durationMin + "min");
+                //var timeHtml = $("<div />").addClass("time").text(jz.date.date(roomSession.start) + " – " +  jz.date.date(roomSession.stop));
+                var nameHtml = $("<div />").addClass("name").text(roomSession.title);
+                //var speakerHtml = $("<div />").addClass("speaker").html(roomSession.title);
+                roomDiv.append($("<div />")
+                    .addClass("session")
+                    .css("height", durationMin * 6 + "px")
+                    .append(nameHtml));
             });
             sessionsDiv.append(roomDiv);
         });

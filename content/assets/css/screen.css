@@ -189,6 +189,26 @@ ul.list i { margin:0 .5em 0 0; }
 .page-invert .tile-facts .tile-inner { background:#A10735; }
 
 
+
+
+.room {
+    float: left;
+    width: 170px;
+    margin: 0;
+    padding: 0;
+}
+
+.session {
+    padding: 5px;
+    margin: 5px;
+    background: #eee;
+    overflow: hidden;
+}
+
+
+
+
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }
