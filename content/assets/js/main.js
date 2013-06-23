@@ -92,8 +92,17 @@ jz.routes.credits = function() {
 jz.routes.program = function() {
     jz.api.sessions().then(function(sessions) {
         var sessionsDiv = $(".sessions");
-        _.each(sessions, function(session, i) {
-            sessionsDiv.append($("<div />").text(session.title));
+
+        var sorted = _.sortBy(sessions, "start");
+        var grouped = _.groupBy(sorted, "room");
+
+        _.each(grouped, function(roomSessions, roomName) {
+            var roomDiv = $("<div />").addClass("room");
+            roomDiv.append($("<h2 />").text(roomName));
+            _.each(roomSessions, function(roomSession) {
+                roomDiv.append($("<div />").text(roomSession.start + " – " +  roomSession.stop + ": " + roomSession.title));
+            });
+            sessionsDiv.append(roomDiv);
         });
     });
 };
