@@ -145,9 +145,10 @@ jz.sessions.generateSessionDay = function(sorted) {
                 sessionHtml.addClass("blank");
             } else {
                 var titleHtml = $("<div />").addClass("detail title").text(roomSession.title);
-                var speakerHtml = $("<div />").addClass("detail speakers").html("<i class='icon-user'></i>" + jz.utils.join(roomSession.speakers));
+                var speakerIcon = roomSession.speakers.length == 1 ? "icon-user" : "icon-group";
+                var speakerHtml = $("<div />").addClass("detail speakers").html("<i class='"+ speakerIcon + "'></i>" + jz.utils.join(roomSession.speakers));
                 var langHtml = $("<div />").addClass("detail lang").html("<i class='icon-globe'></i>" + (roomSession.lang == "no" ? "Norwegian" : "English"));
-                var levelHtml = $("<div />").addClass("detail lang").html("<i class='icon-magic'></i>" + roomSession.level);
+                var levelHtml = $("<div />").addClass("detail lang").html("<i class='icon-signal'></i>" + roomSession.level);
                 sessionHtml.append(titleHtml, speakerHtml, langHtml, levelHtml);
                 sessionHtml.addClass(roomSession.level);
             }
