@@ -16,6 +16,7 @@ exports.config = {
         "components/eventemitter2/lib/eventemitter2.js",
         "components/dispatch/dispatch.js",
         "components/jquery/jquery.js",
+        "assets/js/vendor/moment.min.js",
         "assets/js/main.js"
       ]
     },

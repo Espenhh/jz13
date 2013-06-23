@@ -92,6 +92,16 @@ jz.sessions.blankify = function(sessionsGrouped, startTime) {
     return blankified;
 };
 
+jz.sessions.createTimeSlots = function(conferenceStartTime, conferenceStopTime) {
+    var timeSlots = [];
+    var time = Date.parse(conferenceStartTime);
+    while(time < Date.parse(conferenceStopTime)) {
+        timeSlots.push({ start: new Date(time) });
+        time += 1000*60*60;
+    }
+    return timeSlots;
+};
+
 
 /*         ROUTES         */
 
@@ -135,11 +145,22 @@ jz.routes.program = function() {
         var sorted = _.sortBy(sessions, "start");
         var grouped = _.groupBy(sorted, "room");
 
-        var conferenceStartTime = sorted[0].start;
+        var conferenceStartTime = _.first(sorted).start;
+        var conferenceStopTime = _.last(sorted).stop;
+
+        var timeSlots = jz.sessions.createTimeSlots(conferenceStartTime, conferenceStopTime);
 
         var groupedWithBlanks = jz.sessions.blankify(grouped, conferenceStartTime);
-        debugger;
+
         var rooms = _.keys(groupedWithBlanks).sort();
+
+        var timeslotsHtml = $("<div />").addClass("room times");
+        timeslotsHtml.append($("<h2 />").html("&nbsp;"));
+        _.each(timeSlots, function(timeSlot) {
+            var timeFormatted = moment(timeSlot.start).format('MMM Do, HH:mm');
+            timeslotsHtml.append($("<div />").text(timeFormatted).css("height", 60 * 6 + "px"));
+        });
+        sessionsDiv.append(timeslotsHtml);
 
         _.each(rooms, function(roomName) {
             var roomSessions = groupedWithBlanks[roomName];
