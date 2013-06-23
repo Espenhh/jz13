@@ -6,7 +6,8 @@ window.jz = {
     data: {},
     view: {},
     api: {},
-    date: {}
+    date: {},
+    sessions: {}
 };
 
 /*         UTILS         */
@@ -75,6 +76,22 @@ jz.date.duration = function(start, stop) {
     return stopDate - startDate;
 };
 
+jz.sessions.blankify = function(sessionsGrouped, startTime) {
+    var blankified = {};
+    _.each(sessionsGrouped, function(sessions, roomName) {
+        blankified[roomName] = _.reduce(sessions, function(withBlanks, session) {
+            var previousEndTime = withBlanks.length == 0 ? startTime : _.last(withBlanks).stop;
+            var duration = jz.date.duration(previousEndTime, session.start);
+            if(duration > 0) {
+                withBlanks.push({blank: true, start: previousEndTime, stop: session.start})
+            }
+            withBlanks.push(session);
+            return withBlanks;
+        }, []);
+    });
+    return blankified;
+};
+
 
 /*         ROUTES         */
 
@@ -118,23 +135,33 @@ jz.routes.program = function() {
         var sorted = _.sortBy(sessions, "start");
         var grouped = _.groupBy(sorted, "room");
 
-        var rooms = _.keys(grouped).sort();
+        var conferenceStartTime = sorted[0].start;
+
+        var groupedWithBlanks = jz.sessions.blankify(grouped, conferenceStartTime);
+        debugger;
+        var rooms = _.keys(groupedWithBlanks).sort();
 
         _.each(rooms, function(roomName) {
-            var roomSessions = grouped[roomName];
+            var roomSessions = groupedWithBlanks[roomName];
 
             var roomDiv = $("<div />").addClass("room");
             roomDiv.append($("<h2 />").text(roomName));
             _.each(roomSessions, function(roomSession) {
                 var durationMin = jz.date.duration(roomSession.start, roomSession.stop) / 1000 / 60;
-                //var durationHtml = $("<div />").addClass("duration").text(durationMin + "min");
-                //var timeHtml = $("<div />").addClass("time").text(jz.date.date(roomSession.start) + " – " +  jz.date.date(roomSession.stop));
-                var nameHtml = $("<div />").addClass("name").text(roomSession.title);
-                //var speakerHtml = $("<div />").addClass("speaker").html(roomSession.title);
-                roomDiv.append($("<div />")
+                var sessionHtml = $("<div />")
                     .addClass("session")
-                    .css("height", durationMin * 6 + "px")
-                    .append(nameHtml));
+                    .css("height", durationMin * 6 + "px");
+                if(roomSession.blank) {
+                    sessionHtml.addClass("blank");
+                } else {
+                    var durationHtml = $("<div />").addClass("duration").text(durationMin + "min");
+                    var timeHtml = $("<div />").addClass("time").text(jz.date.date(roomSession.start) + " – " +  jz.date.date(roomSession.stop));
+                    var nameHtml = $("<div />").addClass("name").text(roomSession.title);
+                    //var speakerHtml = $("<div />").addClass("speaker").html(roomSession.title);
+                    sessionHtml.append(nameHtml, durationHtml, timeHtml);
+                }
+
+                roomDiv.append(sessionHtml);
             });
             sessionsDiv.append(roomDiv);
         });

@@ -190,6 +190,9 @@ ul.list i { margin:0 .5em 0 0; }
 
 
 
+.sessions { 
+
+}
 
 .room {
     float: left;
@@ -199,10 +202,22 @@ ul.list i { margin:0 .5em 0 0; }
 }
 
 .session {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+
     padding: 5px;
-    margin: 5px;
+    margin: 0;
+    border: 5px solid #fff;
     background: #eee;
     overflow: hidden;
+    font-size: 10px;
+}
+.session:hover {
+    background: #bbb;
+}
+.blank {
+    background: white;
 }
 
 
