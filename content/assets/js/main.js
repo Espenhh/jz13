@@ -106,6 +106,56 @@ jz.sessions.createTimeSlots = function(conferenceStartTime, conferenceStopTime) 
     return timeSlots;
 };
 
+jz.sessions.generateSessionDay = function(sorted) {
+    var sessionsDiv = $("<div />");
+
+    var grouped = _.groupBy(sorted, "room");
+
+    var conferenceStartTime = _.first(sorted).start;
+    var conferenceStopTime = _.last(sorted).stop;
+
+    var timeSlots = jz.sessions.createTimeSlots(conferenceStartTime, conferenceStopTime);
+
+    var groupedWithBlanks = jz.sessions.blankify(grouped, conferenceStartTime);
+
+    var rooms = _.keys(groupedWithBlanks).sort();
+    sessionsDiv.append($("<div />").addClass("dayHeader").html(moment(timeSlots[0].start).format('MMMM Do')));
+    var timeslotsHtml = $("<div />").addClass("room times");
+    timeslotsHtml.append($("<h2 />").html("&nbsp;"));
+    _.each(timeSlots, function(timeSlot) {
+        var timeFormatted = moment(timeSlot.start).format('HH:mm');
+        timeslotsHtml.append($("<div />").text(timeFormatted).css("height", 60 * 6 + "px"));
+    });
+    sessionsDiv.append(timeslotsHtml);
+
+    _.each(rooms, function(roomName) {
+        var roomSessions = groupedWithBlanks[roomName];
+
+        var roomDiv = $("<div />").addClass("room");
+        roomDiv.append($("<h2 />").text(roomName));
+        _.each(roomSessions, function(roomSession) {
+            var durationMin = jz.date.duration(roomSession.start, roomSession.stop) / 1000 / 60;
+            var sessionHtml = $("<div />")
+                .addClass("session")
+                .css("height", durationMin * 6 + "px");
+            if(roomSession.blank) {
+                sessionHtml.addClass("blank");
+            } else {
+                var titleHtml = $("<div />").addClass("detail title").text(roomSession.title);
+                var speakerHtml = $("<div />").addClass("detail speakers").html("<i class='icon-user'></i>" + jz.utils.join(roomSession.speakers));
+                var langHtml = $("<div />").addClass("detail lang").html("<i class='icon-globe'></i>" + (roomSession.lang == "no" ? "Norwegian" : "English"));
+                var levelHtml = $("<div />").addClass("detail lang").html("<i class='icon-magic'></i>" + roomSession.level);
+                sessionHtml.append(titleHtml, speakerHtml, langHtml, levelHtml);
+                sessionHtml.addClass(roomSession.level);
+            }
+
+            roomDiv.append(sessionHtml);
+        });
+        sessionsDiv.append(roomDiv);
+    });
+    return sessionsDiv;
+};
+
 
 /*         ROUTES         */
 
@@ -147,49 +197,14 @@ jz.routes.program = function() {
         var sessionsDiv = $(".sessions");
 
         var sorted = _.sortBy(sessions, "start");
-        var grouped = _.groupBy(sorted, "room");
-
-        var conferenceStartTime = _.first(sorted).start;
-        var conferenceStopTime = _.last(sorted).stop;
-
-        var timeSlots = jz.sessions.createTimeSlots(conferenceStartTime, conferenceStopTime);
-
-        var groupedWithBlanks = jz.sessions.blankify(grouped, conferenceStartTime);
-
-        var rooms = _.keys(groupedWithBlanks).sort();
-
-        var timeslotsHtml = $("<div />").addClass("room times");
-        timeslotsHtml.append($("<h2 />").html("&nbsp;"));
-        _.each(timeSlots, function(timeSlot) {
-            var timeFormatted = moment(timeSlot.start).format('MMM Do, HH:mm');
-            timeslotsHtml.append($("<div />").text(timeFormatted).css("height", 60 * 6 + "px"));
+        var splitByDay = _.groupBy(sorted, function(session) {
+            return moment(session.start).format('MMM Do');
         });
-        sessionsDiv.append(timeslotsHtml);
-
-        _.each(rooms, function(roomName) {
-            var roomSessions = groupedWithBlanks[roomName];
-
-            var roomDiv = $("<div />").addClass("room");
-            roomDiv.append($("<h2 />").text(roomName));
-            _.each(roomSessions, function(roomSession) {
-                var durationMin = jz.date.duration(roomSession.start, roomSession.stop) / 1000 / 60;
-                var sessionHtml = $("<div />")
-                    .addClass("session")
-                    .css("height", durationMin * 6 + "px");
-                if(roomSession.blank) {
-                    sessionHtml.addClass("blank");
-                } else {
-                    var titleHtml = $("<div />").addClass("detail title").text(roomSession.title);
-                    var speakerHtml = $("<div />").addClass("detail speakers").html("<i class='icon-user'></i>" + jz.utils.join(roomSession.speakers));
-                    var langHtml = $("<div />").addClass("detail lang").html("<i class='icon-globe'></i>" + (roomSession.lang == "no" ? "Norwegian" : "English"));
-                    var levelHtml = $("<div />").addClass("detail lang").html("<i class='icon-magic'></i>" + roomSession.level);
-                    sessionHtml.append(titleHtml, speakerHtml, langHtml, levelHtml);
-                }
-
-                roomDiv.append(sessionHtml);
-            });
-            sessionsDiv.append(roomDiv);
+        _.each(splitByDay, function(day) {
+            sessionsDiv.append(jz.sessions.generateSessionDay(day));
+            sessionsDiv.append($("<div />").addClass("clear"));
         });
+
     });
 };
 

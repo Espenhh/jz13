@@ -196,9 +196,26 @@ ul.list i { margin:0 .5em 0 0; }
 
 .room {
     float: left;
-    width: 155px;
+    width: 170px;
     margin: 0;
     padding: 0;
+}
+.room h2 {
+    text-align: center;
+}
+.times {
+    width: 70px;
+}
+
+
+.dayHeader {
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 1px dotted #A10735;
+    padding: 10px;
+    margin: 50px 0 0 0;
+    color: #A10735;
+    font-weight: bolder;
 }
 
 .session {
@@ -206,12 +223,11 @@ ul.list i { margin:0 .5em 0 0; }
     -webkit-box-sizing: border-box; 
     box-sizing: border-box; 
 
-    padding: 5px;
+    padding: 10px;
     margin: 0;
     border: 5px solid #fff;
     background: #eee;
     overflow: hidden;
-    
 }
 .session:hover {
     background: #bbb;
@@ -231,11 +247,16 @@ ul.list i { margin:0 .5em 0 0; }
     font-size: 14px;
 }
 .session .detail {
-    margin: 10px 0;
+    margin: 0 0 10px 0;
 }
 .session .detail i {
     margin-right: 5px;
 }
+
+.session.beginner { background: #e2f2f1; }
+.session.intermediate { background: #fff6e2; }
+.session.intermediate-advanced { background: #fff6e2; }
+.session.advanced { background: #ffebea; }
 
 .blank {
     background: #fff;
