@@ -127,7 +127,7 @@ jz.sessions.generateSessionDay = function(sorted) {
         if(!timeFormatted.match(/\d\d:[0,3]0/g)) {
             timeFormatted = "";
         }
-        timeslotsHtml.append($("<div />").text(timeFormatted).css("height", 6 * 10 + "px"));
+        timeslotsHtml.append($("<div />").css("height", 6 * 10 + "px").append($("<div />").text(timeFormatted)));
     });
     sessionsDiv.append(timeslotsHtml);
 

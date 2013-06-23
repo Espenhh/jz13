@@ -206,7 +206,19 @@ ul.list i { margin:0 .5em 0 0; }
 .times {
     width: 70px;
 }
+
+.sessions div {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
 .times div {
+
+    border-top: 5px solid #fff;
+}
+
+.times div div {
     border-top: 1px dotted #ddd;
     color: #ddd;
     font-size: 14px;
@@ -224,10 +236,6 @@ ul.list i { margin:0 .5em 0 0; }
 }
 
 .session {
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
-    box-sizing: border-box; 
-
     padding: 10px;
     margin: 0;
     border: 5px solid #fff;
@@ -258,10 +266,15 @@ ul.list i { margin:0 .5em 0 0; }
     margin-right: 5px;
 }
 
-.session.beginner { background: #e2f2f1; }
-.session.intermediate { background: #fff6e2; }
-.session.intermediate-advanced { background: #fff6e2; }
-.session.advanced { background: #ffebea; }
+.session.beginner { background: rgba(16,128,117,0.15) }
+.session.intermediate { background: rgba(252,161,9,0.15) }
+.session.intermediate-advanced { background: rgba(251,52,55,0.15) }
+.session.advanced { background: rgba(251,52,55,0.15) }
+
+.session.beginner:hover { background: rgba(16,128,117,0.30) }
+.session.intermediate:hover { background: rgba(252,161,9,0.30) }
+.session.intermediate-advanced:hover { background: rgba(251,52,55,0.30) }
+.session.advanced:hover { background: rgba(251,52,55,0.30) }
 
 .blank {
     background: #fff;
