@@ -179,9 +179,11 @@ jz.routes.program = function() {
                 if(roomSession.blank) {
                     sessionHtml.addClass("blank");
                 } else {
-                    var titleHtml = $("<div />").addClass("title").text(roomSession.title);
-                    var speakerHtml = $("<div />").addClass("speakers").text(jz.utils.join(roomSession.speakers));
-                    sessionHtml.append(titleHtml, speakerHtml);
+                    var titleHtml = $("<div />").addClass("detail title").text(roomSession.title);
+                    var speakerHtml = $("<div />").addClass("detail speakers").html("<i class='icon-user'></i>" + jz.utils.join(roomSession.speakers));
+                    var langHtml = $("<div />").addClass("detail lang").html("<i class='icon-globe'></i>" + (roomSession.lang == "no" ? "Norwegian" : "English"));
+                    var levelHtml = $("<div />").addClass("detail lang").html("<i class='icon-magic'></i>" + roomSession.level);
+                    sessionHtml.append(titleHtml, speakerHtml, langHtml, levelHtml);
                 }
 
                 roomDiv.append(sessionHtml);

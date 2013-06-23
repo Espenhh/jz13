@@ -222,9 +222,19 @@ ul.list i { margin:0 .5em 0 0; }
     line-height: 1.2;
     color: #A10735;
     padding: 0 0 5px 0;
+    min-height: 50px;
 }
 .session .speakers {
-    font-size: 12px;
+    font-size: 14px;
+}
+.session .lang {
+    font-size: 14px;
+}
+.session .detail {
+    margin: 10px 0;
+}
+.session .detail i {
+    margin-right: 5px;
 }
 
 .blank {
