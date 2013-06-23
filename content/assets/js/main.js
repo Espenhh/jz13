@@ -101,7 +101,7 @@ jz.sessions.createTimeSlots = function(conferenceStartTime, conferenceStopTime) 
     var time = Date.parse(conferenceStartTime);
     while(time < Date.parse(conferenceStopTime)) {
         timeSlots.push({ start: new Date(time) });
-        time += 1000*60*60;
+        time += 1000*60*10;
     }
     return timeSlots;
 };
@@ -124,7 +124,10 @@ jz.sessions.generateSessionDay = function(sorted) {
     timeslotsHtml.append($("<h2 />").html("&nbsp;"));
     _.each(timeSlots, function(timeSlot) {
         var timeFormatted = moment(timeSlot.start).format('HH:mm');
-        timeslotsHtml.append($("<div />").text(timeFormatted).css("height", 60 * 6 + "px"));
+        if(!timeFormatted.match(/\d\d:[0,3]0/g)) {
+            timeFormatted = "";
+        }
+        timeslotsHtml.append($("<div />").text(timeFormatted).css("height", 6 * 10 + "px"));
     });
     sessionsDiv.append(timeslotsHtml);
 
