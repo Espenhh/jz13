@@ -55,6 +55,10 @@ jz.utils.ms = function(endDate) {
     else return endDate - startDate;
 };
 
+jz.utils.join = function(array) {
+    return _.reduce(array, function(acc, next) { return (acc && acc + ", ") + next; }, "");
+};
+
 jz.date.parse = function(date) {
     var    m = /(\d\d\d\d)-(\d\d)-(\d\d).(\d\d):(\d\d):(\d\d)/.exec(date);
     if(!m) m = /(\d\d\d\d)-(\d\d)-(\d\d)/.exec(date);
@@ -175,11 +179,9 @@ jz.routes.program = function() {
                 if(roomSession.blank) {
                     sessionHtml.addClass("blank");
                 } else {
-                    var durationHtml = $("<div />").addClass("duration").text(durationMin + "min");
-                    var timeHtml = $("<div />").addClass("time").text(jz.date.date(roomSession.start) + " – " +  jz.date.date(roomSession.stop));
-                    var nameHtml = $("<div />").addClass("name").text(roomSession.title);
-                    //var speakerHtml = $("<div />").addClass("speaker").html(roomSession.title);
-                    sessionHtml.append(nameHtml, durationHtml, timeHtml);
+                    var titleHtml = $("<div />").addClass("title").text(roomSession.title);
+                    var speakerHtml = $("<div />").addClass("speakers").text(jz.utils.join(roomSession.speakers));
+                    sessionHtml.append(titleHtml, speakerHtml);
                 }
 
                 roomDiv.append(sessionHtml);

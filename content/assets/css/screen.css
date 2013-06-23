@@ -211,13 +211,28 @@ ul.list i { margin:0 .5em 0 0; }
     border: 5px solid #fff;
     background: #eee;
     overflow: hidden;
-    font-size: 10px;
+    
 }
 .session:hover {
     background: #bbb;
+    cursor: pointer;
 }
+.session .title {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #A10735;
+    padding: 0 0 5px 0;
+}
+.session .speakers {
+    font-size: 12px;
+}
+
 .blank {
-    background: white;
+    background: #fff;
+}
+.blank:hover {
+    background: #fff;
+    cursor: default;
 }
 
 
