@@ -156,7 +156,7 @@ jz.data.partners = [
     ["Miles", "miles_2012.jpg", "http://www.miles.no/"],
     ["Programutvikling", "programutvikling_2012.jpg", "http://www.put.no/"],
     ["Steria", "steria_2012.jpg", "http://www.steria.no/"],
-    ["Systek", "systek_2012.jpg", "http://www.systek.no/"],
+    ["Systek", "systek_2013.jpg", "http://www.systek.no/"],
     ["ViaNett", "vianett_2013ny.jpg", "http://www.vianett.no"],
     ["Visma", "visma_2012.jpg", "http://www.visma.no/"],
     ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
