@@ -17,7 +17,8 @@ exports.config = {
         "components/dispatch/dispatch.js",
         "components/jquery/jquery.js",
         "assets/js/vendor/moment.min.js",
-        "assets/js/main.js"
+        "assets/js/namespace.js",
+        "assets/js"
       ]
     },
 
