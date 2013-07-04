@@ -1,5 +1,8 @@
+<!-- 
 <div class="session">
 
-<%= title %>
-
-</div>
+</div> 
+-->
+<% _.each(speakers, function(speaker) { %>
+	<img src="<%= speaker.gravatarUrl %>?s=200&d=mm">
+<% }) %>
