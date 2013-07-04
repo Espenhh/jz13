@@ -44,3 +44,7 @@ jz.utils.ms = function(endDate) {
 jz.utils.join = function(array) {
     return _.reduce(array, function(acc, next) { return (acc && acc + ", ") + next; }, "");
 };
+
+jz.utils.slug = function(str) {
+    return str.replace(/[ ]+/g, "-").toLowerCase();
+};

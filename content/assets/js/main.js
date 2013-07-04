@@ -2,15 +2,11 @@
 
 $(function() {
     jz.utils.addSupportClasses();
-    jz.routes.go();
-});
-
-jz.routes.go = function() {
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
     var file = _.last(path.split("/")) || "index";
     var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "index" : file;
     if(jz.routes[name]) jz.routes[name]();
-};
+});
 
 jz.routes.index = function() {
     jz.api.tweets().then(function(tweets) {
@@ -39,18 +35,30 @@ jz.routes.credits = function() {
 };
 
 jz.routes.program = function() {
-    jz.api.sessions().then(function(sessions) {
-        var sessionsDiv = $(".sessions");
+    var summary = function(item) {
+        return $("<div>").addClass("summary").text(item.title);
+    };
+    var details = function(item) {
+        return $("<div>").addClass("details").text(item.title).hide();
+    };
+    var session = function(item) {
+        return $("<div>").addClass("session")
+            .addClass(item.slugs.join(" "))
+            .append(summary(item))
+            .append(details(item));
+    };
 
-        var sorted = _.sortBy(sessions, "start");
-        var splitByDay = _.groupBy(sorted, function(session) {
-            return moment(session.start).format('MMM Do');
-        });
-        _.each(splitByDay, function(day) {
-            sessionsDiv.append(jz.sessions.generateSessionDay(day));
-            sessionsDiv.append($("<div />").addClass("clear"));
-        });
 
+
+    jz.api.sessions().then(function(data) {
+        jz.api.template("filters", { filters: data.tags }).then(function(html) {
+            $(".filters").html(html);
+        });
+        _.each(data.sessions, function(session) {
+            jz.api.template("session", session).then(function(html) {
+                $(".sessions").append(html);
+            });
+        });
     });
 };
 
