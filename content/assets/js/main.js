@@ -35,28 +35,20 @@ jz.routes.credits = function() {
 };
 
 jz.routes.program = function() {
-    var summary = function(item) {
-        return $("<div>").addClass("summary").text(item.title);
+    var show = function(event) {
+        event.preventDefault();
+        jz.api.details($(this).attr("data-url")).then(function(html) {
+            $(this).find(".details").html(html).show();
+            console.log("show", html);
+        });
     };
-    var details = function(item) {
-        return $("<div>").addClass("details").text(item.title).hide();
-    };
-    var session = function(item) {
-        return $("<div>").addClass("session")
-            .addClass(item.slugs.join(" "))
-            .append(summary(item))
-            .append(details(item));
-    };
-
-
-
     jz.api.sessions().then(function(data) {
         jz.api.template("filters", { filters: data.tags }).then(function(html) {
             $(".filters").html(html);
         });
         _.each(data.sessions, function(session) {
             jz.api.template("session", session).then(function(html) {
-                $(".sessions").append(html);
+                $(".sessions").append($(html).on("click", show).attr("data-url", session.links[0].uri));
             });
         });
     });

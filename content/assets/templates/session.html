@@ -1,8 +1,16 @@
-<!-- 
-<div class="session">
-
-</div> 
--->
-<% _.each(speakers, function(speaker) { %>
-	<img src="<%= speaker.gravatarUrl %>?s=200&d=mm">
-<% }) %>
+<li class="session">
+    <div class="intro <%= slugs.join(" ") %>">
+        <img src="<%= speakers[0].gravatarUrl %>?s=200&d=identicon" alt="<%= names %>">
+        <span class="title"><%= title %></span>
+        <span class="name">with <%= names %></span>
+        <span class="keywords">
+            <span class="keyword level level-<%= level %>"><%= jz.utils.title(level) %></span>
+            <% _.each(keywords, function(keyword) { %>
+                <span class="keyword"><%= keyword %></span>
+            <% }) %>
+        </span>
+        <div class="clear"></div>
+    </div>
+    <div class="details hide"></div>
+    <div class="clear"></div>
+</li>

@@ -20,6 +20,7 @@ jz.api.sessions = function() {
     jz.api.get("/api/sessions").then(function(data) {
         _.each(data, function(d) {
             d.slugs = _.map(d.keywords, jz.utils.slug);
+            d.names = _.pluck(d.speakers, "name").join(", ");
         });
         var c = _.chain(data), parsed = {
             tags:    c.pluck("keywords").flatten().uniq().value(),
@@ -30,6 +31,16 @@ jz.api.sessions = function() {
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);
         def.resolve(parsed);
+    });
+    return def;
+};
+
+jz.api.details = function(url) {
+    var def = new $.Deferred();
+    jz.api.get(url).then(function(data) {
+        jz.api.template("details", data).then(function(html) {
+            def.resolve(def);
+        });
     });
     return def;
 };

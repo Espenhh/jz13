@@ -48,3 +48,7 @@ jz.utils.join = function(array) {
 jz.utils.slug = function(str) {
     return str.replace(/[ ]+/g, "-").toLowerCase();
 };
+
+jz.utils.title = function(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+};
