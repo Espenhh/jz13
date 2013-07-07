@@ -39,7 +39,7 @@ jz.api.details = function(url) {
     var def = new $.Deferred();
     jz.api.get(url).then(function(data) {
         jz.api.template("details", data).then(function(html) {
-            def.resolve(def);
+            def.resolve(html);
         });
     });
     return def;

@@ -37,19 +37,31 @@ jz.routes.credits = function() {
 jz.routes.program = function() {
     var show = function(event) {
         event.preventDefault();
-        jz.api.details($(this).attr("data-url")).then(function(html) {
-            $(this).find(".details").html(html).show();
-            console.log("show", html);
-        });
+        $(this).toggleClass("active");
+        jz.api.details($(this).attr("data-url")).then(_.bind(function(html) {
+            $(this).find(".details").html(html).slideToggle(200);
+        }, this));
+    };
+    var filter = function(event) {
+        event.preventDefault();
+        if($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(".intro").show();
+        } else {
+            $(".filters a").removeClass("active");
+            $(this).addClass("active");
+            $(".intro").hide();
+            $(".intro." + $(this).attr("rel")).show();
+        }
     };
     jz.api.sessions().then(function(data) {
         jz.api.template("filters", { filters: data.tags }).then(function(html) {
             $(".filters").html(html);
+            $(".filters a").on("click", filter);
         });
-        _.each(data.sessions, function(session) {
-            jz.api.template("session", session).then(function(html) {
-                $(".sessions").append($(html).on("click", show).attr("data-url", session.links[0].uri));
-            });
+        jz.api.template("sessions", { sessions: data.sessions }).then(function(html) {
+            $(".program").html(html);
+            $(".program li").on("click", show);
         });
     });
 };

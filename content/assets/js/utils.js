@@ -52,3 +52,7 @@ jz.utils.slug = function(str) {
 jz.utils.title = function(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 };
+
+jz.utils.paragraphs = function(str) {
+    return "<p>" + str.replace(/\n\n/g, "</p><p>") + "</p>";
+};
