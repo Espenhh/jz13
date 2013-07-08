@@ -1,6 +1,9 @@
 jz.api.cache = {};
 
 jz.api.get = function(url) {
+    if(url.indexOf("http") === 0) {
+        url = "/api/" + url.split("/api/")[1];
+    }
     var def = new $.Deferred();
     var data = jz.api.cache[url];
     if(data) return def.resolve(data);
