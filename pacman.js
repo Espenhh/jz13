@@ -3,6 +3,7 @@
 exports.config = {
 
   ignore_build: ["components"],
+  ignore_processing: ["assets/templates", "assets/components"],
 
   assets: {
 
@@ -16,7 +17,9 @@ exports.config = {
         "components/eventemitter2/lib/eventemitter2.js",
         "components/dispatch/dispatch.js",
         "components/jquery/jquery.js",
-        "assets/js/main.js"
+        "assets/js/vendor/moment.min.js",
+        "assets/js/namespace.js",
+        "assets/js"
       ]
     },
 

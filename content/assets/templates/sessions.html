@@ -1,0 +1,22 @@
+<ul class="sessions">
+<% _.each(sessions, function(s) { %>
+
+    <li class="session" data-url="<%= s.links[0].uri %>">
+        <div class="intro <%= s.slugs.join(" ") %>">
+            <img src="<%= s.speakers[0].gravatarUrl %>?s=200&d=identicon" alt="<%= s.names %>">
+            <span class="title"><%= s.title %></span>
+            <span class="keywords">
+                <span class="keyword"><%= s.names %></span>
+                <span class="keyword level level-<%= s.level %>"><%= jz.utils.title(s.level) %></span>
+                <% _.each(s.keywords, function(keyword) { %>
+                    <span class="keyword"><%= keyword %></span>
+                <% }) %>
+            </span>
+            <div class="clear"></div>
+        </div>
+        <div class="details hide"></div>
+        <div class="clear"></div>
+    </li>
+
+<% }) %>
+</ul>

@@ -1,0 +1,7 @@
+<ul>
+    <% _.each(filters, function(f) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(f) %>">
+            <%= f %>
+        </a></li>
+    <% }) %>
+</ul>
