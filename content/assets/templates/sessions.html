@@ -6,6 +6,8 @@
             <img src="<%= s.speakers[0].gravatarUrl %>?s=200&d=identicon" alt="<%= s.names %>">
             <span class="title"><%= s.title %></span>
             <span class="keywords">
+                <span class="keyword"><%= s.sessionlength %></span>
+                <span class="keyword"><%= s.language %></span>
                 <span class="keyword"><%= s.names %></span>
                 <span class="keyword level level-<%= s.level %>"><%= jz.utils.title(s.level) %></span>
                 <% _.each(s.keywords, function(keyword) { %>

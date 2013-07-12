@@ -24,6 +24,8 @@ jz.api.sessions = function() {
         _.each(data, function(d) {
             d.slugs = _.map(d.keywords, jz.utils.slug);
             d.names = _.pluck(d.speakers, "name").join(", ");
+            d.sessionlength = d.format === "presentation" ? "60 min" : "10 min";
+            d.language = d.lang === "no" ? "Norwegian" : "English";
         });
         var c = _.chain(data), parsed = {
             tags:    c.pluck("keywords").flatten().uniq().value(),

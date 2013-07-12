@@ -1,3 +1,9 @@
 <%= jz.utils.paragraphs(body) %>
 
-<p class="audience">Intended audience: <%= audience %></p>
+<h4>Intended audience:</h4>
+<p class="audience"><%= audience %></p>
+
+<% _.each(speakers, function(s) { %>
+    <h4>Speaker: <%= s.name %></h4>
+	<p><%= s.bio %></p>
+<% }) %>
