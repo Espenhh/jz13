@@ -36,7 +36,8 @@ jz.data.partners = [
     ["Antares", "antares_2013.jpg", "http://www.antares.no"],
     ["Evry", "evry_2013.jpg", "http://www.evry.no"],
     ["Jetbrains", "Jetbrains.jpg", "http://www.jetbrains.com"],
-    ["Pluralsight", "pluralsight_2013.jpg", "http://www.pluralsight.com"]
+    ["Pluralsight", "pluralsight_2013.jpg", "http://www.pluralsight.com"],
+    ["Greenbird", "stolt_partner_greenbird.jpg", "http://www.greenbird.no"]
 ];
 
 // TODODODODODOD!!11one
