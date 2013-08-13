@@ -117,7 +117,7 @@ a:hover { color:#000; border-color:#000; }
 
 .tile-partners .tile-inner { background:#303030; height:auto; text-align: center; min-height:15em; padding:2em 1em; }
 .tile-partners a { border:none; }
-.tile-partners img { width:100px; display: inline-block; border:.5em solid #303030; }
+.tile-partners img { width:150px; height: 68px; display: inline-block; border:.5em solid #303030; }
 .tile-partners img:hover { border-color:#222; }
 
 .tile-credits .tile-inner { background:#303030; height:auto; text-align: center; min-height:280px; padding:2em 1em; }
