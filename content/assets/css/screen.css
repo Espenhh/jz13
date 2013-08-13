@@ -122,6 +122,10 @@ a:hover { color:#000; border-color:#000; }
 .tile-credits img { width:200px; height:200px; display: inline-block; border:.5em solid #222; float: left; margin: 0.5em; }
 .tile-credits img:hover { border-color:#000; }
 
+.tile-communities .tile-inner { height: auto; }
+.tile-communities .community { width: 20%; float: left; margin-right: 1em; padding: 1em; background: red;}
+
+
 .tile-contact .tile-inner { background:#FCAF2A; color:#000; line-height: 1.35; padding-bottom:2.3em; }
 .tile-contact h2 { color:#fff; }
 .tile-contact strong { font-weight: bold; }
@@ -214,6 +218,8 @@ ul.list i { margin:0 .5em 0 0; }
 .details { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
 .details { background:#f6f4ed; float: left; width: 100%; clear: both; padding:3em 5.5em; border-bottom:2em solid #fff; }
 .details h3 { margin:0; }
+
+.community h3 { margin:0; }
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }

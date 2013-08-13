@@ -80,3 +80,13 @@ jz.routes.partners = function() {
         });
     });
 };
+
+jz.routes.communities = function() {
+    _.each($(".community"), function(a) {
+        var color = jz.utils.randomColor();
+        console.log(color);
+        $(a).css("background", color.b);
+        $(a).find("h3").css("color", color.f);
+        $(a).css("color", color.f);
+    });
+};

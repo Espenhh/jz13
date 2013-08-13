@@ -56,3 +56,37 @@ jz.utils.title = function(str) {
 jz.utils.paragraphs = function(str) {
     return "<p>" + str.replace(/\n\n/g, "</p><p>") + "</p>";
 };
+
+jz.utils.randomColor = function() {
+    var colors = [
+        {
+            f: "#ffffff",
+            b: "#a10735"
+        }, 
+        {
+            f: "#ffffff",
+            b: "#fc4f4c"
+        },
+        {
+            f: "#000000",
+            b: "#f7813f"
+        },
+        {
+            f: "#000000",
+            b: "#f3a928"
+        },
+        {
+            f: "#000000",
+            b: "#f3a928"
+        },
+        {
+            f: "#ffffff",
+            b: "#266761"
+        },
+        {
+            f: "#ffffff",
+            b: "#1a0000"
+        },
+    ];
+    return colors[_.random(colors.length-1)];
+};
