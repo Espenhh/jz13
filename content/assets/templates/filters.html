@@ -1,7 +1,10 @@
+<h2 class="program-header">Categories</h2>
 <ul>
     <% _.each(filters, function(f) { %>
         <li><a href="#" rel="<%= jz.utils.slug(f) %>">
-            <%= f %>
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= _.str.truncate(f, 26) %>
         </a></li>
     <% }) %>
 </ul>

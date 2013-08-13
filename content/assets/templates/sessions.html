@@ -1,24 +1,50 @@
-<ul class="sessions">
-<% _.each(sessions, function(s) { %>
+<div class="sessions">
+<% _.each(sessions, function(day) { %>
 
-    <li class="session" data-url="<%= s.links[0].uri %>">
-        <div class="intro <%= s.slugs.join(" ") %>">
-            <img src="<%= s.speakers[0].gravatarUrl %>?s=200&d=identicon" alt="<%= s.names %>">
-            <span class="title"><%= s.title %></span>
-            <span class="keywords">
-                <span class="keyword"><%= s.sessionlength %></span>
-                <span class="keyword"><%= s.language %></span>
-                <span class="keyword"><%= s.names %></span>
-                <span class="keyword level level-<%= s.level %>"><%= jz.utils.title(s.level) %></span>
-                <% _.each(s.keywords, function(keyword) { %>
-                    <span class="keyword"><%= keyword %></span>
-                <% }) %>
-            </span>
-            <div class="clear"></div>
+    <h2 class="program-header"><%= jz.date.day(day[0].presentation[0].start) %></h2>
+
+    <% _.each(day, function(slot) { %>
+        <div class="slot">
+
+            <% _.each(slot.presentation, function(pres, i) { %>
+                <% console.log(pres) %>
+                <a href="#" class="session session-<%= i %> <%= pres.slugs.join(' ') %>">
+                    <div class="time"><%= jz.date.time(slot.presentation[0].start) %></div>
+                    <span class="title">
+                        <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                        <%= _.str.truncate(pres.title, 55) %>
+                    </span>
+                    <span class="person"><img src="<%= pres.imgs[0] %>?s=200&amp;d=identicon"> <%= _.str.truncate(pres.names, 20) %></span>
+                    <span class="room"><%= pres.room %></span>
+                </a>
+            <% }) %>
+
+            <% _.each(slot["lightning-talk"], function(pres, i) { %>
+                <a href="#" class="session session-short <%= pres.slugs.join(' ') %>">
+                    <div class="time"><%= jz.date.time(slot.presentation[0].start) %></div>
+                    <div class="badge"><i class="icon-bolt" title="Lightning talk"></i></div>
+                    <span class="title">
+                        <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                        <%= _.str.truncate(pres.title, 55) %>
+                    </span>
+                    <span class="person"><img src="<%= pres.imgs[0] %>?s=200&amp;d=identicon"> <%= _.str.truncate(pres.names, 20) %></span>
+                    <span class="room"><%= pres.room %></span>
+                </a>
+            <% }) %>
+
         </div>
-        <div class="details hide"></div>
-        <div class="clear"></div>
-    </li>
+        <!-- <h3>Time <%= slot.presentation[0].start %></h3> -->
+
+        <!-- <h4>Presentations</h4> -->
+
+        <!--
+        <h4>Lightning</h4>
+        <% _.each(slot["lightning-talk"], function(light) { %>
+            <p><%= light.title %></p>
+        <% }) %>
+        -->
+
+    <% }) %>
 
 <% }) %>
-</ul>
+</div>

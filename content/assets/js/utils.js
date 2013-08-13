@@ -46,7 +46,7 @@ jz.utils.join = function(array) {
 };
 
 jz.utils.slug = function(str) {
-    return str.replace(/[ ]+/g, "-").toLowerCase();
+    return 'slug-' + str.replace(/[ ]+/g, "-").toLowerCase();
 };
 
 jz.utils.title = function(str) {

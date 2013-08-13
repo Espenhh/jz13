@@ -46,12 +46,14 @@ jz.routes.program = function() {
         event.preventDefault();
         if($(this).hasClass("active")) {
             $(this).removeClass("active");
-            $(".intro").show();
+            $(".session").show();
+            $("html").removeClass("ui-filter");
         } else {
             $(".filters a").removeClass("active");
             $(this).addClass("active");
-            $(".intro").hide();
-            $(".intro." + $(this).attr("rel")).show();
+            $(".session").hide();
+            $("." + $(this).attr("rel")).show();
+            $("html").addClass("ui-filter");
         }
     };
     jz.api.sessions().then(function(data) {
