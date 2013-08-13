@@ -57,7 +57,7 @@ jz.api.groupSlots = function(day) {
 };
 
 jz.api.groupSessions = function(data) {
-    var sorted = _.chain(data).sortBy('start').groupBy('day').value();
+    var sorted = _.chain(data).sortBy(jz.api.string_comparator('-format')).sortBy('start').groupBy('day').value();
     sorted = _.map(sorted, jz.api.groupSlots);
     return sorted;
 };
@@ -101,4 +101,32 @@ jz.api.template = function(name, data) {
         def.resolve(_.template(html)(data || {}));
     });
     return def;
+};
+
+
+
+/**
+ * Olav: litt jalla? :P Er herfra: https://gist.github.com/stereobooster/2952629 
+ *
+ * Underscore string descending sortBy
+ * usage:
+ *   Sort by name ascending `_.sortBy(data, string_comparator('name'));`
+ *   Sort by name descending `_.sortBy(data, string_comparator('-name'));`
+ */
+jz.api.string_comparator = function(param_name, compare_depth) {
+    if (param_name[0] == '-') {
+        param_name = param_name.slice(1),
+        compare_depth = compare_depth || 10;
+        return function (item) {
+             return String.fromCharCode.apply(String,
+                _.map(item[param_name].slice(0, compare_depth).split(""), function (c) {
+                    return 0xffff - c.charCodeAt();
+                })
+            );
+        };
+    } else {
+        return function (item) {
+            return item[param_name];
+        };
+    }
 };
