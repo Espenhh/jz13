@@ -8,7 +8,7 @@
 
             <% _.each(slot.presentation, function(pres, i) { %>
                 <a href="#" class="session session-<%= i %> <%= pres.slugs.join(' ') %>">
-                    <div class="time"><%= jz.date.time(slot.presentation[0].start) %></div>
+                    <div class="time"><%= pres.start ? jz.date.time(pres.start) : '' %></div>
                     <span class="title">
                         <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
                         <%= _.str.truncate(pres.title, 55) %>
@@ -20,7 +20,7 @@
 
             <% _.each(slot["lightning-talk"], function(pres, i) { %>
                 <a href="#" class="session session-short <%= pres.slugs.join(' ') %>">
-                    <div class="time"><%= jz.date.time(slot.presentation[0].start) %></div>
+                    <div class="time"><%= pres.start ? jz.date.time(pres.start) : '' %></div>
                     <div class="badge"><i class="icon-bolt" title="Lightning talk"></i></div>
                     <span class="title">
                         <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>

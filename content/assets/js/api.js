@@ -65,6 +65,7 @@ jz.api.groupSessions = function(data) {
 jz.api.sessions = function() {
     var def = new $.Deferred();
     jz.api.get("/api/sessions").then(function(data) {
+
         _.each(data, jz.api.parseSession);
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value(),
