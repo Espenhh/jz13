@@ -7,7 +7,6 @@
         <div class="slot">
 
             <% _.each(slot.presentation, function(pres, i) { %>
-                <% console.log(pres) %>
                 <a href="#" class="session session-<%= i %> <%= pres.slugs.join(' ') %>">
                     <div class="time"><%= jz.date.time(slot.presentation[0].start) %></div>
                     <span class="title">
