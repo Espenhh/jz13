@@ -65,8 +65,13 @@ jz.api.groupSessions = function(data) {
 jz.api.sessions = function() {
     var def = new $.Deferred();
     jz.api.get("/api/sessions").then(function(data) {
-
         _.each(data, jz.api.parseSession);
+
+        // Remove invalid sessions
+        data = _.reject(data, function(d) {
+            return !d.start || !d.title || !d.room;
+        });
+
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value(),
             langs: c.pluck("lang").uniq().value(),
