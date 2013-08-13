@@ -2,7 +2,8 @@ jz.date.parse = function(date) {
     var    m = /(\d\d\d\d)-(\d\d)-(\d\d).(\d\d):(\d\d):(\d\d)/.exec(date);
     if(!m) m = /(\d\d\d\d)-(\d\d)-(\d\d)/.exec(date);
     if(!m) return "";
-    return { year: m[1], month: m[2], day: m[3], hour: m[4], min: m[5], sec: m[6] };
+    var hourWithTimeZoneFixed = parseInt(m[4]) + 2; // Olav: ok? :P
+    return { year: m[1], month: m[2], day: m[3], hour: hourWithTimeZoneFixed, min: m[5], sec: m[6] };
 };
 
 jz.date.date = function(date) {
