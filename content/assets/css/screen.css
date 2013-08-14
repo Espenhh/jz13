@@ -196,7 +196,7 @@ ul.list i { margin:0 .5em 0 0; }
 .page-invert .tile-facts .tile-inner { background:#A10735; }
 
 .filters ul { padding:0 0 2em 1.25em; }
-.filters li { padding:.46em 0; }
+.filters li { padding:.51em 0; }
 .filters a { border: none; color:#394549; }
 .filters a:hover, .filters a:hover i { color:#148f87; }
 .filters i { font-size: .9em; display: inline-block; margin: 0 .3em 0 0; color:#ddd; }
@@ -205,11 +205,12 @@ ul.list i { margin:0 .5em 0 0; }
 
 .tiles-program { min-height: 50em; }
 h2.program-header { border-bottom:1px solid #f0f0f0; padding:2em 0 1.5em 3.4em; margin:0 0 1.5em 0; }
+h2.program-header br { display: none; }
 .filters h2.program-header { padding-left:1em; }
 
 .program { margin-bottom:5em; }
 .slot { padding: 0 0 2em 0; margin: 0 0 2em 0; border-bottom:1px solid #f0f0f0; }
-.slot-time { font-size: 1.4em; padding: 1em; display: none; }
+.slot-time { font-size: 1.4em; padding: 1em; display: none; font-weight: 200; text-align: center; }
 
 .session { display: block; color: #394549; border: none; position: relative; padding:.2em 0 .2em 4em;
     border-top:1px solid #fff; border-bottom:1px solid #fff; height: 1.5em; overflow: hidden; line-height: 1.5; }
@@ -281,10 +282,11 @@ h2.program-header { border-bottom:1px solid #f0f0f0; padding:2em 0 1.5em 3.4em; 
     .img-inner,
     a:hover .img-inner { display: none; }
 
-    h2.program-header { padding:1em; text-align: center; }
-    .slot { border: none; padding-bottom: 0; }
+    h2.program-header { padding:1em 1em 0 1em; margin:0; border: none; font-weight: 200; font-size: 2em; text-align: center; }
+    h2.program-header br { display: block; }
+    .slot { border: none; padding-bottom: 1em; margin-bottom: 0; font-size: 1.4em; }
     .slot-time { display: block; }
-    .session { padding-left: 0; }
+    .session { padding-left: 0; padding-top:.1em; padding-bottom:.1em; }
     .session .time { display: none; }
     .session .badge { display: none; }
     .session .person { display: none; }

@@ -2,7 +2,10 @@
 <% _.each(sessions, function(day) { %>
 <div class="day">
 
-    <h2 class="program-header"><%= jz.date.day(day[0][0].start) %></h2>
+    <h2 class="program-header">
+        <%= jz.date.weekday(day[0][0].start) %>,<br>
+        <%= jz.date.day(day[0][0].start) %>
+    </h2>
     <% _.each(day, function(slot) { %>
         <div class="slot">
 
