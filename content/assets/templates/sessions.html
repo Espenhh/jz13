@@ -6,6 +6,10 @@
     <% _.each(day, function(slot) { %>
         <div class="slot">
 
+            <div class="slot-time">
+                <%= jz.date.time(slot[0].start) %>
+            </div>
+
             <% _.each(slot, function(pres, i) { %>
                 <a href="#" class="
                     session
@@ -17,7 +21,7 @@
                     <%= jz.utils.slug(pres.format) %>
                     session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
 
-                    <div class="time"><%= pres.start ? jz.date.time(pres.start) : '' %></div>
+                    <div class="time"><%= jz.date.time(pres.start) %></div>
                     <div class="badge"><i class="icon-bolt" title="Lightning talk"></i></div>
 
                     <span class="title">
