@@ -195,10 +195,10 @@ ul.list i { margin:0 .5em 0 0; }
 .page-invert .tile .extra { background:#101010;  color:#fff; }
 .page-invert .tile-facts .tile-inner { background:#A10735; }
 
-.filters ul { padding:0 0 .45em 1.25em; }
+.filters ul { padding:0 0 2em 1.25em; }
 .filters li { padding:.46em 0; }
 .filters a { border: none; color:#394549; }
-.filters a:hover { color:#148f87; }
+.filters a:hover, .filters a:hover i { color:#148f87; }
 .filters i { font-size: .9em; display: inline-block; margin: 0 .3em 0 0; color:#ddd; }
 .filters .active .icon-circle-blank { display: none; }
 .filters .active .icon-circle { display: inline-block; color: #148f87; }
@@ -207,20 +207,23 @@ ul.list i { margin:0 .5em 0 0; }
 h2.program-header { border-bottom:1px solid #f0f0f0; padding:2em 0 1.5em 3.4em; margin:0 0 1.5em 0; }
 .filters h2.program-header { padding-left:1em; }
 
+.program { margin-bottom:5em; }
 .slot { padding: 0 0 2em 0; margin: 0 0 2em 0; border-bottom:1px solid #f0f0f0; }
 
 .session { display: block; color: #394549; border: none; position: relative; padding:.4em 0 .4em 4em;
     border-top:1px solid #fff; border-bottom:1px solid #fff; }
 .session-short { color:#999; }
-.session:hover { color:#000; border-color: #f6f6f6; }
-.session .time { position: absolute; left: 0; font-weight: bold; display: none; }
+.session:hover { color:#000; border-color: #eee; }
+.session .time { position: absolute; left: 0; font-weight: bold; display: none; text-align: right; }
 .session-0 .time { display: block; }
-.session .badge { position: absolute; left: 2em; opacity: .5; }
-.session .person { position: absolute; left:34em; }
+.session .badge { position: absolute; left: 2em; opacity: .5; display: none; }
+.session-short .badge { display: block; }
+.session .person { position: absolute; left:33em; }
 .session img { width: 1em; height: 1em; border-radius: 1em; margin:-.15em .2em -.15em 0; }
 .session .room { position: absolute; right: 1.5em; }
 
-.ui-filter .slot { border: none; margin: 0; padding: 0; }
+
+.ui-filter .slot { border: none; margin: 0 0 .5em 0; padding: 0; }
 .ui-filter .session .time { display: block; font-weight: 200; }
 .ui-filter .session .badge { display: none; }
 

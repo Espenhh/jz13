@@ -43,14 +43,9 @@ jz.api.groupSlots = function(day) {
         prev = session;
     });
 
-    // Divide into formats
-    _.each(slots, function(slot, index) {
-        slots[index] = _.groupBy(slot, 'format');
-    });
-
     // Sort presentations by room number
     _.each(slots, function(slot, index) {
-        slots[index].presentation = _.sortBy(slots[index].presentation, 'room');
+        slots[index] = _.sortBy(slots[index], 'room');
     });
 
     return slots;
@@ -74,7 +69,7 @@ jz.api.sessions = function() {
 
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value(),
-            langs: c.pluck("lang").uniq().value(),
+            langs: c.pluck("language").uniq().value(),
             levels: c.pluck("level").uniq().value(),
             formats: c.pluck("format").uniq().value(),
             sessions: jz.api.groupSessions(data)

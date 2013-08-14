@@ -57,7 +57,7 @@ jz.routes.program = function() {
         }
     };
     jz.api.sessions().then(function(data) {
-        jz.api.template("filters", { filters: data.tags }).then(function(html) {
+        jz.api.template("filters", { data: data }).then(function(html) {
             $(".filters").html(html);
             $(".filters a").on("click", filter);
         });

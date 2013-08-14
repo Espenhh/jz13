@@ -1,47 +1,37 @@
 <div class="sessions">
 <% _.each(sessions, function(day) { %>
 
-    <h2 class="program-header"><%= jz.date.day(day[0].presentation[0].start) %></h2>
+    <h2 class="program-header"><%= jz.date.day(day[0][0].start) %></h2>
 
     <% _.each(day, function(slot) { %>
         <div class="slot">
 
-            <% _.each(slot.presentation, function(pres, i) { %>
-                <a href="#" class="session session-<%= i %> <%= pres.slugs.join(' ') %>">
-                    <div class="time"><%= pres.start ? jz.date.time(pres.start) : '' %></div>
-                    <span class="title">
-                        <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
-                        <%= _.str.truncate(pres.title, 55) %>
-                    </span>
-                    <span class="person"><img src="<%= pres.imgs[0] %>?s=200&amp;d=identicon"> <%= _.str.truncate(pres.names, 20) %></span>
-                    <span class="room"><%= pres.room %></span>
-                </a>
-            <% }) %>
+            <% _.each(slot, function(pres, i) { %>
+                <a href="#" class="
+                    session
+                    session-<%= i %>
+                    <%= pres.slugs.join(' ') %>
+                    <%= jz.utils.slug(pres.language) %>
+                    <%= jz.utils.slug(pres.level) %>
+                    session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
 
-            <% _.each(slot["lightning-talk"], function(pres, i) { %>
-                <a href="#" class="session session-short <%= pres.slugs.join(' ') %>">
                     <div class="time"><%= pres.start ? jz.date.time(pres.start) : '' %></div>
                     <div class="badge"><i class="icon-bolt" title="Lightning talk"></i></div>
+
                     <span class="title">
                         <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
                         <%= _.str.truncate(pres.title, 55) %>
                     </span>
+
                     <span class="person"><img src="<%= pres.imgs[0] %>?s=200&amp;d=identicon"> <%= _.str.truncate(pres.names, 20) %></span>
                     <span class="room"><%= pres.room %></span>
+
                 </a>
             <% }) %>
 
+
         </div>
-        <!-- <h3>Time <%= slot.presentation[0].start %></h3> -->
 
-        <!-- <h4>Presentations</h4> -->
-
-        <!--
-        <h4>Lightning</h4>
-        <% _.each(slot["lightning-talk"], function(light) { %>
-            <p><%= light.title %></p>
-        <% }) %>
-        -->
 
     <% }) %>
 

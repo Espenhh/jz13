@@ -1,10 +1,30 @@
 <h2 class="program-header">Categories</h2>
 <ul>
-    <% _.each(filters, function(f) { %>
-        <li><a href="#" rel="<%= jz.utils.slug(f) %>">
+    <% _.each(data.tags, function(t) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(t) %>">
             <i class="icon-circle-blank"></i>
             <i class="icon-circle hide"></i>
-            <%= _.str.truncate(f, 26) %>
+            <%= _.str.truncate(t, 26) %>
+        </a></li>
+    <% }) %>
+</ul>
+
+<ul>
+    <% _.each(data.langs, function(language) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(language) %>">
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= language %>
+        </a></li>
+    <% }) %>
+</ul>
+
+<ul>
+    <% _.each(data.levels, function(level) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(level) %>">
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= _.str.capitalize(level) %>
         </a></li>
     <% }) %>
 </ul>
