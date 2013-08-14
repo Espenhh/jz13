@@ -68,10 +68,11 @@ jz.api.sessions = function() {
         });
 
         var c = _.chain(data), parsed = {
-            tags: c.pluck("keywords").flatten().uniq().value(),
-            langs: c.pluck("language").uniq().value(),
+            tags: c.pluck("keywords").flatten().uniq().value().sort(),
+            rooms: c.pluck("room").uniq().value().sort(),
+            langs: c.pluck("language").uniq().value().sort(),
             levels: c.pluck("level").uniq().value(),
-            formats: c.pluck("format").uniq().value(),
+            formats: c.pluck("format").uniq().value().reverse(),
             sessions: jz.api.groupSessions(data)
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);
@@ -101,7 +102,7 @@ jz.api.template = function(name, data) {
 
 
 /**
- * Olav: litt jalla? :P Er herfra: https://gist.github.com/stereobooster/2952629 
+ * Olav: litt jalla? :P Er herfra: https://gist.github.com/stereobooster/2952629
  *
  * Underscore string descending sortBy
  * usage:

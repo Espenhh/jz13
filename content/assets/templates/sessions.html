@@ -1,8 +1,8 @@
 <div class="sessions">
 <% _.each(sessions, function(day) { %>
+<div class="day">
 
     <h2 class="program-header"><%= jz.date.day(day[0][0].start) %></h2>
-
     <% _.each(day, function(slot) { %>
         <div class="slot">
 
@@ -13,6 +13,8 @@
                     <%= pres.slugs.join(' ') %>
                     <%= jz.utils.slug(pres.language) %>
                     <%= jz.utils.slug(pres.level) %>
+                    <%= jz.utils.slug(pres.room) %>
+                    <%= jz.utils.slug(pres.format) %>
                     session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
 
                     <div class="time"><%= pres.start ? jz.date.time(pres.start) : '' %></div>
@@ -32,8 +34,8 @@
 
         </div>
 
-
     <% }) %>
 
+</div>
 <% }) %>
 </div>

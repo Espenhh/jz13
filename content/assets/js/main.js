@@ -46,15 +46,26 @@ jz.routes.program = function() {
         event.preventDefault();
         if($(this).hasClass("active")) {
             $(this).removeClass("active");
-            $(".session").show();
-            $("html").removeClass("ui-filter");
         } else {
-            $(".filters a").removeClass("active");
+            $(this).parents('ul').find('.active').removeClass('active');
             $(this).addClass("active");
-            $(".session").hide();
-            $("." + $(this).attr("rel")).show();
-            $("html").addClass("ui-filter");
         }
+
+        var filters = $(".filters").find("a.active[rel]").map(function() {
+            console.log($(this).attr("rel"));
+            return $(this).attr("rel");
+        });
+
+        $("html").toggleClass("ui-filter", !!filters.length);
+
+        $(".session").removeClass('hide');
+        _.each(filters, function(name) {
+            $(".session").not("." + name).addClass('hide');
+        });
+
+        $(".day").hide().each(function() {
+            if ($(this).find('.session').not('.hide').size()) $(this).show();
+        });
     };
     jz.api.sessions().then(function(data) {
         jz.api.template("filters", { data: data }).then(function(html) {
