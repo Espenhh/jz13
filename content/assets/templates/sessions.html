@@ -14,9 +14,7 @@
             </div>
 
             <% _.each(slot, function(pres, i) { %>
-                <a href="#" class="
-                    session
-                    session-<%= i %>
+                <a href="/presentation.html?id=<%= pres.id %>" class="session session-<%= i %>
                     <%= pres.slugs.join(' ') %>
                     <%= jz.utils.slug(pres.language) %>
                     <%= jz.utils.slug(pres.level) %>

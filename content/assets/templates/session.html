@@ -1,0 +1,34 @@
+<div class="tiles" id="when">
+    <div class="tile tile-med tile-session tile-txt"><div class="tile-inner">
+        <div class="top">
+            <h2 class="first last"><%= title %></h2>
+            <h3 class="first">
+                <%= jz.date.weekday(start) %>,
+                <%= jz.date.day(start) %> at
+                <%= jz.date.time(start) %> in
+                <%= room %>
+            </h3>
+        </div>
+        <div class="body">
+            <div class="intro"><%= jz.utils.paragraphs(summary) %></div>
+            <%= jz.utils.paragraphs(body) %>
+            <p>Keywords: <%- keywords.join(', ') %></p>
+            <p>Location: <%- room %></p>
+            <p>Language: <%- language %></p>
+            <p>Level: <%- _.str.capitalize(level) %></p>
+            <p>Duration: <%- sessionlength %></p>
+        </div>
+    </div>
+</div>
+
+<% _.each(speakers, function(speaker) { %>
+    <div class="tile tile-small tile-txt tile-speaker"><div class="tile-inner">
+        <div>
+            <img src="<%= speaker.gravatarUrl %>?s=200&amp;d=identicon">
+            <h4><%= speaker.name %></h4>
+            <%= jz.utils.paragraphs(speaker.bio) %>
+        </div>
+    </div></div>
+<% }) %>
+
+<div class="clear"></div>

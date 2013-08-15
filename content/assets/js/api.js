@@ -19,6 +19,7 @@ jz.api.tweets = function() {
 };
 
 jz.api.parseSession = function(d) {
+    d.id    = d.links ? _.last(d.links[0].uri.split("/")).substr(0, 8) : 1;
     d.slugs = _.map(d.keywords, jz.utils.slug);
     d.names = _.pluck(d.speakers, "name").join(", ");
     d.imgs  = _.pluck(d.speakers, "gravatarUrl");
@@ -77,6 +78,14 @@ jz.api.sessions = function() {
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);
         def.resolve(parsed);
+    });
+    return def;
+};
+
+jz.api.session = function(id) {
+    var def = new $.Deferred();
+    jz.api.get("/api/sessions/" + id).then(function(data) {
+        def.resolve(jz.api.parseSession(data));
     });
     return def;
 };

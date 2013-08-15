@@ -79,6 +79,15 @@ jz.routes.program = function() {
     });
 };
 
+jz.routes.presentation = function() {
+    jz.api.session(jz.utils.param("id")).then(function(data) {
+        console.log(data);
+        jz.api.template("session", data).then(function(html) {
+            $('.presentation').html(html);
+        });
+    });
+};
+
 jz.routes.partners = function() {
     if($(".partners").size() === 0) return;
     $(".partners").empty().each(function(i, el) {
