@@ -254,6 +254,8 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     padding:0; margin: 0 0 1em 0; color:#148f87; }
 .tile-speaker p { font-size: .9em; }
 
+.program-disclaimer { font-style: italic; max-width: 100%; font-size: 0.7em; margin: 0 0 5em 0; padding: 0 2em;}
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }
