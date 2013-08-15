@@ -219,11 +219,14 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .session-short { color:#999; }
 .session:hover { color:#000; border-color: #eee; }
 .session .time { position: absolute; left: 0; font-weight: bold; display: none; text-align: right; }
+.session .time-show { display: block; }
 .session-0 .time { display: block; }
 .session .badge { position: absolute; left: 2em; opacity: .5; display: none; }
 .session-short .badge { display: block; }
 .session .person { position: absolute; left:33em; }
+.tile-big .session .person { left:52em; }
 .session img { width: 1em; height: 1em; border-radius: 1em; margin:-.15em .2em -.15em 0; }
+.session strong { color: #148f87; }
 .session .room { position: absolute; right: 1.5em; }
 
 .ui-filter .slot { border: none; margin: 0 0 .5em 0; padding: 0; }
@@ -302,6 +305,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
     h2.program-header { padding:1em 1em 0 1em; margin:0; border: none; font-weight: 200; font-size: 2em; text-align: center; }
     h2.program-header br { display: block; }
+    h2.program-header-alone { font-size:1.4em; padding:2em; }
     .slot { border: none; padding-bottom: 1em; margin-bottom: 0; font-size: 1.4em; }
     .slot-time { display: block; }
     .session { padding-left: 0; padding-top:.1em; padding-bottom:.1em; }
