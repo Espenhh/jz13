@@ -52,7 +52,6 @@ jz.routes.program = function() {
         }
 
         var filters = $(".filters").find("a.active[rel]").map(function() {
-            console.log($(this).attr("rel"));
             return $(this).attr("rel");
         });
 
@@ -81,7 +80,6 @@ jz.routes.program = function() {
 
 jz.routes.presentation = function() {
     jz.api.session(jz.utils.param("id")).then(function(data) {
-        console.log(data);
         jz.api.template("session", data).then(function(html) {
             $('.presentation').html(html);
         });

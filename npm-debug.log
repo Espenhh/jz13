@@ -1,0 +1,137 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.8.14/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'pacman',
+1 verbose cli   '-g' ]
+2 info using npm@1.1.65
+3 info using node@v0.8.14
+4 verbose read json /usr/local/share/npm/lib/package.json
+5 verbose read json /usr/local/share/npm/lib/package.json
+6 verbose cache add [ 'pacman', null ]
+7 silly cache add name=undefined spec="pacman" args=["pacman",null]
+8 verbose parsed url { pathname: 'pacman', path: 'pacman', href: 'pacman' }
+9 silly lockFile 9cca1930-pacman pacman
+10 verbose lock pacman /Users/ob/.npm/9cca1930-pacman.lock
+11 silly lockFile 9cca1930-pacman pacman
+12 verbose addNamed [ 'pacman', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile bb08e22b-pacman pacman@
+15 verbose lock pacman@ /Users/ob/.npm/bb08e22b-pacman.lock
+16 silly addNameRange { name: 'pacman', range: '', hasData: false }
+17 verbose url raw pacman
+18 verbose url resolving [ 'https://registry.npmjs.org/', './pacman' ]
+19 verbose url resolved https://registry.npmjs.org/pacman
+20 info trying registry request attempt 1 at 15:14:35
+21 verbose etag "BCXWVAJFD1ZMF44MKPVKFUHB9"
+22 http GET https://registry.npmjs.org/pacman
+23 http 304 https://registry.npmjs.org/pacman
+24 silly registry.get cb [ 304,
+24 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+24 silly registry.get     etag: '"BCXWVAJFD1ZMF44MKPVKFUHB9"',
+24 silly registry.get     date: 'Thu, 15 Aug 2013 13:14:37 GMT',
+24 silly registry.get     'content-length': '0' } ]
+25 verbose etag pacman from cache
+26 silly addNameRange number 2 { name: 'pacman', range: '', hasData: true }
+27 silly addNameRange versions [ 'pacman',
+27 silly addNameRange   [ '0.1.0',
+27 silly addNameRange     '0.2.0',
+27 silly addNameRange     '0.2.1',
+27 silly addNameRange     '0.2.2',
+27 silly addNameRange     '0.2.3',
+27 silly addNameRange     '0.3.3',
+27 silly addNameRange     '0.3.4',
+27 silly addNameRange     '0.4.0',
+27 silly addNameRange     '0.4.1',
+27 silly addNameRange     '0.4.2',
+27 silly addNameRange     '0.4.3',
+27 silly addNameRange     '0.5.0',
+27 silly addNameRange     '0.6.0',
+27 silly addNameRange     '0.6.1',
+27 silly addNameRange     '0.6.2',
+27 silly addNameRange     '0.7.0',
+27 silly addNameRange     '0.7.1',
+27 silly addNameRange     '0.8.0',
+27 silly addNameRange     '0.8.1',
+27 silly addNameRange     '0.8.2',
+27 silly addNameRange     '0.9.0',
+27 silly addNameRange     '0.9.1',
+27 silly addNameRange     '0.9.2',
+27 silly addNameRange     '0.9.3',
+27 silly addNameRange     '0.9.4',
+27 silly addNameRange     '0.9.5',
+27 silly addNameRange     '0.10.0',
+27 silly addNameRange     '0.10.1',
+27 silly addNameRange     '0.10.2',
+27 silly addNameRange     '0.10.3',
+27 silly addNameRange     '0.10.4',
+27 silly addNameRange     '0.10.5',
+27 silly addNameRange     '0.11.0',
+27 silly addNameRange     '0.12.0',
+27 silly addNameRange     '0.13.0',
+27 silly addNameRange     '0.14.0' ] ]
+28 verbose addNamed [ 'pacman', '0.14.0' ]
+29 verbose addNamed [ '0.14.0', '0.14.0' ]
+30 silly lockFile 2a158038-pacman-0-14-0 pacman@0.14.0
+31 verbose lock pacman@0.14.0 /Users/ob/.npm/2a158038-pacman-0-14-0.lock
+32 verbose read json /Users/ob/.npm/pacman/0.14.0/package/package.json
+33 silly lockFile 2a158038-pacman-0-14-0 pacman@0.14.0
+34 silly lockFile bb08e22b-pacman pacman@
+35 silly resolved [ { author: { name: 'Olav Bjorkoy', email: 'olav@bjorkoy.com' },
+35 silly resolved     name: 'pacman',
+35 silly resolved     description: 'Pacman is a fast static site generator, built for large sites with many files.',
+35 silly resolved     version: '0.14.0',
+35 silly resolved     repository: { type: 'git', url: 'https://github.com/olav/pacman.git' },
+35 silly resolved     bin: { pacman: './bin/pacman' },
+35 silly resolved     main: './lib/pacman.js',
+35 silly resolved     dependencies:
+35 silly resolved      { underscore: '1.4.x',
+35 silly resolved        commander: '1.1.x',
+35 silly resolved        'uglify-js': '2.2.x',
+35 silly resolved        'clean-css': '0.9.x',
+35 silly resolved        express: '3.1.x',
+35 silly resolved        mime: '1.2.x',
+35 silly resolved        shelljs: '0.1.x' },
+35 silly resolved     devDependencies: { nodeunit: '', jshint: '' },
+35 silly resolved     scripts: { test: './test' },
+35 silly resolved     engines: { node: '>= 0.8.0' },
+35 silly resolved     readme: '# The Pacman Project\n\n---\n\n**This is very much a work in progress, and not ready for production.**\n\n---\n\nPacman is a fast static site generator,\nbuilt for large sites with many files, written in node.js\n(about 500 lines of JS).\n\nWhile there are many static site generators, few are built to work with lots of files.\nThe main problem is in development mode, where many static site generators regenerate all files\nwhen a single file changes. If you have a lot of files, this means waiting a few seconds\nbefore you can see your changes in the browser.\n\nPacman has **no support for**:\n\n* Blogging\n* Feeds\n* Pagination\n* Listing pages\n* Markdown\n* Asset preprocessors\n\nPacman **has support for**:\n\n* Regenerating files on the fly\n* HTML microtemplates\n* Layouts and partials\n* Asset packaging\n* Deploy via rsync\n* Staying out of your way\n\nPacman has two distinct modes: dev mode and build mode.\n\n* **In dev mode**, all files are served on the fly, without recompilation.\n* **In build mode**, all files are processed and all assets are packed, producing a directory that can be uploaded\nto your server.\n\n## Install\n\nTo install pacman, use npm:\n\n```\n$ npm install pacman -g\n```\n\n## Setup\n\nPacman could be used in a directory with the following structure:\n\n```\nmysite/\n    config.js        -- the pacman config file (more on this later)\n    public/          -- the folder where the build-mode generated site is placed\n    content/         -- the content for your site\n        index.html   -- an index file for your site, along with any other file\n        _partials/   -- a folder with all your partials\n        _layouts/    -- a folder with all your layouts\n```\n\n* Pacman will generate content from the `content` directory,\n* The resulting site will be placed in the `public` directory.\n* You can change the names of these folders from the command line, or in the `config.js` file.\n* Files or folders starting with `_` will not be processed into the `public` directory.\n* Other than that, the names of the folders are not important in any way.\n\n\n## Usage\n\nHere is how to use Pacman from the command line:\n\n```\nUsage: pacman [options]\n\nOptions:\n\n  -h, --help       output usage information\n  -V, --version    output the version number\n\n  -d, --dev        serve content directly from source folder\n  -b, --build      build a complete version, with packed assets\n  -s, --sync       sync target dir to remote server or local dir\n\n  --port   <port>  change dev server port    (default 3000)\n  --config <path>  change config file        (default ./config.js)\n  --source <path>  change source directory   (default ./content)\n  --target <path>  change target directory   (default ./public)\n  --remote <path>  set remote server address (no default)\n```\n\nHere are some common use cases:\n\n```\n# Development mode: serve files directly from ./content\n$ pacman -d\n\n# Build mode: process all files and assets into ./public\n$ pacman -b\n\n# Sync: rsync target directory to your remote server\n$ pacman -s --remote user@example.com:/path/to/document/root/\n\n# Build and sync to different local folder\n$ pacman -b -s --remote relative/target/folder\n```\n\n\n## API\n\nYou may also use pacman programmatically:\n\n```js\nvar pacman = require("pacman");\n\n// Set config flags\npacman.config({\n  source: "relative/source/folder/name",\n  target: "relative/target/folder/name",\n  remote: "foo@example.com:/path/to/document/root/"\n});\n\n// Start dev mode\npacman.dev();\n\n// Start build mode\npacman.build();\n\n// Sync target dir\npacman.sync();\n```\n\n\n## Templates\n\nPacman uses JS microtemplates from Underscore.js to parse HTML files.\nFor example, putting the following in your HTML file will output the current Unix timestamp:\n\n```\n<%= (new Date()).getTime() %>\n```\n\nYou also have a few built-in helpers, most importantly `get(key)` and `set(key, value)` which can be used\nto pass variables between files, partials and layouts. These variables are reset between each\nindividually generated page.\n\n\n## Partials\n\nPartials are small bits of HTML that you need on more than one page. Render another HTML file\n(most often from your `_partials` directory) by using the `partial` helper:\n\n```\n<%= partial("_partials/myFile.html") %>\n```\n\nPutting your partials in a folder starting with `_` ensures that they will not be copied\ninto the `public` folder by themselves, but only as part of other files.\n\n\n## Layouts\n\nLayouts are used to surround your HTML files with standard content, like the doctype, your menu and footer.\nPlace your layout in `_layouts/default.html`, and it will be used automatically.\nIn your layout, you have the variable `content`, which denotes where the main content should be placed:\n\n```\n<!doctype html>\n<html>\n<head>\n    <title>My Site</title>\n</head>\n<body>\n    <%= content %>\n</body>\n</html>\n```\n\nYou can use different layouts for different files. This is specified\nin your `config.js` file (explained at the end of this readme):\n\n```js\nexports.config = {\n  layouts: {\n    "mypage.html": "_layouts/other.html"\n  }\n};\n```\n\nCreate an object with your custom layouts, called `layouts`, where each key should be a\nsubstring of the file path to match, and the value points to the layout file.\n\n\n## Assets\n\nAssets (for now, just JS and CSS files) are served as they are in dev mode, and concatenated and minified in build mode.\nWhich assets belong in which group is specified in the `config.js` file (see the next section).\nTo include your assets, use the `assets` helper, quite possibly in your layout file:\n\n```\n<!doctype html>\n<html>\n<head>\n    <title>My Site</title>\n    <%= assets("css", "group1") %>\n</head>\n<body>\n    <%= content %>\n    <%= assets("js", "group2") %>\n</body>\n</html>\n```\n\n\n## Config\n\nPacman will look for a `config.js` file in the directory in which it is run.\nYou can override where to look for the config with the `-c` command line flag.\nThe config is a valid node.js module. Here is an example:\n\n```js\nexports.config = {\n\n  assets: {\n    css: {\n      group1: [\n        "css/1.css",\n        "css/2.css"\n      ]\n    },\n    js: {\n      group2: [\n        "js/a.js",\n        "js/b.js"\n      ]\n    },\n  },\n\n  helpers: {\n    hello: function() {\n      return "hello!";\n    }\n  }\n\n};\n```\n\nThe main purpose of the file is to specify assets (in order), any default command line flags,\nand any custom HTML helper functions.\n\nIn this example, we have two types of assets (CSS and JS), which each have one group of assets.\nIf the order is not important, you can use folder names instead of filenames,\nand each file in that directory will be included.\nEach asset file path is suffixed with a `?v=<current_build_timestamp>` for proper cache busting.\nYou can disable this with the `config.timestamp` flag.\n\nWe have a helper function (`hello`), usable in any HTML file.\nThe assets can be referenced in an HTML file like this:\n\n```\n<%= assets("css", "group1") %>\n<%= assets("js", "group2") %>\n\n<%= hello() %>\n```\n\nThere are many other config flags you may override. For now,\nsee the file `lib/config.js` for all these flags.\n\n---\n\nLicense: MIT (see LICENSE).\n',
+35 silly resolved     readmeFilename: 'README.md',
+35 silly resolved     _id: 'pacman@0.14.0',
+35 silly resolved     _from: 'pacman' } ]
+36 info install pacman@0.14.0 into /usr/local/share/npm/lib
+37 info installOne pacman@0.14.0
+38 verbose from cache /Users/ob/.npm/pacman/0.14.0/package/package.json
+39 info /usr/local/share/npm/lib/node_modules/pacman unbuild
+40 verbose read json /usr/local/share/npm/lib/node_modules/pacman/package.json
+41 info preuninstall pacman@0.14.0
+42 info uninstall pacman@0.14.0
+43 verbose true,/usr/local/share/npm/lib/node_modules,/usr/local/share/npm/lib/node_modules unbuild pacman@0.14.0
+44 verbose /usr/local/share/npm/bin,[object Object] binRoot
+45 info /usr/local/share/npm/lib/node_modules/pacman unbuild
+46 verbose read json /usr/local/share/npm/lib/node_modules/pacman/package.json
+47 info preuninstall pacman@0.14.0
+48 info uninstall pacman@0.14.0
+49 verbose true,/usr/local/share/npm/lib/node_modules,/usr/local/share/npm/lib/node_modules unbuild pacman@0.14.0
+50 verbose /usr/local/share/npm/bin,[object Object] binRoot
+51 error error rolling back Error: EPERM, chmod '/usr/local/share/npm/bin/pacman'
+51 error error rolling back  pacman@0.14.0 { [Error: EPERM, chmod '/usr/local/share/npm/bin/pacman']
+51 error error rolling back   errno: 50,
+51 error error rolling back   code: 'EPERM',
+51 error error rolling back   path: '/usr/local/share/npm/bin/pacman' }
+52 error Error: EPERM, chmod '/usr/local/share/npm/bin/pacman'
+52 error  { [Error: EPERM, chmod '/usr/local/share/npm/bin/pacman']
+52 error   errno: 50,
+52 error   code: 'EPERM',
+52 error   path: '/usr/local/share/npm/bin/pacman' }
+53 error Please try running this command again as root/Administrator.
+54 error System Darwin 12.3.0
+55 error command "/usr/local/Cellar/node/0.8.14/bin/node" "/usr/local/bin/npm" "install" "pacman" "-g"
+56 error cwd /Users/ob/dev/javazone/jz13
+57 error node -v v0.8.14
+58 error npm -v 1.1.65
+59 error path /usr/local/share/npm/bin/pacman
+60 error code EPERM
+61 error errno 50
+62 error stack Error: EPERM, chmod '/usr/local/share/npm/bin/pacman'
+63 verbose exit [ 50, true ]

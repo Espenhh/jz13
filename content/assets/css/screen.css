@@ -240,6 +240,11 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .tile-session .body { padding:2em; }
 .tile-session h3 { padding:.5em 0 0 0; margin: 0; color: #148f87; }
 .tile-session .intro { font-weight: normal; }
+.tile-session .body h3 { padding: 1em 0 1em 0; }
+
+.tile-session .meta { }
+.tile-session .meta li { padding:.2em 0 .2em 7em; position: relative; line-height: 1.5; }
+.tile-session .meta strong { display: inline-block; font-weight: normal; width: 6em; position: absolute; left: 0; text-align: right; }
 
 .tile-speaker img { width: 100px; height: 100px; border-radius: 200px; display: block; margin: 0 auto 1em auto; border:2px solid #fff; }
 .tile-speaker h4 { text-transform: none; font-weight: 200; font-size: 1.2em; text-align: center;
