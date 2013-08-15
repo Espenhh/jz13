@@ -310,4 +310,9 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     .session .person { display: none; }
     .session .room { display: none; }
     .filters { display: none; }
+
+    .tile-session { font-size:1.2em; }
+    .tile-session .tile-inner { padding: 0; }
+    .tile-speaker { margin:0; font-size:1.2em; }
+    .tile-session .top { border:none; padding:0 2em; }
 }
