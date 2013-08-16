@@ -240,9 +240,9 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
 .tile-session .tile-inner { background:#fff; padding:0 2em 2em 0; }
 .tile-session .top { padding:2em; border-bottom:1px solid #f0f0f0; }
-.tile-session .body { padding:2em; }
+.tile-session .body { padding:2em; font-weight: 200; }
 .tile-session h3 { padding:.5em 0 0 0; margin: 0; color: #148f87; }
-.tile-session .intro { font-weight: normal; }
+.tile-session .intro { font-weight: normal; color:#000; }
 .tile-session .body h3 { padding: 1em 0 1em 0; }
 
 .tile-session .meta { }
@@ -252,7 +252,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .tile-speaker img { width: 100px; height: 100px; border-radius: 200px; display: block; margin: 0 auto 1em auto; border:2px solid #fff; }
 .tile-speaker h4 { text-transform: none; font-weight: 200; font-size: 1.2em; text-align: center;
     padding:0; margin: 0 0 1em 0; color:#148f87; }
-.tile-speaker p { font-size: .9em; }
+.tile-speaker p { font-size: .9em; font-weight: 200; }
 
 .program-disclaimer { font-style: italic; max-width: 100%; font-size: 0.7em; margin: 0 0 5em 0; padding: 0 2em;}
 
@@ -321,4 +321,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     .tile-session .tile-inner { padding: 0; }
     .tile-speaker { margin:0; font-size:1.2em; }
     .tile-session .top { border:none; padding:0 2em; }
+
+    .workshop .time { display: block; font-weight: 200; }
+    .workshop strong { display: block; padding-left: 3em; }
 }
