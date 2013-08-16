@@ -1,24 +1,46 @@
-<ul class="sessions">
-<% _.each(sessions, function(s) { %>
+<div class="sessions">
+<% _.each(sessions, function(day) { %>
+<div class="day">
 
-    <li class="session" data-url="<%= s.links[0].uri %>">
-        <div class="intro <%= s.slugs.join(" ") %>">
-            <img src="<%= s.speakers[0].gravatarUrl %>?s=200&d=identicon" alt="<%= s.names %>">
-            <span class="title"><%= s.title %></span>
-            <span class="keywords">
-                <span class="keyword"><%= s.sessionlength %></span>
-                <span class="keyword"><%= s.language %></span>
-                <span class="keyword"><%= s.names %></span>
-                <span class="keyword level level-<%= s.level %>"><%= jz.utils.title(s.level) %></span>
-                <% _.each(s.keywords, function(keyword) { %>
-                    <span class="keyword"><%= keyword %></span>
-                <% }) %>
-            </span>
-            <div class="clear"></div>
+    <h2 class="program-header">
+        <%= jz.date.weekday(day[0][0].start) %>,<br>
+        <%= jz.date.day(day[0][0].start) %>
+    </h2>
+    <% _.each(day, function(slot) { %>
+        <div class="slot">
+
+            <div class="slot-time">
+                <%= jz.date.time(slot[0].start) %>
+            </div>
+
+            <% _.each(slot, function(pres, i) { %>
+                <a href="/presentation.html?id=<%= pres.id %>" class="session session-<%= i %>
+                    <%= pres.slugs.join(' ') %>
+                    <%= jz.utils.slug(pres.language) %>
+                    <%= jz.utils.slug(pres.level) %>
+                    <%= jz.utils.slug(pres.room) %>
+                    <%= jz.utils.slug(pres.format) %>
+                    session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
+
+                    <div class="time"><%= jz.date.time(pres.start) %></div>
+                    <div class="badge"><i class="icon-bolt" title="Lightning talk"></i></div>
+
+                    <span class="title">
+                        <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                        <%= _.str.truncate(pres.title, 55) %>
+                    </span>
+
+                    <span class="person"><img src="<%= pres.imgs[0] %>?s=200&amp;d=identicon"> <%= _.str.truncate(pres.names, 20) %></span>
+                    <span class="room"><%= pres.room %></span>
+
+                </a>
+            <% }) %>
+
+
         </div>
-        <div class="details hide"></div>
-        <div class="clear"></div>
-    </li>
 
+    <% }) %>
+
+</div>
 <% }) %>
-</ul>
+</div>

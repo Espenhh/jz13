@@ -30,15 +30,11 @@ jz.utils.urlify = function(string) {
     return string.replace(exp, "<a href='$1'>$1</a>");
 };
 
-jz.utils.date = function(year, month, day, hour, min) {
-    return new Date(Date.UTC(parseInt(year, 10), parseInt(month, 10), parseInt(day, 10),
-        parseInt(hour, 10) - 2, parseInt(min, 10)));
-};
-
-jz.utils.ms = function(endDate) {
-    var startDate = new Date();
-    if (endDate < startDate) return "kLO1djacsfg";
-    else return endDate - startDate;
+jz.utils.param = function(name) {
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(window.location.href);
+    if (!results) return false;
+    return decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
 jz.utils.join = function(array) {
@@ -46,7 +42,7 @@ jz.utils.join = function(array) {
 };
 
 jz.utils.slug = function(str) {
-    return str.replace(/[ ]+/g, "-").toLowerCase();
+    return 'slug-' + str.replace(/[ ]+/g, "-").toLowerCase();
 };
 
 jz.utils.title = function(str) {
@@ -54,7 +50,7 @@ jz.utils.title = function(str) {
 };
 
 jz.utils.paragraphs = function(str) {
-    return "<p>" + str.replace(/\n\n/g, "</p><p>") + "</p>";
+    return "<p>" + str.replace(/[\r\n]+(?=[^\r\n])/g, '</p><p>') + "</p>";
 };
 
 jz.utils.randomColor = function() {

@@ -46,22 +46,43 @@ jz.routes.program = function() {
         event.preventDefault();
         if($(this).hasClass("active")) {
             $(this).removeClass("active");
-            $(".intro").show();
         } else {
-            $(".filters a").removeClass("active");
+            $(this).parents('ul').find('.active').removeClass('active');
             $(this).addClass("active");
-            $(".intro").hide();
-            $(".intro." + $(this).attr("rel")).show();
         }
+
+        var filters = $(".filters").find("a.active[rel]").map(function() {
+            return $(this).attr("rel");
+        });
+
+        $("html").toggleClass("ui-filter", !!filters.length);
+
+        $(".session").removeClass('hide');
+        _.each(filters, function(name) {
+            $(".session").not("." + name).addClass('hide');
+        });
+
+        $(".day").hide().each(function() {
+            if ($(this).find('.session').not('.hide').size()) $(this).show();
+        });
     };
     jz.api.sessions().then(function(data) {
-        jz.api.template("filters", { filters: data.tags }).then(function(html) {
+        jz.api.template("filters", { data: data }).then(function(html) {
             $(".filters").html(html);
             $(".filters a").on("click", filter);
         });
         jz.api.template("sessions", { sessions: data.sessions }).then(function(html) {
             $(".program").html(html);
             $(".program li").on("click", show);
+        });
+    });
+};
+
+jz.routes.presentation = function() {
+    jz.api.session(jz.utils.param("id")).then(function(data) {
+        $('title').text(data.title + ' - JavaZone 2013');
+        jz.api.template("session", data).then(function(html) {
+            $('.presentation').html(html);
         });
     });
 };
