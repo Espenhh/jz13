@@ -80,6 +80,7 @@ jz.routes.program = function() {
 
 jz.routes.presentation = function() {
     jz.api.session(jz.utils.param("id")).then(function(data) {
+        $('title').text(data.title + ' - JavaZone 2013');
         jz.api.template("session", data).then(function(html) {
             $('.presentation').html(html);
         });
