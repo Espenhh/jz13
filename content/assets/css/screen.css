@@ -260,6 +260,24 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
 .program-disclaimer { font-style: italic; max-width: 100%; font-size: 0.7em; margin: 0 0 5em 0; padding: 0 2em;}
 
+.workshop-tag-medium, .workshop-tag-full {
+    border-radius: .8em;
+    color: #fff;
+    margin-right: .5em;
+    padding: .2em .6em;
+    font-size: .8em;
+    display: block;
+    float: left;
+}
+.workshop-tag-medium {
+    background: #f3a928;
+}
+.workshop-tag-full {
+    background: #a10735;
+}
+
+
+
 .community h3 { margin:0; }
 
 @media only screen and (max-width: 1350px) {
