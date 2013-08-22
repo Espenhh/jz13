@@ -105,6 +105,8 @@ a:hover { color:#000; border-color:#000; }
 .tile-txt {  }
 .tile-txt .tile-inner { height:auto; }
 
+.tile-img { margin-bottom: 2em; }
+
 .tile-blank .tile-inner { background: none; height: auto; padding:0; }
 
 .tile-dates .tile-inner { background:#fd8640; color:#fff; }
@@ -197,7 +199,8 @@ ul.list i { margin:0 .5em 0 0; }
 .page-invert .footer a { color:#8b8b8b; }
 .page-invert .footer a:hover, .page-invert .menu a:hover { border-color:#fff; color:#fff; }
 .page-invert .tile .extra { background:#101010;  color:#fff; }
-.page-invert .tile-facts .tile-inner { background:#A10735; }
+.page-invert .tile-invert .tile-inner,
+.page-invert .tile-facts .tile-inner { background:#282828; }
 
 .filters ul { padding:0 0 2em 1.25em; }
 .filters li { padding:.51em 0; }
@@ -348,4 +351,6 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
     .workshop .time { display: block; font-weight: 200; }
     .workshop strong { display: block; padding-left: 3em; }
+
+    .img-awezone-poster { width: 25em; height: 35.0064em; display: block; margin: 0 auto; }
 }
