@@ -352,5 +352,9 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     .workshop .time { display: block; font-weight: 200; }
     .workshop strong { display: block; padding-left: 3em; }
 
+    .workshop-tag-medium, .workshop-tag-full {
+        display: none;
+    }
+
     .img-awezone-poster { width: 25em; height: 35.0064em; display: block; margin: 0 auto; }
 }
