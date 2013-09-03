@@ -68,6 +68,32 @@
                             </div>
                         <% }) %>
                     </ul>
+
+                    <h2>Details:</h2>
+                    <ul class="details">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Rating</th>
+                                    <th>comment</th>
+                                    <th>ip</th>
+                                    <th>userAgent</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% _.each(pres.feedback.details, function(detail, i) { %>
+                                    <tr>
+                                        <td><%= detail.time %></td>
+                                        <td><%= detail.rating %></td>
+                                        <td><%= _.str.truncate(detail.comment, 15) %></td>
+                                        <td><%= detail.ip %></td>
+                                        <td><%= detail.userAgent %></td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </ul>
                 </div>
 
             <% }) %>
