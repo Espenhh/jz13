@@ -32,6 +32,8 @@ or by linking to the appropriate location:
 
 Add a handler to respond to `path`. Any part of path starting with `:` is treated as a required paramenter,
 which will be a named property of an object passed as the first argument to the handler.
+Any part starting with `*` is treated as an optional parameter. You can have more than one optional parameter,
+but optional parameter(s) always have to be at the end of the path.
 
     dispatch.off([path | handler]);
 

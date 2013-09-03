@@ -64,6 +64,8 @@ process.on('exit', function() {
                       console,
                       Buffer,
                       process,
+                      testFullSpec_param_found,
+                      TAP_Global_Harness,
                       global.ArrayBuffer!==undefined?ArrayBuffer:null,
                       global.Int8Array!==undefined?Int8Array:null,
                       global.Uint8Array!==undefined?Uint8Array:null,
@@ -79,6 +81,9 @@ process.on('exit', function() {
                       global
                       ];
 
+  if (global.setImmediate) {
+    knownGlobals.push(setImmediate, clearImmediate);
+  }
   if (global.errno) {
     knownGlobals.push(errno);
   }

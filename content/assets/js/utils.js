@@ -11,6 +11,12 @@ jz.utils.shuffle = function(array) {
     return array;
 };
 
+jz.utils.notify = function(text) {
+    clearTimeout(jz.utils.notify.timer);
+    $(".notification").hide().text(text).fadeIn(200);
+    jz.utils.notify.timer = setTimeout(function() { $(".notification").fadeOut(200); }, 2000);
+};
+
 jz.utils.addSupportClasses = function() {
     var mobile   = jz.utils.agent("Android", "webOS", "iPhone", "iPod", "BlackBerry", "IEMobile");
     var handheld = jz.utils.agent("iPad", "Tablet") || mobile;
@@ -58,7 +64,7 @@ jz.utils.randomColor = function() {
         {
             f: "#ffffff",
             b: "#a10735"
-        }, 
+        },
         {
             f: "#ffffff",
             b: "#fc4f4c"

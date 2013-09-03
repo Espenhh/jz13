@@ -15,8 +15,8 @@ exports.config = {
         "components/underscore/underscore.js",
         "components/underscore.string/lib/underscore.string.js",
         "components/eventemitter2/lib/eventemitter2.js",
-        "components/dispatch/dispatch.js",
         "components/jquery/jquery.js",
+        "components/jquery.cookie/jquery.cookie.js",
         "assets/js/vendor/moment.min.js",
         "assets/js/namespace.js",
         "assets/js"

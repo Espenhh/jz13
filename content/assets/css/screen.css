@@ -235,6 +235,21 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .session img { width: 1em; height: 1em; border-radius: 1em; margin:-.15em .2em -.15em 0; }
 .session strong { color: #148f87; }
 .session .room { position: absolute; right: 1.5em; }
+.session .rate { position: absolute; right: 1.5em; background:#fff; padding:.2em 0 .2em .5em; }
+.session .rate i { display: block; float: left; color:#999; font-size: .9em; padding:.1em .1em; }
+.session .rate .comment-icon { margin-left: .5em; padding-top:.05em; }
+.session .rate .icon-star { color: #f9ad29; }
+.session .rate .icon-comment { color: #148f87; }
+.session .rate-active .icon-star:active { color: #148f87; }
+
+.feedback { background:#fff; padding:2em 4em; margin:0 0 2em 0; background:#f9f9f9; }
+.feedback textarea { width: 30em; height: 10em; font-size: .8em; padding:1em; border:1px solid #ccc; margin: 0 0 1em 0; }
+.feedback textarea:focus { outline: none; border-color:#999; }
+.feedback p { margin: 0; }
+
+.notification { background:rgba(0,0,0,0.8); color:#fff; font-size: 1.4em; padding:1em 2em; text-align: center; border-radius: .2em; }
+.notification { width:14em; position: fixed; top:3em; left:50%; margin-left:-9em; z-index:9999; }
+.notification { display: none; }
 
 .ui-filter .slot { border: none; margin: 0 0 .5em 0; padding: 0; }
 .ui-filter .session .time { display: block; font-weight: 200; }
@@ -342,7 +357,13 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     .session .badge { display: none; }
     .session .person { display: none; }
     .session .room { display: none; }
+    .session .rate { right:0; top: 0; padding:.35em 0 .35em 1em; }
     .filters { display: none; }
+
+    .feedback { padding:2em; }
+    .feedback textarea { width:90%; }
+
+    .notification { top:1em; }
 
     .tile-session { font-size:1.2em; }
     .tile-session .tile-inner { padding: 0; }

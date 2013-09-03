@@ -9,6 +9,7 @@
     "underscore": "",
     "underscore.string": "",
     "dispatch": "",
-    "jquery": "1.x.x"
+    "jquery": "1.x.x",
+    "jquery.cookie": ""
   }
 }

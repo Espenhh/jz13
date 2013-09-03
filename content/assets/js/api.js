@@ -19,7 +19,8 @@ jz.api.tweets = function() {
 };
 
 jz.api.parseSession = function(d) {
-    d.id    = d.links ? _.last(d.links[0].uri.split("/")).substr(0, 8) : 1;
+    d.uri   = jz.api.link(d, 'details');
+    d.id    = d.uri ? _.last(d.uri.split("/")).substr(0, 8) : 1;
     d.slugs = _.map(d.keywords, jz.utils.slug);
     d.names = _.pluck(d.speakers, "name").join(", ");
     d.imgs  = _.pluck(d.speakers, "gravatarUrl");
@@ -28,6 +29,7 @@ jz.api.parseSession = function(d) {
     d.sessionlength = d.format === "presentation" ? "60 min" : "10 min";
     d.language = d.lang === "no" ? "Norwegian" : "English";
     d.level = d.level === 'intermediate-advanced' ? 'advanced' : d.level;
+    d.rating = parseInt(jz.api.rating(d.id), 10);
     return d;
 };
 
@@ -56,6 +58,14 @@ jz.api.groupSessions = function(data) {
     var sorted = _.chain(data).sortBy(jz.api.string_comparator('-format')).sortBy('start').groupBy('day').value();
     sorted = _.map(sorted, jz.api.groupSlots);
     return sorted;
+};
+
+jz.api.link = function(data, rel) {
+    if (!data.links) return false;
+    var link = _.find(data.links, function(link) {
+        return link.rel.indexOf(rel) > -1;
+    });
+    return link ? link.uri : false;
 };
 
 jz.api.sessions = function() {
@@ -100,6 +110,19 @@ jz.api.details = function(url) {
     return def;
 };
 
+jz.api.rate = function(id, url, rating, comment) {
+    var data = {};
+    if (rating) data.rating = parseInt(rating, 10);
+    if (comment) data.comment = comment;
+    $.ajax({ method: "post", data: data });
+    $.cookie(id, rating, { path: '/', expires: 365 });
+};
+
+jz.api.rating = function(id) {
+    if (!id) return 0;
+    return $.cookie(id) || 0;
+};
+
 jz.api.template = function(name, data) {
     var def = new $.Deferred();
     jz.api.get("/assets/templates/" + name + ".html").then(function(html) {
@@ -108,16 +131,6 @@ jz.api.template = function(name, data) {
     return def;
 };
 
-
-
-/**
- * Olav: litt jalla? :P Er herfra: https://gist.github.com/stereobooster/2952629
- *
- * Underscore string descending sortBy
- * usage:
- *   Sort by name ascending `_.sortBy(data, string_comparator('name'));`
- *   Sort by name descending `_.sortBy(data, string_comparator('-name'));`
- */
 jz.api.string_comparator = function(param_name, compare_depth) {
     if (param_name[0] == '-') {
         param_name = param_name.slice(1),

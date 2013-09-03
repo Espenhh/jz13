@@ -14,14 +14,13 @@ body {
 
 div, nav {
     display: inline-block;
-    padding:1.5em;
-    margin:0 1em 1em 0;
-    border-radius: .3em;
+    padding:1em;
+    margin:0 .5em .5em 0;
+    border-radius: .5em;
     background: #eee;
-    color:#ccc;
+    color:#666;
     width:19em;
     text-align: left;
-    border-bottom:.15em solid rgba(0,0,0,0.1);
 }
 
 nav {
