@@ -111,6 +111,7 @@ jz.api.details = function(url) {
 };
 
 jz.api.rate = function(id, url, rating, comment) {
+    if (!rating && !comment) return;
     var data = {};
     if (rating) data.rating = parseInt(rating, 10);
     if (comment) data.comment = comment;
