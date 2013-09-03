@@ -163,3 +163,27 @@ jz.routes.communities = function() {
         $(a).css("color", color.f);
     });
 };
+
+// Disse ligger under /admin, burde kanskje indikeres på noen måte? :P
+jz.routes.sessions = function() {
+    var lineClick = function() {
+        var feedbackDiv = $(".feedback-" + $(this).attr("data-id"));
+        feedbackDiv.toggleClass("hide");
+
+        // if ($(this).hasClass("active")) $(".feedback").addClass("hide");
+        // else $(".feedback").insertAfter($(this).parents('a')).removeClass('hide');
+        // $(this).toggleClass("active");
+        // $(".feedback").attr("data-id", $(this).parents('a').attr("data-id"));
+        // $(".feedback").attr("data-uri", $(this).parents('a').attr("data-feedback"));
+        // $(".feedback a").off().on("click", commentSubmit);
+        // $(".feedback textarea").focus();
+        return false;
+    };
+
+    jz.api.adminsessions().then(function(data) {
+        jz.api.template("adminsessions", { sessions: data.sessions }).then(function(html) {
+            $(".program").html(html);
+            $(".program a").on("click", lineClick);
+        });
+    });
+};

@@ -29,7 +29,8 @@ exports.config = {
         "assets/css/font-awesome.css",
         "assets/css/images.css",
         "assets/css/helpers.css",
-        "assets/css/screen.css"
+        "assets/css/screen.css",
+        "assets/css/admin.css"
       ]
     }
 

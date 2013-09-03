@@ -69,8 +69,16 @@ jz.api.link = function(data, rel) {
 };
 
 jz.api.sessions = function() {
+    return jz.api.sessionsByUrl("/api/sessions");
+};
+
+jz.api.adminsessions = function() {
+    return jz.api.sessionsByUrl("/api/admin/sessions");
+};
+
+jz.api.sessionsByUrl = function(url) {
     var def = new $.Deferred();
-    jz.api.get("/api/sessions").then(function(data) {
+    jz.api.get(url).then(function(data) {
         _.each(data, jz.api.parseSession);
 
         // Remove invalid sessions
