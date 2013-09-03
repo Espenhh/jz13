@@ -36,16 +36,38 @@
                     <span class="person"><img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> <%= _.str.truncate(pres.names, 20) %></span>
 
                     <span class="rate-total">
-                        <%= pres.feedback.length %>
+                        <%= pres.feedback.numRatings %>
                         <i class="rate-icon icon-star-empty"></i>
+                    </span>
+                     <span class="comments-total">
+                        <%= pres.feedback.comments.length %>
+                        <i class="comments-icon icon-comment-alt"></i>
                     </span>
                 </a>
                 <div class="feedback admin-feedbackdetails feedback-<%= pres.id %> hide">
-                    <% _.each(pres.feedback, function(one, i) { %>
-                        <div>
-                            <%= one.rating %> – <%= one.comment %>
-                        </div>
-                    <% }) %>
+                    <div class="feedback-summary feedback-summary-numRatings">
+                        <span><%= pres.feedback.numRatings %></span>
+                        Numeric ratings
+                    </div>
+                    <div class="feedback-summary feedback-summary-avgRating">
+                        <span><%= pres.feedback.avgRating.toFixed(2) %></span>
+                        Average score
+                    </div>
+                    <div class="feedback-summary feedback-summary-writtenRatings">
+                        <span><%= pres.feedback.comments.length %></span>
+                        Comments
+                    </div>
+                    <div class="clear"></div>
+                    <h2>Comments:</h2>
+                    <ul class="comments">
+                        <% _.each(pres.feedback.comments, function(comment, i) { %>
+                            <div class="comment">
+                                <div class="icon"><i class="icon-comment-alt"></i></div>
+                                <div class="thecomment"> <%= jz.utils.paragraphs(comment) %></div>
+                                <div class="clear"></div>
+                            </div>
+                        <% }) %>
+                    </ul>
                 </div>
 
             <% }) %>

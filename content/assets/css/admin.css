@@ -1,1 +1,11 @@
-.admin-sessions .rate-total { position: absolute; right: 1.5em; }
+.admin-sessions .rate-total { position: absolute; right: 3em; }
+.admin-sessions .comments-total { position: absolute; right: 0em; }
+
+.feedback-summary {  float: left; width: 7em; height: 7em; text-align: center; background-color: #fff; margin-right: 2em; padding: 2em;}
+.feedback-summary span { color: #148f87; font-size: 4em; display: block; text-align: center; margin-bottom: .5em;}
+.admin-sessions .comments i { color: #148f87;}
+.admin-sessions h2 { color: #148f87;}
+
+.admin-feedbackdetails .comments .comment { margin-bottom: 1em;}
+.admin-feedbackdetails .comments .comment .icon { float: left; width: 1.5em;}
+.admin-feedbackdetails .comments .comment .thecomment { float: left; }
