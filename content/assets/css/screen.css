@@ -135,6 +135,13 @@ a:hover { color:#000; border-color:#000; }
 
 .tile-sessions { height: auto; }
 
+.tile-javabin { }
+.tile-javabin .tile-inner { background:#A10735; color:#fff; }
+.tile-javabin h2 { color:#fff; }
+.tile-javabin strong { font-weight: bold; }
+.tile-javabin a { color:#fff; float: none; border-color:#fff; }
+.tile-javabin a:hover { color:#eee; border-color:#eee; }
+
 ul.tags { padding:1em 0; clear: both; }
 ul.tags li { display: inline; }
 .tag { display: inline-block; text-transform: lowercase; background:#F15B40; color:#fff !important;
