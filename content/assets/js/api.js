@@ -7,7 +7,12 @@ jz.api.get = function(url) {
     var def = new $.Deferred();
     var data = jz.api.cache[url];
     if(data) return def.resolve(data);
-    $.get(url, function(data) {
+    $.ajax({
+        url: url,
+        headers: {
+            "X-Jz-Secret": $.cookie("jz.secret") || "?"
+        }
+    }).done(function(data) {
         jz.api.cache[url] = data;
         def.resolve(data);
     });
@@ -73,6 +78,10 @@ jz.api.sessions = function() {
 };
 
 jz.api.adminsessions = function() {
+    if(!$.cookie("jz.secret")) {
+        var secret = prompt('Passord:');
+        $.cookie("jz.secret", secret, { path: '/', expires: 1 });
+    }
     return jz.api.sessionsByUrl("/api/admin/sessions");
 };
 
