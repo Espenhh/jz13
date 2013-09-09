@@ -28,6 +28,21 @@
     </div>
 </div>
 
+<% if (jz.api.link({ links: links }, 'feedback')) { %>
+    <div class="tile tile-small tile-txt tile-speaker tile-rating"><div class="tile-inner">
+        <h4>Rate this talk</h4>
+        <div class="rate rate-talk <%= rating > 0 ? 'rate-inactive' : 'rate-active' %>">
+            <i class="rate-icon <%= rating > 0 ? 'icon-star' : 'icon-star-empty' %>" data-rate="1"></i>
+            <i class="rate-icon <%= rating > 1 ? 'icon-star' : 'icon-star-empty' %>" data-rate="2"></i>
+            <i class="rate-icon <%= rating > 2 ? 'icon-star' : 'icon-star-empty' %>" data-rate="3"></i>
+        </div>
+        <div class="feedback hide feedback-talk">
+            <textarea placeholder="Provide additional feedback..."></textarea>
+            <p><a href="#">Submit feedback</a></p>
+        </div>
+    </div></div>
+<% } %>
+
 <% _.each(speakers, function(speaker) { %>
     <div class="tile tile-small tile-txt tile-speaker"><div class="tile-inner">
         <div>

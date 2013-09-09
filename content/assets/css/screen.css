@@ -254,6 +254,19 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .feedback textarea:focus { outline: none; border-color:#999; }
 .feedback p { margin: 0; }
 
+.rate-talk { font-size: 1.4em; text-align: center; }
+.rate-talk i { color:#999; }
+.rate-talk.rate-active i:hover { cursor: pointer; }
+.rate-talk .icon-star { color: #f9ad29; }
+
+.feedback-talk { padding: 2em 0 0 0; margin: 0; }
+.feedback-talk textarea { width: 18em; }
+.feedback-talk p { text-align: center; }
+
+.tile-invert .feedback { background: none; }
+.tile-invert textarea { background: #333; border:none; color:#fff; }
+.tile-invert textarea:focus { background: #444; }
+
 .notification { background:rgba(0,0,0,0.8); color:#fff; font-size: 1.4em; padding:1em 2em; text-align: center; border-radius: .2em; }
 .notification { width:14em; position: fixed; top:3em; left:50%; margin-left:-9em; z-index:9999; }
 .notification { display: none; }

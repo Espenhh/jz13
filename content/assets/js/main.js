@@ -66,7 +66,6 @@ jz.routes.program = function() {
     var stop = function() {
         return false;
     };
-
     var rateIn = function() {
         $(this).addClass("icon-star").removeClass("icon-star-empty");
         $(this).prevAll().addClass("icon-star").removeClass("icon-star-empty");
@@ -132,9 +131,41 @@ jz.routes.program = function() {
 
 jz.routes.presentation = function() {
     jz.api.session(jz.utils.param("id")).then(function(data) {
+
+        var stop = function() {
+            return false;
+        };
+        var rateIn = function() {
+            $(this).addClass("icon-star").removeClass("icon-star-empty");
+            $(this).prevAll().addClass("icon-star").removeClass("icon-star-empty");
+        };
+        var rateOut = function() {
+            $(this).addClass("icon-star-empty").removeClass("icon-star");
+            $(this).prevAll().removeClass("icon-star").addClass("icon-star-empty");
+        };
+        var rateClick = function() {
+            $(this).parents(".rate").find(".rate-icon").off();
+            $(this).add($(this).prevAll()).removeClass("icon-star-empty").addClass("icon-star");
+            $(this).parents(".rate").off().removeClass("rate-active").addClass("rate-inactive");
+            var rating = $(this).attr("data-rate");
+            jz.api.rate(data.id, jz.api.link(data, 'feedback'), rating);
+            jz.utils.notify("Thanks for your feedback!");
+            $('.feedback').slideDown();
+            return false;
+        };
+        var commentSubmit = function() {
+            jz.api.rate(data.id, jz.api.link(data, 'feedback'), null, $(".feedback textarea").val());
+            $(".feedback textarea").val("");
+            jz.utils.notify("Thanks for your feedback!");
+            return false;
+        };
+
         $('title').text(data.title + ' - JavaZone 2013');
         jz.api.template("session", data).then(function(html) {
             $('.presentation').html(html);
+            $(".presentation .rate-inactive .rate-icon").on("click", stop);
+            $(".presentation .rate-active .rate-icon").hover(rateIn, rateOut).on("click", rateClick);
+            $(".presentation .feedback a").off().on("click", commentSubmit);
         });
     });
 };
