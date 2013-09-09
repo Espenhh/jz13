@@ -157,6 +157,7 @@ jz.routes.presentation = function() {
             jz.api.rate(data.id, jz.api.link(data, 'feedback'), null, $(".feedback textarea").val());
             $(".feedback textarea").val("");
             jz.utils.notify("Thanks for your feedback!");
+            $('.feedback').slideUp();
             return false;
         };
 
