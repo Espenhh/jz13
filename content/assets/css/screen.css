@@ -382,6 +382,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
     .feedback { padding:2em; }
     .feedback textarea { width:90%; }
+    .session .rate i { padding:.1em .2em; }
 
     .notification { top:1em; }
 
