@@ -35,6 +35,8 @@ jz.routes.credits = function() {
 };
 
 jz.routes.program = function() {
+    jz.routes.index(); // Litt hacky, dra ut tweets-rendring i funksjon :)
+
     var show = function(event) {
         event.preventDefault();
         $(this).toggleClass("active");
