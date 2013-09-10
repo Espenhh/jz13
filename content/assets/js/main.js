@@ -3,8 +3,8 @@
 $(function() {
     jz.utils.addSupportClasses();
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
-    var file = _.last(path.split("/")) || "index";
-    var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "index" : file;
+    var file = _.last(path.split("/")) || "program";
+    var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "program" : file;
     if(jz.routes[name]) jz.routes[name]();
 });
 
