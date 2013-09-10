@@ -288,7 +288,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .tile-session .body h3 { padding: 1em 0 1em 0; }
 
 .tile-session .meta { }
-.tile-session .meta li { padding:.2em 0 .2em 7em; position: relative; line-height: 1.5; }
+.tile-session .meta li { padding:.2em 0 .2em 7em; position: relative; line-height: 1.4; }
 .tile-session .meta strong { display: inline-block; font-weight: normal; width: 6em; position: absolute; left: 0; text-align: right; }
 
 .tile-speaker img { width: 100px; height: 100px; border-radius: 200px; display: block; margin: 0 auto 1em auto; border:2px solid #fff; }
@@ -296,7 +296,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     padding:0; margin: 0 0 1em 0; color:#148f87; }
 .tile-speaker p { font-size: .9em; font-weight: 200; }
 
-.program-disclaimer { font-style: italic; max-width: 100%; font-size: 0.7em; margin: 0 0 5em 0; padding: 0 2em;}
+.program-disclaimer { text-align: center; max-width: 100%; font-size: .9em; margin: 0 0 3em 0; color: #999; }
 
 .workshop-tag-medium, .workshop-tag-full {
     border-radius: .8em;
@@ -370,20 +370,23 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     h2.program-header { padding:1em 1em 0 1em; margin:0; border: none; font-weight: 200; font-size: 2em; text-align: center; }
     h2.program-header br { display: block; }
     h2.program-header-alone { font-size:1.4em; padding:2em; }
-    .slot { border: none; padding-bottom: 1em; margin-bottom: 0; font-size: 1.4em; }
+    .slot { border: none; padding-bottom: 1em; margin-bottom: 0; font-size: 1.3em; }
     .slot-time { display: block; }
-    .session { padding-left: 0; padding-top:.1em; padding-bottom:.1em; }
+    .session { padding: .3em 0 .3em 1.8em; overflow:visible; height: auto; line-height: 1.5; position: relative; }
+    .session .level { display: none; }
     .session .time { display: none; }
     .session .badge { display: none; }
-    .session .person { display: none; }
+    .session .person { position: static; top:0; left: 0; color: #148f87; }
+    .session .person img { position: absolute; top: .7em; left: 0; }
     .session .room { display: none; }
-    .session .rate { right:0; top: 0; padding:.35em 0 .35em 1em; }
     .filters { display: none; }
+
+    .session-rateable { height: 1.5em; overflow: hidden; }
+    .session .rate { right: 0; top:.4em; bottom: auto; left: auto; padding:.2em 0 .5em 1em; }
 
     .feedback { padding:2em; }
     .feedback textarea { width:90%; }
     .session .rate i { padding:.1em .2em; }
-
     .notification { top:1em; }
 
     .tile-session { font-size:1.2em; }
