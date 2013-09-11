@@ -35,3 +35,9 @@ jz.date.duration = function(start, stop) {
     var stopDate = Date.parse(stop);
     return stopDate - startDate;
 };
+
+jz.date.today = function(date) {
+    var d = new Date(date);
+    var n = new Date();
+    return d.toDateString() === n.toDateString();
+};

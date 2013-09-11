@@ -127,6 +127,9 @@ jz.routes.program = function() {
             $(".program .rate-inactive .rate-icon").on("click", stop);
             $(".program .rate-active .rate-icon").hover(rateIn, rateOut).on("click", rateClick);
             $(".program .comment-icon").hover(commentIn, commentOut).on("click", commentClick);
+            $(".program .day-hide h2").on('click', function() {
+                $(this).parents(".day").removeClass("day-hide");
+            });
         });
     });
 };
