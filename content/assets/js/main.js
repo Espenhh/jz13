@@ -151,7 +151,7 @@ jz.routes.presentation = function() {
             $(this).parents(".rate").off().removeClass("rate-active").addClass("rate-inactive");
             var rating = $(this).attr("data-rate");
             jz.api.rate(data.id, jz.api.link(data, 'feedback'), rating);
-            jz.utils.notify("Thanks for your feedback!");
+            jz.utils.notify("Thanks for your feedback! You can add a comment as well.", 4000);
             $('.feedback').slideDown();
             return false;
         };

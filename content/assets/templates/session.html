@@ -36,7 +36,7 @@
             <i class="rate-icon <%= rating > 1 ? 'icon-star' : 'icon-star-empty' %>" data-rate="2"></i>
             <i class="rate-icon <%= rating > 2 ? 'icon-star' : 'icon-star-empty' %>" data-rate="3"></i>
         </div>
-        <div class="feedback hide feedback-talk">
+        <div class="feedback <%= rating == 0 ? 'hide' : '' %> feedback-talk">
             <textarea placeholder="Provide additional feedback..."></textarea>
             <p><a href="#">Submit feedback</a></p>
         </div>
