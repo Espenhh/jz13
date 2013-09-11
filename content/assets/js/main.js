@@ -84,7 +84,7 @@ jz.routes.program = function() {
         var id = $(this).parents("a").attr("data-id");
         var rating = $(this).attr("data-rate");
         jz.api.rate(id, uri, rating);
-        jz.utils.notify("Thanks for your feedback!");
+        jz.utils.notify("Thanks for your feedback! You can add a comment as well.", 4000);
         return false;
     };
 

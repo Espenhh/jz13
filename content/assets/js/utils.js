@@ -11,10 +11,10 @@ jz.utils.shuffle = function(array) {
     return array;
 };
 
-jz.utils.notify = function(text) {
+jz.utils.notify = function(text, displayMs) {
     clearTimeout(jz.utils.notify.timer);
     $(".notification").hide().text(text).fadeIn(200);
-    jz.utils.notify.timer = setTimeout(function() { $(".notification").fadeOut(200); }, 2000);
+    jz.utils.notify.timer = setTimeout(function() { $(".notification").fadeOut(200); }, displayMs || 2000);
 };
 
 jz.utils.addSupportClasses = function() {
