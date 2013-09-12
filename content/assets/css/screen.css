@@ -378,12 +378,12 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
     .slot { border: none; padding-bottom: 1em; margin-bottom: 0; font-size: 1.3em; }
     .slot-time { display: block; }
-    .session { padding: .3em 0 .3em 1.8em; overflow:visible; height: auto; line-height: 1.5; position: relative; }
-    .session .level { display: none; }
+    .session { padding: .3em 0 .3em 1.5em; overflow:visible; height: auto; line-height: 1.5; position: relative; }
+    .session .level { position: absolute; top: .7em; left: 0; right: auto; margin:0; padding: 0; }
     .session .time { display: none; }
     .session .badge { display: none; }
     .session .person { position: static; top:0; left: 0; color: #148f87; }
-    .session .person img { position: absolute; top: .7em; left: 0; }
+    .session .person img { display: none; position: absolute; top: .7em; left: 0; }
     .session .room { display: none; }
     .filters { display: none; }
 
