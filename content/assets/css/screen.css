@@ -224,10 +224,6 @@ h2.program-header .date { display: block; padding:.5em 0 0 0; color: #148f87; }
 h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .filters h2.program-header { padding-left:1em; }
 
-.sessions .day-hide h2.program-header { color: #ccc; border:none; margin: 0; padding-bottom: 0; }
-.sessions .day-hide h2.program-header:hover { color:#000; cursor:pointer; }
-.sessions .day-hide .slot { display: none; }
-
 .program { margin-bottom:5em; }
 .slot { padding: 0 0 2em 0; margin: 0 0 2em 0; border-bottom:1px solid #f0f0f0; }
 .slot-time { font-size: 1.4em; padding: 1em; display: none; font-weight: 200; text-align: center; }
@@ -300,7 +296,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     padding:0; margin: 0 0 1em 0; color:#148f87; }
 .tile-speaker p { font-size: .9em; font-weight: 200; }
 
-.program-disclaimer { text-align: center; max-width: 100%; font-size: .9em; margin: 0 0 3em 0; padding:0 1em; color: #999; }
+.program-disclaimer { text-align: center; max-width: 100%; font-size: .9em; margin: 0 0 3em 0; color: #999; }
 
 .workshop-tag-medium, .workshop-tag-full {
     border-radius: .8em;
@@ -375,8 +371,6 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     h2.program-header { padding:1em 1em 0 1em; margin:0; border: none; font-weight: 200; font-size: 2em; text-align: center; }
     h2.program-header br { display: block; }
     h2.program-header-alone { font-size:1.4em; padding:2em; }
-    .sessions .day-hide h2.program-header { font-size: 1.2em; }
-
     .slot { border: none; padding-bottom: 1em; margin-bottom: 0; font-size: 1.3em; }
     .slot-time { display: block; }
     .session { padding: .3em 0 .3em 1.8em; overflow:visible; height: auto; line-height: 1.5; position: relative; }
