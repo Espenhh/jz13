@@ -41,6 +41,7 @@ a:hover .img-inner {
 .img-bags { background-image:url("/assets/img/tiles/bags.jpg"); }
 .img-flam { background-image:url("/assets/img/tiles/flam.jpg"); }
 .img-view { background-image:url("/assets/img/tiles/view.jpg"); }
+.img-spektrum { background-image:url("/assets/img/tiles/spektrum.jpg"); }
 .img-awezone-poster { background-image:url("/assets/img/awezone/poster.jpg"); width: 45.111em; height: 63.167em; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -65,6 +66,7 @@ only screen and (                min-resolution: 2dppx) {
     .img-bags { background-image:url("/assets/img/tiles/bags@2x.jpg"); }
     .img-flam { background-image:url("/assets/img/tiles/flam@2x.jpg"); }
     .img-view { background-image:url("/assets/img/tiles/view@2x.jpg"); }
+    .img-spektrum { background-image:url("/assets/img/tiles/spektrum@2x.jpg"); }
     .img-awezone-poster { background-image:url("/assets/img/awezone/poster@2x.jpg"); }
 
 }
