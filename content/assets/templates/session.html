@@ -1,4 +1,9 @@
 <div class="tiles" id="when">
+    <% if (jz.api.link({ links: links }, 'video')) { %>
+        <div class="talkvideo">
+            <iframe src="<%= jz.api.link({ links: links }, 'video').replace("http://vimeo.com/", "//player.vimeo.com/video/") %>?title=0&amp;byline=0&amp;portrait=0&amp;color=A10735" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    <% } %>
     <div class="tile tile-med tile-session tile-txt"><div class="tile-inner">
         <div class="top">
             <h2 class="first last"><%= title %></h2>

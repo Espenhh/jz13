@@ -96,6 +96,8 @@ a:hover { color:#000; border-color:#000; }
 .tile-video .tile-inner { padding:0; height:25.2em; }
 .tile-video iframe { width:100%; height:100%; }
 
+.talkvideo { height: 25em; margin: 0 1.5em 3em 0; }
+
 .tile-txt {  }
 .tile-txt .tile-inner { height:auto; }
 
