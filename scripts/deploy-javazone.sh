@@ -31,7 +31,7 @@ if [ $1 == "test" ]; then
 	JZ_SERVER="javabin@176.58.113.146"
 	JZ_SERVER_ROOT="/home/javabin/web/jz13/test"
 	JZ_KEEP_OLD_PACKAGES_FOR_MINUTES=86400 # 60 dager
-	JZ_CHECK_PACMAN=false
+	JZ_CHECK_PACBOT=false
 elif [ $1 == "prod" ]; then
 	echo "Bekreft deploy til prod ved å skrive 'p-r-o-d-u-k-s-j-o-n' uten bindestrekene"
 	read ans
@@ -45,7 +45,7 @@ elif [ $1 == "prod" ]; then
 	JZ_SERVER="javabin@176.58.113.146"
 	JZ_SERVER_ROOT="/home/javabin/web/jz13/prod"
 	JZ_KEEP_OLD_PACKAGES_FOR_MINUTES=86400 # 60 dager
-	JZ_CHECK_PACMAN=true
+	JZ_CHECK_PACBOT=true
 else
 	echo "Ugyldig miljø. Bruk en av [prod/test]"
 	exit $E_BADARGS
@@ -54,7 +54,7 @@ JZ_NEW_FOLDER=`date +%s`
 
 fancymessage "Deployer til  $JZ_SERVER, mappe $JZ_SERVER_ROOT/$JZ_NEW_FOLDER"
 
-fancymessage "BYGGER PACMAN"
+fancymessage "BYGGER PACBOT"
 rm -r public
 ./scripts/build.sh
 
