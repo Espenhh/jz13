@@ -1,0 +1,62 @@
+<%= partial("_partials/menu.html") %>
+<% set('page', 'page-invert') %>
+
+<div class="tiles">
+<div class="tile tile-big tile-txt tile-blank"><div class="tile-inner">
+
+<div class="form img-spektrum">
+<div class="form-inner">
+<form>
+
+<div class="field">
+    <h3><i class="icon-user"></i> What was your role at the conference?</h3>
+    <p class="choices">
+        <label><input type="radio" name="role" value="participant"> Participant</label>
+        <label><input type="radio" name="role" value="speaker"> Speaker</label>
+        <label><input type="radio" name="role" value="volunteer"> Volunteer</label>
+    </p>
+</div>
+
+<div class="field">
+    <h3><i class="icon-bullhorn"></i> What did you think of the presentations?</h3>
+    <p class="choices">
+        <label><input type="radio" name="presentations_rating" value="3"> <em>3</em> They were great! <i class="icon-smile"></i></label>
+        <label><input type="radio" name="presentations_rating" value="2"> <em>2</em> They were all right. <i class="icon-meh"></i></label>
+        <label><input type="radio" name="presentations_rating" value="1"> <em>1</em> Meh, not so great. <i class="icon-frown"></i></label>
+    </p>
+</div>
+
+<div class="field">
+    <h3><i class="icon-food"></i> What did you think of the conference?</h3>
+    <p class="choices">
+        <label><input type="radio" name="conference_rating" value="3"> <em>3</em> It was great! <i class="icon-smile"></i></label>
+        <label><input type="radio" name="conference_rating" value="2"> <em>2</em> It was all right. <i class="icon-meh"></i></label>
+        <label><input type="radio" name="conference_rating" value="1"> <em>1</em> Meh, not so great. <i class="icon-frown"></i></label>
+    </p>
+</div>
+
+<div class="field">
+    <h3><i class="icon-heart"></i> Do you have any additional feedback?</h3>
+    <p class="freetext">
+        <textarea name="freetext" placeholder=""></textarea>
+    </p>
+</div>
+
+<div class="field">
+    <p><a href="#" class="submit">
+        <i class="icon-ok"></i>
+        Submit feedback
+    </a></p>
+</div>
+
+</form>
+</div>
+</div>
+
+
+</div></div>
+</div>
+
+
+<div class="clear"></div>
+<%= partial("_partials/footer.html") %>

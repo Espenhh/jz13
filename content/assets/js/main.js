@@ -198,6 +198,20 @@ jz.routes.communities = function() {
     });
 };
 
+jz.routes.feedback = function() {
+    $(".submit").on("click", function() {
+        var data = {
+            role: $("[name=role]:checked").val(),
+            presentations_rating: $("[name=presentations_rating]:checked").val(),
+            conference_rating: $("[name=conference_rating]:checked").val(),
+            freetext: $("[name=freetext]").val()
+        };
+        jz.api.post("/api/generalfeedback", { feedback: data });
+        jz.utils.notify("Thanks for your feedback!");
+        return false;
+    });
+};
+
 // Disse ligger under /admin, burde kanskje indikeres på noen måte? :P
 jz.routes.sessions = function() {
     var lineClick = function() {

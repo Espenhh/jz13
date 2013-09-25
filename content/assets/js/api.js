@@ -132,8 +132,17 @@ jz.api.rate = function(id, url, rating, comment) {
     var data = {};
     if (rating) data.rating = parseInt(rating, 10);
     if (comment) data.comment = comment;
-    $.ajax({ url: url, contentType: "application/json", method: "post", data: JSON.stringify(data) });
     $.cookie(id, rating, { path: '/', expires: 365 });
+    jz.api.post(url, data);
+};
+
+jz.api.post = function(url, data) {
+    return $.ajax({
+        url: url,
+        contentType: "application/json",
+        method: "post",
+        data: JSON.stringify(data)
+    });
 };
 
 jz.api.rating = function(id) {
