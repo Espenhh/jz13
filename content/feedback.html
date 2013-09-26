@@ -9,49 +9,56 @@
 
 <div class="thanks hide">
     <h2><i class="icon-heart"></i> Thank you for your feedback!</h2>
-    <p>We will take all suggestions to heart to make next year's conference even better! You can also give feedback <a href="/program.html">to each speaker</a> directly.</p>
-    <p class="last"><a href="https://twitter.com/javazone">Follow us on Twitter</a> to be the first to know all about JavaZone 2014.</p>
+    <p>We will take all suggestions to heart to make next year's conference even better!</p>
+    <p>You can watch this years presentations and give feedback to each speaker on the talks page:</p>
+<!--     <p>Follow us on <a href="https://twitter.com/javazone">Twitter</a> to be the first to know all about JavaZone 2014.</p> -->
+    <p class="last"><a href="program.html" class="button">
+        <i class="icon-ok"></i>
+        Give feedback on talks
+    </a></p>
 </div>
 
 <form>
 
 <div class="field">
+    <h3><i class="icon-bullhorn"></i> What do you think of the program?</h3>
+    <p class="small">Variation of talks, the different lengths and forms.</p>
+    <p class="choices">
+        <label><input type="radio" name="presentations_rating" value="3"> <em>3</em> The program was great! <i class="icon-smile"></i></label>
+        <label><input type="radio" name="presentations_rating" value="2"> <em>2</em> It was all right. <i class="icon-meh"></i></label>
+        <label><input type="radio" name="presentations_rating" value="1"> <em>1</em> Meh, not very good. <i class="icon-frown"></i></label>
+    </p>
+</div>
+
+<div class="field">
+    <h3><i class="icon-food"></i> What do you think of the conference?</h3>
+    <p class="small">Practicalities, the food serving, information etc.</p>
+    <p class="choices">
+        <label><input type="radio" name="conference_rating" value="3"> <em>3</em> The conference was great! <i class="icon-smile"></i></label>
+        <label><input type="radio" name="conference_rating" value="2"> <em>2</em> It was all right. <i class="icon-meh"></i></label>
+        <label><input type="radio" name="conference_rating" value="1"> <em>1</em> Meh, not very good. <i class="icon-frown"></i></label>
+    </p>
+</div>
+
+<div class="field">
     <h3><i class="icon-user"></i> What was your role at the conference?</h3>
     <p class="choices">
-        <label><input type="radio" name="role" value="participant"> Participant</label>
+        <label><input type="radio" name="role" value="participant"> Regular participant</label>
+        <label><input type="radio" name="role" value="volunteer"> Student volunteer</label>
+        <label><input type="radio" name="role" value="partner"> Partner contact</label>
         <label><input type="radio" name="role" value="speaker"> Speaker</label>
-        <label><input type="radio" name="role" value="volunteer"> Volunteer</label>
-        <label><input type="radio" name="role" value="partner"> Partner</label>
-    </p>
-</div>
-
-<div class="field">
-    <h3><i class="icon-bullhorn"></i> What did you think of the presentations?</h3>
-    <p class="choices">
-        <label><input type="radio" name="presentations_rating" value="3"> <em>3</em> They were great! <i class="icon-smile"></i></label>
-        <label><input type="radio" name="presentations_rating" value="2"> <em>2</em> They were all right. <i class="icon-meh"></i></label>
-        <label><input type="radio" name="presentations_rating" value="1"> <em>1</em> Meh, not so great. <i class="icon-frown"></i></label>
-    </p>
-</div>
-
-<div class="field">
-    <h3><i class="icon-food"></i> What did you think of the conference?</h3>
-    <p class="choices">
-        <label><input type="radio" name="conference_rating" value="3"> <em>3</em> It was great! <i class="icon-smile"></i></label>
-        <label><input type="radio" name="conference_rating" value="2"> <em>2</em> It was all right. <i class="icon-meh"></i></label>
-        <label><input type="radio" name="conference_rating" value="1"> <em>1</em> Meh, not so great. <i class="icon-frown"></i></label>
     </p>
 </div>
 
 <div class="field">
     <h3><i class="icon-heart"></i> Do you have any additional feedback?</h3>
     <p class="freetext">
-        <textarea name="freetext" placeholder="What do you think worked well, what can we do better next year..."></textarea>
+        <textarea name="freetext" placeholder="What do you think worked well? What can we do better next year. Any other comments?"></textarea>
     </p>
 </div>
 
 <div class="field">
-    <p><a href="#" class="submit">
+    <p><a href="#" class="button submitform">
         <i class="icon-ok"></i>
         Submit feedback
     </a></p>

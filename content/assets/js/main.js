@@ -199,7 +199,7 @@ jz.routes.communities = function() {
 };
 
 jz.routes.feedback = function() {
-    $(".submit").on("click", function() {
+    $(".submitform").on("click", function() {
         var data = {
             role: $("[name=role]:checked").val(),
             presentations_rating: $("[name=presentations_rating]:checked").val(),
