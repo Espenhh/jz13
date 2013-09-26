@@ -326,11 +326,14 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .form p { margin: 0 0 2em 0; }
 .form em { display: none; }
 .form textarea { width: 22.5em; height: 14em; font-size: .8em; padding:1em; border:1px solid #ccc; margin: 0 0 1em 0; }
-.form textarea { border-radius: .2em; }
+.form textarea { line-height: 1.4em; border-radius: .2em; }
 .form textarea:focus { outline: none; border-color:#999; }
 .form .submit { background: #148f87; color:#fff; padding:.5em 1em; border-radius: .2em; }
 .form .submit:hover { background: #117972; }
 .form .submit i { display: inline-block; margin: 0 .3em 0 0; }
+
+.thanks h2 { margin-top: 1em; }
+.thanks p.last { margin-bottom: 2em; }
 
 .community h3 { margin:0; }
 

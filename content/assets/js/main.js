@@ -206,8 +206,13 @@ jz.routes.feedback = function() {
             conference_rating: $("[name=conference_rating]:checked").val(),
             freetext: $("[name=freetext]").val()
         };
-        jz.api.post("/api/generalfeedback", { feedback: data });
-        jz.utils.notify("Thanks for your feedback!");
+        if(data.role || data.presentations_rating || data.conference_rating || data.freetext) {
+            jz.api.post("/api/generalfeedback", { feedback: data });
+            window.scrollTo(0, 0);
+            $("form")[0].reset();
+            $("form").hide();
+            $(".thanks").show();
+        }
         return false;
     });
 };
@@ -217,14 +222,6 @@ jz.routes.sessions = function() {
     var lineClick = function() {
         var feedbackDiv = $(".feedback-" + $(this).attr("data-id"));
         feedbackDiv.toggleClass("hide");
-
-        // if ($(this).hasClass("active")) $(".feedback").addClass("hide");
-        // else $(".feedback").insertAfter($(this).parents('a')).removeClass('hide');
-        // $(this).toggleClass("active");
-        // $(".feedback").attr("data-id", $(this).parents('a').attr("data-id"));
-        // $(".feedback").attr("data-uri", $(this).parents('a').attr("data-feedback"));
-        // $(".feedback a").off().on("click", commentSubmit);
-        // $(".feedback textarea").focus();
         return false;
     };
 
